@@ -63,7 +63,7 @@ export default function Background() {
 
     return (
         <>
-            <div className="flex justify-center my-2 md:flex bg-black">
+            <div className="flex fixed left-0 top-[80px] z-51 w-full justify-center items-center bg-black h-[70px] md:h-[90px]">
                 <div className="flex flex-row items-center gap-4 overflow-x-auto whitespace-nowrap h-[50px] px-4">
                     {all_timelines.map((timelineData, index) => {
                         const isActive = activeTimeline === timelineData.title;
@@ -82,11 +82,11 @@ export default function Background() {
                 </div>
             </div>
             
-            <div className="flex flex-col gap-4 text-sm md:text-base  px-6">
+            <div className="flex flex-col gap-4 text-sm md:text-base px-6 mt-[70px]">
                 {all_timelines.map((timelineData, index) => {
                     if (timelineData.title === activeTimeline) {
                         return (
-                            <div className='flex mt-6 w-full'>
+                            <div key={index} className='flex mt-6 w-full'>
                                 <Timeline
                                     key={index}
                                     Icon={timelineData.icon}
