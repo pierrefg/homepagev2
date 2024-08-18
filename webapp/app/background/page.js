@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 
@@ -11,8 +12,6 @@ import { PiChalkboardTeacherLight } from "react-icons/pi";
 import { workExperiences, volunteeringExperiences, educationExperiences, teachingExperiences } from './data';
 
 import Timeline from "./timeline";
-
-import { isMobileDevice } from '@/components/isMobileDevice';
 
 // Declare all_timelines as a constant
 const all_timelines = [

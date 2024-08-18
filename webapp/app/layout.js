@@ -1,6 +1,8 @@
 import "./globals.css";
 import LayoutSelector from "./LayoutSelector";
 
+import React, { Suspense } from 'react';
+
 export const metadata = {
     title: "Pierre FG",
     description: "Je suis scientifique des données mais également graphiste et photographe. Viens découvrir mon site pour voir ce que je fais !",
@@ -24,7 +26,9 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className='font-mono'>
-                <LayoutSelector>{children}</LayoutSelector>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <LayoutSelector>{children}</LayoutSelector>
+                </Suspense>
             </body>
         </html>
     );

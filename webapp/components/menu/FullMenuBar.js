@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useState } from 'react';
 
-import Portrait from '../Portrait';
-import SocialIcons from '../SocialIcons';
-import MenuBar from './MenuBar';
+import Portrait from '@/components/Portrait';
+import SocialIcons from '@/components/SocialIcons';
+import MenuBar from '@/components/menu/MenuBar';
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";

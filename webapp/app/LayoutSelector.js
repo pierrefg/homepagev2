@@ -1,7 +1,6 @@
 "use client";
 
-import Landing from '../components/Landing';
-import MenuWithPage from '../components/menu/MenuWithPage';
+import MenuWithPage from '@/components/menu/MenuWithPage';
 
 import { usePathname } from 'next/navigation';
 
@@ -10,7 +9,9 @@ export default function LayoutSelector({ children }) {
 
     if (pathname === '/') {
         return (
-            <Landing />
+            <>
+                {children}
+            </>
         )
     } else {
         return (
