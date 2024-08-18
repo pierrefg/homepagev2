@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+
+}
+
+html {
+  background-color: rgb(var(--foreground-rgb));
+  color: white;
+}
+
+.btn-white-primary {
+  @apply px-6 py-3 bg-white text-black hover:bg-purple-700 hover:text-white hover:animate-pulse transition-colors duration-300 ease-in-out;
+}
+
+.btn-white-primary.active {
+  @apply bg-purple-700 text-white;
+  rotate: 2deg;
+}
+
+.icon {
+  @apply text-2xl hover:text-purple-700;
+  display: inline ;
+}
+
+.icon.icon-link {
+  @apply hover:text-purple-700 transition-colors duration-300 ease-in-out;
+}
+
+.snake {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.pfg-tab {
+  a {
+    @apply border-solid border-2 border-white hover:bg-purple-700 p-1 cursor-pointer;
+  }
+} 
+
