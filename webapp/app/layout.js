@@ -1,5 +1,7 @@
 import "./globals.css";
+
 import LayoutSelector from "./LayoutSelector";
+import Loader from "@/components/Loader";
 
 import React, { Suspense } from 'react';
 
@@ -32,7 +34,7 @@ export default function RootLayout({ children }) {
             <body className='font-mono'>
                 <Analytics />
                 <SpeedInsights/>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loader />}>
                     <LayoutSelector>{children}</LayoutSelector>
                 </Suspense>
             </body>

@@ -66,3 +66,18 @@ html {
 }
 
 
+
+.square-loader {
+    @apply w-16 h-16 bg-purple-700 border-solid border-2 border-white; /* Width: 4rem (16), Height: 4rem (16), Background color: white */
+    animation: rotate 3s linear infinite;
+  }
+  
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
