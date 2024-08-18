@@ -5,10 +5,10 @@ import { AiOutlineTool } from "react-icons/ai";
 
 export default function Work() {
     return (
-        <div className='flex mt-6 w-full'>
+        <div className='flex w-full'>
             <Timeline
                 Icon = {AiOutlineTool}
-                title = "Enseignement"
+                title = "Expérience"
                 data = {workData}
             />
         </div>

@@ -1,7 +1,7 @@
-export default function Music() {
+export default function Art() {
     return (
         <main>
-            music
+            art
         </main>
     )   
 }

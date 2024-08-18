@@ -8,7 +8,7 @@ export default function Volunteering() {
         <div className='flex mt-6 w-full'>
             <Timeline
                 Icon = {MdOutlineVolunteerActivism}
-                title = "Ensignement"
+                title = "Bénévolat"
                 data = {volunteeringData}
             />
         </div>

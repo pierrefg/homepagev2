@@ -8,7 +8,7 @@ export default function Teaching() {
         <div className='flex mt-6 w-full'>
             <Timeline
                 Icon = {PiChalkboardTeacherLight}
-                title = "Ensignement"
+                title = "Enseignement"
                 data = {teachingData}
             />
         </div>

@@ -2,19 +2,19 @@ export default function Timeline({ Icon, title, data }) {
     if (!data) return null;
 
     return (
-        <div className="timeline w-full grid md:grid-cols-7 gap-4">
+        <div className="timeline grid md:grid-cols-[180px_1fr] gap-4">
             <div className="timeline-title">
                 <Icon className="text-base inline mr-2" />
                 <h1>{title}</h1>
             </div>
-            <div className="md:col-span-6 text-white">
+            <div className="text-white">
                 <ul>
                     {data.map((experience, index) => (
                         <li key={index} className="mt-4">
-                            <div className="grid md:grid-cols-5 md:gap-6">
+                            <div className="grid md:grid-cols-[80px_1fr] md:gap-6">
 
                                 {/* Visible on Medium and Larger Screens */}
-                                <div className="md:col-span-1 hidden md:block">
+                                <div className="hidden md:block">
                                     <time>{experience.period}</time><br />
                                     {experience.type && (
                                         <span className="text-sm text-gray-400">
@@ -24,7 +24,7 @@ export default function Timeline({ Icon, title, data }) {
                                 </div>
 
                                 {/* Content Section */}
-                                <div className="md:col-span-4">
+                                <div className="">
                                     <h2 className="">
                                         <strong className="md:p-0 underline">{experience.title}</strong>
                                     </h2>

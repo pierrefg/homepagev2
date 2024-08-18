@@ -3,15 +3,17 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { FaRunning } from "react-icons/fa";
+import { BiPaintRoll } from "react-icons/bi";
+import { AiOutlineExperiment } from "react-icons/ai";
+
 export default function MenuBar({ toDoOnElementClick }) {
     const pathname = usePathname();
 
     var links = [
-        ['Mon parcours', '/background'],
-        ['Graphisme', '/graphics'],
-        ['Photographie', '/photography'],
-        ['Musique', '/music', ''],
-        ['Vidéo', '/video'],
+        [<span><FaRunning className='icon' /> Mon parcours</span>, '/background'],
+        [<span><AiOutlineExperiment className='icon' /> Informatique & Recherche</span>, '/science'],
+        [<span><BiPaintRoll className='icon'/> Activités artistiques</span>, '/art'],
     ]; 
 
     return (

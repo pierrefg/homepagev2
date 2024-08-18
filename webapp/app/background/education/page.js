@@ -8,7 +8,7 @@ export default function Education() {
         <div className='flex mt-6 w-full'>
             <Timeline
                 Icon = {IoSchoolOutline}
-                title = "Éducation"
+                title = "Formation"
                 data = {educationData}
             />
         </div>
