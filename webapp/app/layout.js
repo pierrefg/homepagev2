@@ -2,6 +2,7 @@ import "./globals.css";
 import LayoutSelector from "./LayoutSelector";
 
 import React, { Suspense } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
     title: "Pierre FG",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className='font-mono'>
+                <Analytics />
                 <Suspense fallback={<div>Loading...</div>}>
                     <LayoutSelector>{children}</LayoutSelector>
                 </Suspense>
