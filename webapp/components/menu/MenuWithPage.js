@@ -7,7 +7,7 @@ export default function MenuWithPage({ children }) {
             <div className="flex">
                 <FullMenuBar />
             </div>
-            <div className="pfg-tab flex-1 mt-[90px] max-w-7xl w-full mx-auto bg-black p-6">
+            <div className="pfg-tab flex-1 mt-[90px] max-w-7xl w-full mx-auto bg-black">
                 {children}
             </div>
             <div className="flex">

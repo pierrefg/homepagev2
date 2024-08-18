@@ -7,7 +7,7 @@ export default function MenuBar({ toDoOnElementClick }) {
     const pathname = usePathname();
 
     var links = [
-        ['Mon parcours', '/background'],
+        ['Mon parcours', '/background?section=experience'],
         ['Graphisme', '/graphics'],
         ['Photographie', '/photography'],
         ['Musique', '/music'],
@@ -15,7 +15,7 @@ export default function MenuBar({ toDoOnElementClick }) {
     ]; 
 
     return (
-        <div className={`flex flex-col md:flex-row items-center gap-6`}>
+        <div className={`flex flex-col md:flex-row items-center gap-4`}>
             {
                 links.map(
                     ([title, link], index) => {

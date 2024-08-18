@@ -1,90 +1,142 @@
 export const workExperiences = [
     {
-        title: "Data Scientist",
-        period: "September 2023-now",
+        title: "Scientifique des données",
+        period: "2023-*",
         company: "DataValor (Villeurbanne)",
         type: "CDD",
     },
     {
-        title: "Ph.D. in Data Science and Renewable Energy",
-        period: "2020-2023",
-        company: "LIRIS Laboratory (Villeurbanne, France), Compagnie Nationale du Rhône (Lyon, France)",
-        description: "See description",
-        link: "#thesis",
+        title: "Doctorat en Science des Données et Énergies Renouvelables",
+        period: "2020-23",
+        company: "Laboratoire LIRIS (Villeurbanne, France), Compagnie Nationale du Rhône (Lyon, France)",
+        // description: "Voir la description",
+        link: {
+            url: "https://engrainage-media.com/",
+            text: "Voir plus"
+        },
     },
     {
-        title: "AGILE programming and R&D in natural language processing",
-        period: "2019 (4 months)",
+        title: "Programmation AGILE et R&D en traitement du langage naturel",
+        period: "2019",
+        length: "4 mois",
         company: "Worldline (Lyon)",
-        type: "Internship",
-        description: "I worked with an AGILE team on the development of a large Worldline product (Contact). In parallel, I also worked closely with the R&D on NLP for the development of a chatbot.",
+        type: "Stage",
+        description: "J'ai travaillé avec une équipe AGILE sur le développement d'un grand produit de Worldline (Contact). En parallèle, j'ai également collaboré étroitement avec la R&D sur le NLP pour le développement d'un chatbot.",
     },
     {
-        title: "SAP technical administrator",
-        period: "2018 (3 months)",
+        title: "Administrateur technique SAP",
+        period: "2018",
+        length: "3 mois",
         company: "Oxya (Dardilly)",
-        type: "Internship",
-        description: "My internship in an SAP management company gave me a global vision of the SAP landscape, its modules, maintenance, and workings. I also deepened my technical knowledge (unix, network, database, web...) and team working abilities.",
+        type: "Stage",
+        description: "Mon stage dans une entreprise de gestion SAP m'a donné une vision globale du paysage SAP, de ses modules, de la maintenance et de son fonctionnement. J'ai également approfondi mes connaissances techniques (Unix, réseau, base de données, web...) et mes capacités à travailler en équipe.",
     },
     {
-        title: "Laboratory assistant",
-        period: "2016 (1 month)",
+        title: "Assistant de laboratoire",
+        period: "2016",
+        length: "1 mois",
         company: "Schneider Electric (L'Isle-d'Espagnac)",
-        type: "Internship",
-        description: "This internship allowed me to acquire knowledge on the functioning of the company and its production chain.",
+        type: "Stage",
+        description: "Ce stage m'a permis d'acquérir des connaissances sur le fonctionnement de l'entreprise et de sa chaîne de production.",
     },
 ];
 
-
 export const volunteeringExperiences = [
     {
-        organization: "Engrainage",
-        period: "2024-now",
-        description: "Media for radical ecology",
-        role: "Graphic design and photography",
+        title: "Engrainage",
+        company: "Média sur l'écologie radicale",
+        period: "2024-*",
+        description: "Design graphique et photographie",
         link: {
             url: "https://engrainage-media.com/",
-            text: "Website"
+            text: "Site web"
         }
     },
     {
-        organization: "Les Escales Solidaires",
-        period: "2023-now",
-        description: "Charity meals association",
-        role: "Cook",
+        title: "Les Escales Solidaires",
+        company: "Association de repas solidaires",
+        period: "2023-*",
+        description: "Cuisinier",
     },
     {
-        organization: "The Shifters",
-        period: "2022-2023",
-        description: "Association for the support of The Shift Project",
-        role: "Graphic designer",
+        title: "The Shifters",
+        period: "2022-23",
+        company: "Association pour le soutien du Shift Project",
+        description: "Graphiste",
         link: {
             url: "https://theshiftproject.org/en/home/",
             text: "The Shift Project"
         }
     },
     {
-        organization: "AEDI (Association des Élèves du Département Informatique)",
-        period: "2018-2019",
-        description: "Student association of the computer science faculty of INSA Lyon",
-        role: "Communication and activities coordinator"
+        title: "AEDI (Association des Élèves du Département Informatique)",
+        period: "2018-19",
+        company: "Association étudiante de la faculté d'informatique de l'INSA Lyon",
+        description: "Coordinateur de communication et d'activités"
     },
     {
-        organization: "Media La Mouete",
-        period: "2017-2019",
-        description: "INSA Lyon audiovisual association",
-        role: "Communication coordinator"
+        title: "Média La Mouete",
+        period: "2017-19",
+        company: "Association audiovisuelle de l'INSA Lyon",
+        description: "Coordinateur de communication"
     },
     {
-        organization: "OSIU (Orchestre Symphonique INSA - Universités)",
-        period: "2015-2019",
-        description: "INSA Lyon orchestra association",
-        role: "Violonist and graphic designer"
+        title: "OSIU (Orchestre Symphonique INSA - Universités)",
+        period: "2015-19",
+        company: "Association de l'orchestre de l'INSA Lyon",
+        description: "Violoniste et graphiste"
     },
     {
-        organization: "AMI (Association Musicale de l'INSA)",
-        period: "2015-2019",
-        description: "INSA Lyon musical association",
-        role: "Musician and graphic designer"
+        title: "AMI (Association Musicale de l'INSA)",
+        period: "2015-19",
+        company: "Association musicale de l'INSA Lyon",
+        description: "Musicien et graphiste"
     }
+];
+
+export const educationExperiences = [
+    {
+        title: "Scientifique des données",
+        period: "2023-*",
+        company: "DataValor (Villeurbanne)",
+        type: "CDD",
+    },
+    {
+        title: "Doctorat en Science des Données et Énergies Renouvelables",
+        period: "2020-23",
+        company: "Laboratoire LIRIS (Villeurbanne, France), Compagnie Nationale du Rhône (Lyon, France)",
+        // description: "Voir la description",
+        link: {
+            url: "https://engrainage-media.com/",
+            text: "Voir plus"
+        },
+    },
+    {
+        title: "Programmation AGILE et R&D en traitement du langage naturel",
+        period: "2019",
+        length: "4 mois",
+        company: "Worldline (Lyon)",
+        type: "Stage",
+        description: "J'ai travaillé avec une équipe AGILE sur le développement d'un grand produit de Worldline (Contact). En parallèle, j'ai également collaboré étroitement avec la R&D sur le NLP pour le développement d'un chatbot.",
+    },
+    {
+        title: "Administrateur technique SAP",
+        period: "2018",
+        length: "3 mois",
+        company: "Oxya (Dardilly)",
+        type: "Stage",
+        description: "Mon stage dans une entreprise de gestion SAP m'a donné une vision globale du paysage SAP, de ses modules, de la maintenance et de son fonctionnement. J'ai également approfondi mes connaissances techniques (Unix, réseau, base de données, web...) et mes capacités à travailler en équipe.",
+    },
+    {
+        title: "Assistant de laboratoire",
+        period: "2016",
+        length: "1 mois",
+        company: "Schneider Electric (L'Isle-d'Espagnac)",
+        type: "Stage",
+        description: "Ce stage m'a permis d'acquérir des connaissances sur le fonctionnement de l'entreprise et de sa chaîne de production.",
+    },
+];
+
+var teachingExperiences = [
+
 ];

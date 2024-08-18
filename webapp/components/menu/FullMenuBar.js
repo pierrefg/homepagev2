@@ -22,7 +22,7 @@ export default function FullMenuBar() {
     };
 
     return (
-        <div className="fixed top-0 left-0 w-full border-b-2 md:border-b-gray-700 py-4 z-50 bg-black h-[90px]">
+        <div className="fixed top-0 left-0 w-full border-b-2 border-b-gray-500 py-4 z-50 bg-black h-[80px]">
             <div className="flex items-center justify-between max-w-6xl mx-auto px-4 ">
                 <Link href="/" passHref>
                     <Portrait size={50}/>
@@ -55,7 +55,7 @@ export default function FullMenuBar() {
 
             {/* Mobile Menu */}
             {menuOpen && (
-                <div className="md:hidden flex flex-col items-center gap-6">
+                <div className="md:hidden flex flex-col items-center gap-6 bg-black pt-4 border-b-2 border-b-gray-500">
                     <MenuBar toDoOnElementClick={hideMenu} />
                     <SocialIcons />
                 </div>

@@ -1,61 +1,105 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
+
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
+import { AiOutlineTool } from "react-icons/ai";
+import { PiChalkboardTeacherLight } from "react-icons/pi";
 
-import { workExperiences, volunteeringExperiences } from './data';
+import { workExperiences, volunteeringExperiences, educationExperiences, teachingExperiences } from './data';
+
+import Timeline from "./timeline";
+
+import { isMobileDevice } from '@/components/isMobileDevice';
+
+// Declare all_timelines as a constant
+const all_timelines = [
+    {
+        icon: AiOutlineTool,
+        data: workExperiences,
+        title: 'Expérience',
+        anchor: 'experience'
+    },
+    {
+        icon: MdOutlineVolunteerActivism,
+        data: volunteeringExperiences,
+        title: 'Bénévolat',
+        anchor: 'volunteering'
+    },
+    {
+        icon: IoSchoolOutline,
+        data: educationExperiences,
+        title: 'Formation',
+        anchor: 'education'
+    },
+    {
+        icon: PiChalkboardTeacherLight,
+        data: teachingExperiences,
+        title: 'Enseignement',
+        anchor: 'teaching'
+    }
+];
 
 export default function Background() {
-    return (
-        <div className="flex flex-col gap-4">
-            <div className="flex grid grid-cols-7 gap-4">
-                <div className="col-span-2 text-white p-4 flex items-center justify-end border-r border-r-2 border-white">
-                    <IoSchoolOutline className="text-2xl mr-2" />
-                    Education
-                </div>
-                <div className="col-span-5 text-white">
-                    <ul>
-                        {workExperiences.map((experience, index) => (
-                            <li key={index} className="mt-4">
-                                <div className="flex grid grid-cols-8">
-                                    <div className="col-span-2">
-                                        { experience.period }<br/>
-                                        { experience.type && experience.type }
-                                    </div>
-                                    <div className="col-span-6">
-                                        <strong>{experience.title}</strong><br/>
-                                        { experience.company }<br />
-                                        <i>{experience.description}</i>
-                                        {experience.link && (
-                                            <span> <a href={experience.link.url} target="_blank" rel="noopener noreferrer">here</a></span>
-                                        )}
-                                    </div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </div>
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
-            <div className="flex grid grid-cols-7 gap-4">
-                <div className="col-span-2 text-white p-4 flex items-center justify-end border-r border-r-2 border-white">
-                    <MdOutlineVolunteerActivism className="text-2xl mr-2" />
-                    Volunteering
-                </div>
-                <div className="col-span-5 text-white">
-                    <ul>
-                        {volunteeringExperiences.map((experience, index) => (
-                            <li key={index}>
-                                <strong>{experience.organization}</strong> | <i>{experience.period}</i>
-                                <br />
-                                {experience.description}
-                                <br /><i>{experience.role}</i>
-                                {experience.link && (
-                                    <span> <a href={experience.link.url} target="_blank" rel="noopener noreferrer">{experience.link.text}</a></span>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
+    const [activeTimeline, setActiveTimeline] = useState('experience');
+
+    useEffect(() => {
+        const hash = searchParams.get('section');
+        const matchedTimeline = all_timelines.find(timeline => timeline.anchor === hash);
+        if (matchedTimeline) {
+            setActiveTimeline(matchedTimeline.title);
+        }
+    }, [searchParams]);
+
+    const handleClick = (title, anchor) => {
+        setActiveTimeline(title);
+        router.replace(`${pathname}?section=${anchor}`, undefined, { shallow: true });
+    };
+
+    return (
+        <>
+            <div className="flex justify-center my-2 md:flex bg-black">
+                <div className="flex flex-row items-center gap-4 overflow-x-auto whitespace-nowrap h-[50px] px-4">
+                    {all_timelines.map((timelineData, index) => {
+                        const isActive = activeTimeline === timelineData.title;
+                        const IconComponent = timelineData.icon;
+                        return (
+                            <button
+                                key={index}
+                                className={`btn-white-secondary ${isActive ? 'active' : ''}`}
+                                onClick={() => handleClick(timelineData.title, timelineData.anchor)}
+                            >
+                                <IconComponent className="text-base inline" />
+                                <span> {timelineData.title}</span>
+                            </button>
+                        );
+                    })}
                 </div>
             </div>
-        </div>
+            
+            <div className="flex flex-col gap-4 text-sm md:text-base  px-6">
+                {all_timelines.map((timelineData, index) => {
+                    if (timelineData.title === activeTimeline) {
+                        return (
+                            <div className='flex mt-6 w-full'>
+                                <Timeline
+                                    key={index}
+                                    Icon={timelineData.icon}
+                                    title={timelineData.title}
+                                    data={timelineData.data}
+                                />
+                            </div>
+                        );
+                    }
+                    return null;
+                })}
+            </div>
+        </>
     );
 }

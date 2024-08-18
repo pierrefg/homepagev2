@@ -3,43 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
 
 }
 
 html {
-  background-color: rgb(var(--foreground-rgb));
-  color: white;
+    background-color: rgb(var(--foreground-rgb));
+    color: white;
+    scroll-behavior: smooth;
 }
 
 .btn-white-primary {
-  @apply px-6 py-3 bg-white text-black hover:bg-purple-700 hover:text-white hover:animate-pulse transition-colors duration-300 ease-in-out;
+    @apply px-3 py-2 bg-white text-black hover:bg-purple-700 hover:text-white hover:animate-pulse transition-colors duration-300 ease-in-out;
 }
 
 .btn-white-primary.active {
-  @apply bg-purple-700 text-white;
-  rotate: 2deg;
+    @apply bg-purple-700 text-white;
+    rotate: 2deg;
 }
 
+.btn-white-secondary {
+    @apply px-3 py-1 bg-black  text-white border-solid border-2 border-white hover:text-white transition-colors duration-300 ease-in-out;
+}
+
+.btn-white-secondary:hover {
+    @apply border-purple-700;
+}
+
+
+.btn-white-secondary.active {
+    @apply border-purple-700 text-white;
+    rotate: 2deg;
+}
+
+
 .icon {
-  @apply text-2xl hover:text-purple-700;
-  display: inline ;
+    @apply text-2xl hover:text-purple-700;
+    display: inline ;
 }
 
 .icon.icon-link {
-  @apply hover:text-purple-700 transition-colors duration-300 ease-in-out;
+    @apply hover:text-purple-700 transition-colors duration-300 ease-in-out;
 }
 
 .snake {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
 }
 
 .pfg-tab {
-  a {
-    @apply border-solid border-2 border-white hover:bg-purple-700 p-1 cursor-pointer;
-  }
+    a {
+        @apply border-solid border-2 border-white hover:bg-purple-700 p-1 cursor-pointer;
+    }
 } 
+
+.timeline .timeline-title {
+    @apply flex text-white p-4 md:col-span-1 justify-center items-center 
+        border-2 border-white 
+        md:border-r-2  md:justify-end md:border-0;
+}
+
 
