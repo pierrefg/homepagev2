@@ -7,10 +7,10 @@ export default function MenuBar({ toDoOnElementClick }) {
     const pathname = usePathname();
 
     var links = [
-        ['Mon parcours', '/background?section=experience'],
+        ['Mon parcours', '/background'],
         ['Graphisme', '/graphics'],
         ['Photographie', '/photography'],
-        ['Musique', '/music'],
+        ['Musique', '/music', ''],
         ['Vidéo', '/video'],
     ]; 
 
@@ -19,17 +19,16 @@ export default function MenuBar({ toDoOnElementClick }) {
             {
                 links.map(
                     ([title, link], index) => {
-                        const isActive = pathname === link;
+                        const isActive = pathname.includes(link);
                         
                         return (
-                            <Link key={index} href={link}>
-                                <button 
-                                    key={index} 
-                                    className={`btn-white-primary ${isActive ? 'active' : ''}   `}
-                                    onClick={ toDoOnElementClick }
-                                >                                    
-                                    {title}
-                                </button>
+                            <Link 
+                                key={index} 
+                                href={link}
+                                className={`btn-white-primary ${isActive ? 'active' : ''}`}
+                                onClick={ toDoOnElementClick }
+                            >
+                                {title}
                             </Link>
                         )
                     }
