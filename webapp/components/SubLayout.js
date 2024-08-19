@@ -26,7 +26,7 @@ export default function SubLayout({ children, pagesData }) {
                 </div>
             </div>
             
-            <div className="flex text-sm w-full justify-center md:text-base px-6 mt-[70px] md:mt-[90px]">
+            <div className="flex text-sm w-full justify-center md:text-base px-6 mt-[50px] md:mt-[90px]">
                 {children}
             </div>
         </>

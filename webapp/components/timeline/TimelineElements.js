@@ -36,11 +36,11 @@ export default function TimelineElement({ elementData }) {
                 </h3>
 
                 {/* Visible on Smaller Screens */}
-                <span className="md:hidden block mt-2">
+                <span className="md:hidden block">
                     <time>{elementData.period}</time><br className="hidden md:block"/>
                     {elementData.type && (
                         <span className="text-sm text-gray-400">
-                            <span> | </span>({elementData.type})
+                            <span> | </span>{elementData.type}
                         </span>
                     )}
                 </span>
@@ -50,7 +50,7 @@ export default function TimelineElement({ elementData }) {
                     elementData.companies &&
                     elementData.companies.map((company, index) => (
                         <span key={index}>
-                            { index>0 && <> | </> }
+                            { index>0 && <><span className="hidden md:inline"> | </span><br className="block md:hidden" /></> }
                             {
                                 company.link ?
                                 <span>
@@ -60,7 +60,7 @@ export default function TimelineElement({ elementData }) {
                                 : 
                                 <>{company.name}</>
                             }
-                            <> ({company.place})</>
+                            <span className="hidden md:inlin"> ({company.place})</span>
                         </span>
                     ))
                 }
