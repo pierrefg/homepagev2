@@ -1,7 +1,16 @@
+"use client";
+
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+import Loader from '@/components/Loader';
+
 export default function Science() {
-    return (
-        <main>
-            science
-        </main>
-    )   
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push('/science/research');
+    }, []);
+
+    return <Loader />;
 }

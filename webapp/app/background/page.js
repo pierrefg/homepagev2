@@ -9,7 +9,7 @@ export default function Background() {
     const router = useRouter();
 
     useEffect(() => {
-    router.push('/background/work');
+        router.push('/background/work');
     }, []);
 
     return <Loader />;

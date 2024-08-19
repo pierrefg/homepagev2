@@ -1,10 +1,11 @@
 import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineMail, AiOutlineGithub, AiOutlineExperiment   } from "react-icons/ai";
+import { IoDocumentsOutline } from "react-icons/io5";
 
 export default function SocialIcons() {
     var socialIcons = [
         [AiOutlineInstagram, "https://www.instagram.com/pierre_fg/"],
         [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
-        [AiOutlineExperiment, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
+        [IoDocumentsOutline, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
         [AiOutlineGithub, "https://github.com/PierreFG"],
         [AiOutlineMail, "mailto: pierrefg@proton.me"]
     ]
