@@ -54,8 +54,7 @@ export default function TimelineElement({ elementData }) {
                             {
                                 company.link ?
                                 <span>
-                                    <IoLink className="inline"/>
-                                    <a href={company.link} target="_blank" rel="noopener noreferrer"> {company.name}</a>
+                                    <a href={company.link} target="_blank" rel="noopener noreferrer"><IoLink className="inline"/> {company.name}</a>
                                 </span>
                                 
                                 : 
