@@ -53,9 +53,12 @@ html {
     z-index: -10;
 }
 
-.pfg-tab {
+.pfg-tab{
     a {
-        @apply border-solid border-2 border-white hover:bg-purple-700 p-1 cursor-pointer;
+        @apply hover:text-purple-700 cursor-pointer;
+    }
+    .special-link {
+        @apply border-solid border-2 border-white no-underline hover:bg-purple-700 px-1 hover:text-white;
     }
 } 
 

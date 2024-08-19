@@ -1,4 +1,4 @@
-import Timeline from "@/components/Timeline";
+import Timeline from "@/components/timeline/Timeline";
 import { volunteeringData } from "./data";
 
 import { MdOutlineVolunteerActivism } from "react-icons/md";

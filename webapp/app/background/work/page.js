@@ -1,4 +1,4 @@
-import Timeline from "@/components/Timeline";
+import Timeline from "@/components/timeline/Timeline";
 import { workData } from "./data";
 
 import { AiOutlineTool } from "react-icons/ai";

@@ -1,4 +1,4 @@
-import Timeline from "@/components/Timeline";
+import Timeline from "@/components/timeline/Timeline";
 import { teachingData } from "./data";
 
 import { PiChalkboardTeacherLight } from "react-icons/pi";
