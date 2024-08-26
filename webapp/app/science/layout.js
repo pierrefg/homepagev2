@@ -14,7 +14,7 @@ const scienceContent = [
         link: '/science/data-science'
     },
     {
-        title: <span><IoDocumentsOutline className='inline' /> Publications</span>,
+        title: <span><IoDocumentsOutline className='inline' /> Publications, séminaires...</span>,
         link: '/science/publications'
     },
 ];

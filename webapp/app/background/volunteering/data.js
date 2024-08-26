@@ -6,7 +6,7 @@ export const volunteeringData = [
         },
         subtitle: "Média sur l'écologie radicale",
         period: "2024-*",
-        description: "Design graphique et photographie",
+        description: "Photographe et graphiste",
     },
     {
         title: {

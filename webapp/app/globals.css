@@ -36,14 +36,13 @@ html {
     rotate: 2deg;
 }
 
-
-.icon {
-    @apply text-2xl hover:text-purple-700;
-    display: inline ;
+a {
+    @apply hover:text-purple-700 transition-colors duration-300 ease-in-out cursor-pointer;
 }
 
-.icon.icon-link {
-    @apply hover:text-purple-700 transition-colors duration-300 ease-in-out;
+.icon {
+    @apply text-2xl;
+    display: inline ;
 }
 
 .snake {
@@ -54,31 +53,7 @@ html {
 }
 
 .pfg-tab{
-    a {
-        @apply hover:text-purple-700 cursor-pointer;
-    }
     .special-link {
         @apply border-solid border-2 border-white no-underline hover:bg-purple-700 px-1 hover:text-white;
     }
 } 
-
-.timeline .timeline-title {
-    @apply flex text-white p-4 justify-center items-center 
-        border-b-2 border-white 
-        md:border-r-2 md:justify-end md:border-0;
-}
-
-.square-loader {
-    @apply w-16 h-16 bg-purple-700 border-solid border-2 border-white; /* Width: 4rem (16), Height: 4rem (16), Background color: white */
-    animation: rotate 3s linear infinite;
-  }
-  
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-

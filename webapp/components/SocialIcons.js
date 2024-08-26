@@ -7,7 +7,7 @@ export default function SocialIcons() {
         [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
         [IoDocumentsOutline, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
         [AiOutlineGithub, "https://github.com/PierreFG"],
-        [AiOutlineMail, "mailto: pierrefg@proton.me"]
+        // [AiOutlineMail, "mailto: pierrefg@proton.me"]
     ]
 
     return (

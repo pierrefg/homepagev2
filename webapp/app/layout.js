@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import LayoutSelector from "./LayoutSelector";
-import Loader from "@/components/Loader";
+import Loader from "@/components/loader/Loader";
 
 import React, { Suspense } from 'react';
 

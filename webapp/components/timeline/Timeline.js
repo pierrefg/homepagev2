@@ -1,6 +1,8 @@
+import './style.css'
+
 import TimelineElement from "./TimelineElements";
 
-export default function Timeline({ Icon, title, data }) {
+export default function Timeline({ Icon, title, data, authorData, largeDate=false }) {
     return (
         <div className="timeline grid md:grid-cols-[180px_1fr] gap-4">
             <div className="timeline-title">
@@ -13,7 +15,11 @@ export default function Timeline({ Icon, title, data }) {
                         data.map(
                             (elementData, index) => (
                                 <div key={index} className="flex">
-                                    <TimelineElement elementData={elementData} />
+                                    <TimelineElement 
+                                        elementData={elementData} 
+                                        authorData={authorData} 
+                                        largeDate={largeDate}
+                                    />
                                 </div>
                             )
                         )

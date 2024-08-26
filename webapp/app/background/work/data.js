@@ -18,6 +18,7 @@ export const workData = [
             name: "Doctorat en Science des Données et Énergies Renouvelables",
         },
         period: "2020-23",
+        type: "Doctorat",
         companies: [ 
             {
                 name: 'Laboratoire LIRIS',

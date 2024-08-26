@@ -12,7 +12,10 @@ export const educationData = [
                 link: "https://www.gatech.edu/"
             }
         ],
-        description: "Machine learning, algorithmics, computer vision, data mining, data visualization..."
+        description: "Machine learning, algorithmics, computer vision, data mining, data visualization...",
+        highlight: {
+            text: "GPA de 4/4"
+        }
     },
     {
         title: {
@@ -22,7 +25,7 @@ export const educationData = [
         period: "2018-20",
         companies: [ 
             {
-                name: 'Institut National des sciences appliquées de Lyon',
+                name: 'Institut National des Sciences Appliquées de Lyon',
                 place: 'Villeurbanne, France',
                 link: "https://www.insa-lyon.fr/"
             }
@@ -37,23 +40,21 @@ export const educationData = [
         period: "2015-18",
         companies: [ 
             {
-                name: 'Institut National des sciences appliquées de Lyon',
+                name: 'Institut National des Sciences Appliquées de Lyon',
                 place: 'Villeurbanne, France',
                 link: "https://www.insa-lyon.fr/"
             }
         ],
         description: "Mathematics, physics, chemistry...",
-        links: [
-            {
-                text: "Best internship video award",
-                url: "https://www.youtube.com/watch?v=RzpSbEcSk-A"
-            }
-        ]
+        highlight: {
+            text: "Challenge multimédia Gaston Berger : prix de la meilleure vidéo de rapport de stage",
+            url: "https://www.youtube.com/watch?v=RzpSbEcSk-A"
+        }
     },
     {
         title: {
             name: "Baccalauréat scientifique",
-            postname: "(mention très bien)"
+            // postname: "(mention très bien)"
         },
         period: "2013-15",
         companies: [ 
@@ -63,6 +64,9 @@ export const educationData = [
                 link: "https://etab.ac-poitiers.fr/lycee-guez-de-balzac/spip.php"
             }
         ],
-        description: "Spécialisation Sciences et Vie de la Terre, section musique"
+        description: "Spécialisation Sciences et Vie de la Terre, section musique",
+        highlight: {
+            text: "Mention très bien"
+        }
     }
 ];
