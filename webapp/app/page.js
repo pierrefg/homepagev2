@@ -1,3 +1,7 @@
+'use client';
+
+import useStore from '@/store/useStore';
+
 import Portrait from "@/components/Portrait";
 import MenuBar from '@/components/menu/MenuButtons';
 import SocialIcons from '@/components/SocialIcons'
@@ -5,9 +9,11 @@ import Copyright from "@/components/Copyright";
 import Snake from "@/components/snake/Snake";
 
 export default function Landing() {
+    const { darkMode } = useStore();
+
     return (
         <>
-            <div className="absolute inset-0 z-10 pointer-events-none">
+            <div className={`absolute inset-0 z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
                 <Snake color = "purple" />
                 <Snake color = "blue" />
             </div>

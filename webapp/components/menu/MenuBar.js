@@ -2,9 +2,11 @@
 
 import './style.css';
 
-import Link from "next/link";
-import { useState } from 'react';
+import useStore from '@/store/useStore';
 
+import Link from "next/link";
+
+import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
 import Portrait from '@/components/Portrait';
 import SocialIcons from '@/components/SocialIcons';
 import MenuButtons from '@/components/menu/MenuButtons';
@@ -13,56 +15,67 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 export default function MenuBar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const hideMenu = () => {
-        setMenuOpen(false);
-    };
+    const { menuOpen, switchMenu } = useStore();
 
     return (
-        <div className="menu-bar">
-            <div className="flex items-center justify-between max-w-6xl mx-auto px-4 h-full">
-                <div className="flex items-center h-full">
-                    <Link href="/" passHref>
-                        <Portrait size={50}/>
-                    </Link>
-                </div>
-                
-                {/* Desktop Menu */}
-                <div className="hidden md:flex flex-1 justify-center items-center h-full">
-                    <MenuButtons />
+        <>
+            {
+                menuOpen && 
+                <div
+                    className="absolute fixed inset-0 bg-black bg-opacity-50 z-10 min-h-screen"
+                    onClick={switchMenu}
+                />
+            }
+            <div className="menu-bar z-50">
+                <div className="flex items-center justify-between max-w-6xl mx-auto px-4 h-full">
+                    <div className="flex items-center h-full">
+                        <Link href="/" passHref>
+                            <Portrait size={50}/>
+                        </Link>
+                    </div>
+                    
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex flex-1 justify-center items-center h-full">
+                        <MenuButtons />
+                    </div>
+
+                    <div className="hidden md:flex items-center h-full">
+                        <SocialIcons />
+                    </div>
+
+                    <div className='flex items-center text-center md:hidden text-1xl h-full'>
+                        Pierre FG
+                    </div>
+                    
+                    {/* Hamburger Menu Icon */}
+                    <button
+                        className="md:hidden flex items-center px-3 py-2 text-2xl"
+                        onClick={switchMenu}
+                    >
+                        {
+                            menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />
+                        }
+                    </button>
                 </div>
 
-                <div className="hidden md:flex items-center h-full">
-                    <SocialIcons />
-                </div>
-
-                <div className='flex items-center text-center md:hidden text-1xl h-full'>
-                    Pierre FG
-                </div>
+                {/* Mobile Menu */}
                 
-                {/* Hamburger Menu Icon */}
-                <button
-                    className="md:hidden flex items-center px-3 py-2 text-2xl"
-                    onClick={toggleMenu}
-                >
-                    {
-                        menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />
-                    }
-                </button>
+                {menuOpen && (
+                    <div className="mobile-menu-bar fixed w-full flex flex-col z-50">
+                        <div className='flex flex-col items-center gap-6'>
+                            <div className='flex'>
+                                <MenuButtons toDoOnElementClick={switchMenu} />
+                            </div>
+                            <div className='flex'>
+                                <SocialIcons />
+                            </div>
+                            <div className='flex h-[50px]'>
+                                <ThemeSwitch />
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
-
-            {/* Mobile Menu */}
-            {menuOpen && (
-                <div className="md:hidden flex flex-col items-center gap-6 bg-black pt-4">
-                    <MenuBar toDoOnElementClick={hideMenu} />
-                    <SocialIcons />
-                </div>
-            )}
-        </div>
+        </>
     );
 }

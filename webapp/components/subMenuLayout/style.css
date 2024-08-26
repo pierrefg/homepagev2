@@ -1,5 +1,5 @@
 .sub-menu-layout {
-    @apply flex fixed left-0 top-[75px] w-full bg-[theme('colors.foreground')] items-center h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] justify-center;
+    @apply flex fixed left-0 top-[75px] w-full bg-[theme('colors.foreground')] items-center h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] justify-center transition-colors duration-300;
 }
 
 .sub-menu-layout > div {

@@ -1,7 +1,7 @@
 .switch-body {
-    @apply w-20 h-10 rounded-full z-40 bg-white flex items-center border-solid border-2 border-black transition duration-300 focus:outline-none;
+    @apply w-[50px] h-[7px] rounded-full z-40 flex items-center transition duration-300 focus:outline-none ease-in-out;
 }
 
 .switch-button {
-    @apply w-12 h-12 relative rounded-full transition duration-500 flex items-center justify-center text-white;
+    @apply w-[40px] h-[30px] relative rounded-full transition duration-300 flex items-center justify-center text-white ease-in-out;
 }

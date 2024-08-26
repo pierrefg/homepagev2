@@ -33,19 +33,12 @@
 }
 
 #main-container {
-    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth;
+    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth transition-colors duration-300 ease-in-out;
 }
-
-/* .primary-menu {
-    @apply h-[var(--primary-menu-height)] bg-primary text-[rgb(var(--primary-text-color-rgb))];
-}
-
-.secondary-menu {
-    @apply h-[var(--secondary-menu-height)] bg-secondary text-[rgb(var(--secondary-text-color-rgb))];
-} */
 
 .btn-primary {
-    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground hover:bg-primary-hover hover:text-primary hover:animate-pulse transition-colors duration-300 ease-in-out;
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground hover:bg-primary-hover hover:text-primary hover:animate-pulse;
+    @apply transition-colors duration-300 ease-in-out;
 }
 
 .btn-primary.active {
@@ -53,7 +46,8 @@
 }
 
 .btn-secondary {
-    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-secondary text-primary border-solid border-2 border-primary hover:text-primary transition-colors duration-300 ease-in-out;
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-secondary text-primary border-solid border-2 border-primary hover:text-primary;
+    @apply transition-colors duration-300 ease-in-out;
 }
 
 .btn-secondary:hover {
