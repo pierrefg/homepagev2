@@ -1,8 +1,7 @@
 export const educationData = [
     {
         title: {
-            name: "Master of Science in Computer Science",
-            postname: "(GPA 4/4)"
+            name: "Master of Science in Computer Science"
         },
         period: "2019-20",
         companies: [ 
@@ -53,8 +52,7 @@ export const educationData = [
     },
     {
         title: {
-            name: "Baccalauréat scientifique",
-            // postname: "(mention très bien)"
+            name: "Baccalauréat scientifique"
         },
         period: "2013-15",
         companies: [ 

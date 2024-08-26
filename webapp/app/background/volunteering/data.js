@@ -6,7 +6,7 @@ export const volunteeringData = [
         },
         subtitle: "Média sur l'écologie radicale",
         period: "2024-*",
-        description: "Photographe et graphiste",
+        description: "Photographe, site web et graphisme",
     },
     {
         title: {
@@ -32,9 +32,9 @@ export const volunteeringData = [
             postname: "(Association des Élèves du Département Informatique)",
             link: "https://aedi-insa-lyon.fr/fr/"
         },
-        subtitle: "Association étudiante de la faculté d'informatique de l'INSA Lyon",
+        subtitle: "Association de la faculté d'informatique de l'INSA Lyon",
         period: "2018-19",
-        description: "Coordinateur de communication et d'activités"
+        description: "Graphiste et responsable logistique"
     },
     {
         title: {
@@ -43,7 +43,7 @@ export const volunteeringData = [
         },
         subtitle: "Association de cinéma de l'INSA Lyon",
         period: "2017-19",
-        description: "Coordinateur de communication"
+        description: "Graphiste et coordinateur de la communication"
     },
     {
         title: {
