@@ -39,7 +39,8 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     </strong>
                 </h2>
 
-                <div className="text-sm text-gray-300">
+                <div className="text-sm text-gray-300 pl-0">
+                    {/* SUBTITLE */}
                     {
                         elementData.subtitle &&
                         <h3>
@@ -78,11 +79,11 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     {
                         elementData.companies &&
                         <div>
-                            <><FaBuilding className="inline" /> </>
                             {
                                 elementData.companies.map((company, index) => (
                                     <span key={index}>
-                                        { index>0 && <><span className="hidden md:inline">, </span><br className="block md:hidden" /></> }
+                                        { (company.context || index==0) && <><FaBuilding className="inline" /> </> }
+                                        { (index>0 && !company.context) && <><span className="hidden md:inline">, </span><br className="block md:hidden" /></> }
                                         {
                                             company.link ?
                                             <span>
@@ -105,8 +106,9 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                                                 }  
                                             </>
                                         }
-                                        
-
+                                        { company.context && <span> • {company.context}</span> }
+                                        { company.date && <span> • {company.date}</span> }
+                                        { company.context && <br /> }
                                     </span>
                                 ))
                             }
