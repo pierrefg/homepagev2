@@ -3,57 +3,75 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-
+    /* MENU */
+    --primary-menu-height: 75px; /* Default primary menu height */
+    --secondary-menu-height: 90px; /* Default secondary menu height */
+    --secondary-menu-mobile-height: 70px;
+    /* FOREGROUND */
+    --foreground-rgb: 0, 0, 0; /* Background color */
+    /* PRIMARY */
+    --primary-color-rgb: 255, 255, 255; /* Button primary color */
+    --primary-hover-color-rgb: 128, 0, 128; /* Button primary hover color */
+    --primary-muted-color-rgb: 180, 180, 180;
+    /* SECONDARY */
+    --secondary-color-rgb: 0, 0, 0; /* Button secondary color */
+    --secondary-hover-color-rgb: 128, 0, 128; /* Button secondary hover color */
+    /* SPACING */
+    --btn-padding-x: 12px; /* Button padding x */
+    --btn-padding-y: 8px; /* Button padding y */
 }
 
-html {
-    background-color: rgb(var(--foreground-rgb));
-    color: white;
-    scroll-behavior: smooth;
+#main-container.light {
+    --foreground-rgb: 255, 255, 255; /* Background color */
+    /* PRIMARY */
+    --primary-color-rgb: 0, 0, 0; /* Button primary color */
+    --primary-hover-color-rgb: 128, 0, 128; /* Button primary hover color */
+    --primary-muted-color-rgb: 70, 70, 70;
+    /* SECONDARY */
+    --secondary-color-rgb: 255, 255, 255; /* Button secondary color */
+    --secondary-hover-color-rgb: 128, 0, 128; /* Button secondary hover color */
 }
 
-.btn-white-primary {
-    @apply px-3 py-2 bg-white text-black hover:bg-purple-700 hover:text-white hover:animate-pulse transition-colors duration-300 ease-in-out;
+#main-container {
+    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth;
 }
 
-.btn-white-primary.active {
-    @apply bg-purple-700 text-white;
-    rotate: 2deg;
+/* .primary-menu {
+    @apply h-[var(--primary-menu-height)] bg-primary text-[rgb(var(--primary-text-color-rgb))];
 }
 
-.btn-white-secondary {
-    @apply px-3 py-1 bg-black  text-white border-solid border-2 border-white hover:text-white transition-colors duration-300 ease-in-out;
+.secondary-menu {
+    @apply h-[var(--secondary-menu-height)] bg-secondary text-[rgb(var(--secondary-text-color-rgb))];
+} */
+
+.btn-primary {
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground hover:bg-primary-hover hover:text-primary hover:animate-pulse transition-colors duration-300 ease-in-out;
 }
 
-.btn-white-secondary:hover {
-    @apply border-purple-700;
+.btn-primary.active {
+    @apply bg-primary-hover text-white rotate-2;
 }
 
+.btn-secondary {
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-secondary text-primary border-solid border-2 border-primary hover:text-primary transition-colors duration-300 ease-in-out;
+}
 
-.btn-white-secondary.active {
-    @apply border-purple-700 text-white;
-    rotate: 2deg;
+.btn-secondary:hover {
+    @apply border-secondary-hover;
+}
+
+.btn-secondary.active {
+    @apply border-secondary-hover text-primary rotate-2;
 }
 
 a {
-    @apply hover:text-purple-700 transition-colors duration-300 ease-in-out cursor-pointer;
+    @apply hover:text-primary-hover transition-colors duration-300 ease-in-out cursor-pointer;
 }
 
 .icon {
-    @apply text-2xl;
-    display: inline ;
+    @apply text-2xl inline;
 }
 
-.snake {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+.pfg-tab .special-link {
+    @apply border-solid border-2 border-primary no-underline hover:bg-primary-hover px-1 hover:text-primary;
 }
-
-.pfg-tab{
-    .special-link {
-        @apply border-solid border-2 border-white no-underline hover:bg-purple-700 px-1 hover:text-white;
-    }
-} 

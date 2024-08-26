@@ -1,0 +1,7 @@
+.sub-menu-layout {
+    @apply flex fixed left-0 top-[75px] w-full bg-[theme('colors.foreground')] items-center h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] justify-center;
+}
+
+.sub-menu-layout > div {
+    @apply flex flex-row items-center justify-center w-full;
+}

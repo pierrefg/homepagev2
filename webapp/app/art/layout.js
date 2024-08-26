@@ -1,4 +1,4 @@
-import SubLayout from '@/components/SubLayout';
+import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
 import { IoMusicalNoteOutline } from "react-icons/io5";
 import { MdOutlinePhotoCamera } from "react-icons/md";
@@ -27,7 +27,7 @@ const artContent = [
 export default function ArtLayout({ children }) {
     return (
         <>
-            <SubLayout pagesData={artContent}>{children}</SubLayout>
+            <SubMenuLayout pagesData={artContent}>{children}</SubMenuLayout>
         </>
     );
 }

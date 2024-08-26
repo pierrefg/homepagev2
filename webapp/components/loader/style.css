@@ -1,7 +1,11 @@
+.loader-div {
+    @apply fixed inset-0 flex items-center justify-center bg-[theme('colors.foreground')] z-50;
+}
+
 .square-loader {
-    @apply w-16 h-16 bg-purple-700 border-solid border-2 border-white; /* Width: 4rem (16), Height: 4rem (16), Background color: white */
+    @apply w-16 h-16 bg-primary-hover border-solid border-2 border-white;
     animation: rotate 3s linear infinite;
-  }
+}
   
 @keyframes rotate {
     0% {

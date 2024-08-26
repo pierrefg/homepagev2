@@ -9,7 +9,7 @@ export default function Timeline({ Icon, title, data, authorData, largeDate=fals
                 <Icon className="text-base inline mr-2" />
                 <h1>{title}</h1>
             </div>
-            <div className="text-white">
+            <div className="text-primary">
                 <div className="flex flex-col gap-6">
                     {
                         data.map(

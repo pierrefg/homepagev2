@@ -1,5 +1,7 @@
 "use client";
 
+import './style.css';
+
 import React, { useEffect, useState } from 'react';
 
 export default function Snake({color= 'purple'}) {
@@ -8,7 +10,6 @@ export default function Snake({color= 'purple'}) {
     const max_opacity = 0.4;
     const big_interval_time = Math.random()*8*1000;
     const small_interval_time = Math.random()*2*100;
-    const opacity_delta = small_interval_time/big_interval_time
 
     const [paths, setPaths] = useState([]);
     const [x_delta, setXDelta] = useState([]);

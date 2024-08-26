@@ -1,4 +1,4 @@
-import SubLayout from '@/components/SubLayout';
+import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
 import { IoDocumentsOutline } from "react-icons/io5";
 import { GiChemicalDrop } from "react-icons/gi";
@@ -22,7 +22,7 @@ const scienceContent = [
 export default function ScienceLayout({ children }) {
     return (
         <>
-            <SubLayout pagesData={scienceContent}>{children}</SubLayout>
+            <SubMenuLayout pagesData={scienceContent}>{children}</SubMenuLayout>
         </>
     );
 }

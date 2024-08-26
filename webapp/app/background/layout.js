@@ -1,4 +1,4 @@
-import SubLayout from '@/components/SubLayout';
+import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
 import { PiChalkboardTeacherLight } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
@@ -27,7 +27,7 @@ const backgroundContent = [
 export default function BackgroundLayout({ children }) {
     return (
         <>
-            <SubLayout pagesData={backgroundContent}>{children}</SubLayout>
+            <SubMenuLayout pagesData={backgroundContent}>{children}</SubMenuLayout>
         </>
     );
 }

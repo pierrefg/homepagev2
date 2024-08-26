@@ -7,10 +7,27 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        foreground: 'rgb(var(--foreground-rgb))',
+        primary: {
+          DEFAULT: 'rgb(var(--primary-color-rgb))',
+          hover: 'rgb(var(--primary-hover-color-rgb))',
+          muted: 'rgb(var(--primary-muted-color-rgb))',
+        },
+        secondary: {
+          DEFAULT: 'rgb(var(--secondary-color-rgb))',
+          hover: 'rgb(var(--secondary-hover-color-rgb))',
+          muted: 'rgb(var(--secondary-muted-color-rgb))',
+        },
+      },
+      spacing: {
+        'btn-padding-x': 'var(--btn-padding-x)',
+        'btn-padding-y': 'var(--btn-padding-y)',
+      },
+      height: {
+        'primary-menu': 'var(--primary-menu-height)',
+        'secondary-menu': 'var(--secondary-menu-height)',
+        'secondary-menu-mobile': 'var(--secondary-menu-mobile-height)'
       },
     },
   },

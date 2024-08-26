@@ -9,6 +9,8 @@ import React, { Suspense } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+
+
 export const metadata = {
     title: "Pierre FG",
     description: "Je suis scientifique des données mais également graphiste et photographe. Viens découvrir mon site pour voir ce que je fais !",

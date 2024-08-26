@@ -1,15 +1,17 @@
 import Portrait from "@/components/Portrait";
-import MenuBar from '@/components/menu/MenuBar';
+import MenuBar from '@/components/menu/MenuButtons';
 import SocialIcons from '@/components/SocialIcons'
 import Copyright from "@/components/Copyright";
-import Snake from "@/components/Snake";
+import Snake from "@/components/snake/Snake";
 
 export default function Landing() {
     return (
         <>
-            <Snake color = "purple" />
-            <Snake color = "blue" />
-            <div className="h-screen flex flex-col justify-between">
+            <div className="absolute inset-0 z-10 pointer-events-none">
+                <Snake color = "purple" />
+                <Snake color = "blue" />
+            </div>
+            <div className="relative h-screen flex flex-col justify-between z-20">
                 <div className="flex flex-col gap-6 justify-center items-center flex-grow my-6">
                     <div className="flex flex-col items-center gap-4 ">
                         <div className="flex">
