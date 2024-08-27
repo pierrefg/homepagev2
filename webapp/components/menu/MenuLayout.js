@@ -1,21 +1,39 @@
+import './style.css';
+
+import useStore from '@/store/useStore';
+
 import MenuBar from "./MenuBar";
 import Copyright from "../Copyright";
 
-import './style.css';
+import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
 
 export default function MenuLayout({ children }) {
+    const { menuOpen, switchMenu } = useStore();
+
     return (
-        <div className='flex flex-col justify-between min-h-screen w-full'>
-            <div className="flex z-30 h-full">
+        <div className='flex flex-col min-h-screen'>
+            {/* ThemeSwitch positioning */}
+            <div className='z-50 fixed hidden md:block  top-[calc(var(--primary-menu-height)_/_2_-6px)] right-[50px]'>  
+                <ThemeSwitch />
+            </div>
+
+            {/* MenuBar section */}
+            <div className="z-30">
                 <MenuBar />
             </div>
-            <div className="pfg-tab flex-1 mt-[90px] max-w-7xl w-full mx-auto">
+
+            {/* Main content area */}
+            <div
+                className={`menu-content ${menuOpen ? "opacity-40" : ""}`}
+                onClick={menuOpen ? switchMenu : null}
+            >
                 {children}
             </div>
-            <div className="flex">
+
+            {/* Copyright section */}
+            <div className={`mt-auto ${menuOpen ? "opacity-40" : ""}`}>
                 <Copyright />
             </div>
         </div>
-        
-    )
+    );
 }

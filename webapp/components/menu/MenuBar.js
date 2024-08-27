@@ -19,13 +19,6 @@ export default function MenuBar() {
 
     return (
         <>
-            {
-                menuOpen && 
-                <div
-                    className="absolute fixed inset-0 bg-black bg-opacity-50 z-10 min-h-screen"
-                    onClick={switchMenu}
-                />
-            }
             <div className="menu-bar z-50">
                 <div className="flex items-center justify-between max-w-6xl mx-auto px-4 h-full">
                     <div className="flex items-center h-full">

@@ -6,7 +6,7 @@ export const seminarsData = [
         authors: ['pierref', 'cturbidi', 'vscuturici'],
         companies: [ 
             {
-                name: "Semaine des alrernatives durables de l'INSA Lyon",
+                name: "Semaine des altrernatives durables de l'INSA Lyon",
                 place: 'Lyon, France',
                 link: "https://www.insa-lyon.fr/fr/evenement/sdad-semaine-alternatives-durables-5e-edition-planification-ecologique-et-ressources",
                 date: '2023',

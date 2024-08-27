@@ -5,8 +5,9 @@
 :root {
     /* MENU */
     --primary-menu-height: 75px; /* Default primary menu height */
+    --primary-menu-mobile-height: 70px;
     --secondary-menu-height: 90px; /* Default secondary menu height */
-    --secondary-menu-mobile-height: 70px;
+    --secondary-menu-mobile-height: 75px;
     /* FOREGROUND */
     --foreground-rgb: 0, 0, 0; /* Background color */
     /* PRIMARY */
@@ -33,11 +34,13 @@
 }
 
 #main-container {
-    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth transition-colors duration-300 ease-in-out;
+    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth font-mono;
+    @apply transition-colors duration-300 ease-in-out;
 }
 
 .btn-primary {
-    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground hover:bg-primary-hover hover:text-primary hover:animate-pulse;
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground;
+    @apply hover:bg-primary-hover hover:text-white hover:animate-pulse;
     @apply transition-colors duration-300 ease-in-out;
 }
 
@@ -64,8 +67,4 @@ a {
 
 .icon {
     @apply text-2xl inline;
-}
-
-.pfg-tab .special-link {
-    @apply border-solid border-2 border-primary no-underline hover:bg-primary-hover px-1 hover:text-primary;
 }

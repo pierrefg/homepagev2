@@ -1,7 +1,20 @@
 .sub-menu-layout {
-    @apply flex fixed left-0 top-[75px] w-full bg-[theme('colors.foreground')] items-center h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] justify-center transition-colors duration-300;
+    @apply flex fixed left-0 w-full items-center justify-center;
+    @apply bg-[theme('colors.foreground')] bg-opacity-10;
+    @apply top-[var(--primary-menu-mobile-height)] md:top-[var(--primary-menu-height)] ;
+    @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)];
+    @apply transition-colors duration-300 ease-in-out;
 }
 
-.sub-menu-layout > div {
-    @apply flex flex-row items-center justify-center w-full;
+.sub-menu {
+    @apply flex flex-row gap-4 overflow-x-auto whitespace-nowrap px-4;
+    @apply h-full;
+    @apply items-center;
+}
+
+.sub-menu-content {
+    @apply flex w-full justify-center px-6;
+    @apply text-sm md:text-base;
+    @apply mt-[var(--secondary-menu-mobile-height)];
+    @apply md:mt-[var(--secondary-menu-height)];
 }
