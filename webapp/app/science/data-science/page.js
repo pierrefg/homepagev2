@@ -1,5 +1,8 @@
+import { dataScienceData } from './data';
+import ProjectsList from "@/components/projectsList/ProjectsList";
+
 export default function DataScience() {
     return (
-        <p>Science des données</p>
+        <ProjectsList data={dataScienceData} />
     );
 }

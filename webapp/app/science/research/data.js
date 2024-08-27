@@ -1,12 +1,17 @@
 import diatomPic from './imgs/diatom.png';
 import cePic from './imgs/ce_graph.png';
 
+import { IoHammerOutline } from "react-icons/io5";
+import { MdOutlineWater } from "react-icons/md";
+
 export const researchData = 
     [
         {
             id: 'thesis',
+            icon: IoHammerOutline,
             title: 'Connaissances du Domaine et Fonctions en Science des Données',
             subtitle: "Application à la Production d'Hydroélectricité",
+            period: "2020-23",
             links: [
                 {
                     text: 'manuscrit',
@@ -114,8 +119,10 @@ export const researchData =
         },
         {
             id: 'mthesis',
+            icon: MdOutlineWater,
             title: "Apprentissage Profond pour la Détection et l'Identification Automatique de Diatomées",
             subtitle:  "pour le Diagnostic Écologique des Milieux d'Eau Douce",
+            period: "2020 (6 mois)",
             links: [
                 {
                     text: 'manuscrit',

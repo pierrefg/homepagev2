@@ -15,6 +15,6 @@
     @apply mt-[var(--primary-menu-mobile-height)] md:mt-[var(--primary-menu-height)];
     
     .special-link {
-        @apply border-solid border-2 border-primary no-underline hover:bg-primary-hover px-1 hover:text-primary;
+        @apply border-solid border-2 border-primary no-underline hover:bg-primary-hover px-1 hover:text-primary whitespace-nowrap;
     }    
 }

@@ -143,7 +143,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     {/* LINKS */}
                     {
                         elementData.links && 
-                        <div className="flex flex-row items-center gap-2">
+                        <div className="flex flex-row items-center gap-2 leading-6">
                             <FaCirclePlus className="inline mt-2" /> <ButtonsList links={elementData.links} />
                         </div>
                     }
