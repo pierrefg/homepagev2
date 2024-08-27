@@ -34,7 +34,7 @@ export const workData = [
         ],
         links: [
             {
-                url: "https://engrainage-media.com/",
+                url: "/science/research",
                 text: "Voir plus"
             }
         ]

@@ -11,7 +11,7 @@ export default function Recherche() {
             { 
                 researchData.map(
                     (researchElement, index) => (
-                        <div key={index} className="flex flex-col gap-6">
+                        <div key={index} id={researchElement.id} className="flex flex-col gap-6">
                             { index>0 && <hr className="border-t-2 border-primary w-2/3 mt-4 mx-auto"/>  }
                             <div className="text-center">
                                 <h2 className="text-base md:text-1xl font-semibold">{researchElement.title}</h2>

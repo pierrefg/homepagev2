@@ -15,15 +15,15 @@ export default function Landing() {
 
     return (
         <>
-            <div className='z-50 md:block absolute top-[40px] right-[50px]'>  
+            {/* <div className='z-50 md:block absolute top-[40px] right-[50px]'>  
                 <ThemeSwitch />
-            </div>
+            </div> */}
             <div className={`absolute inset-0 z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
                 <Snake color = "purple" />
                 <Snake color = "blue" />
             </div>
             <div className="relative h-screen flex flex-col justify-between z-20">
-                <div className="flex flex-col gap-6 justify-center items-center flex-grow my-6">
+                <div className="flex flex-col gap-5 justify-center items-center flex-grow my-6">
                     <div className="flex flex-col items-center gap-4 ">
                         <div className="flex">
                             <Portrait />
@@ -45,8 +45,11 @@ export default function Landing() {
                             </div>
                         </div>
                     </div>
-                    <MenuBar />
+                    <div className='py-8'>
+                        <MenuBar />
+                    </div>
                     <SocialIcons />
+                    <ThemeSwitch />
                 </div>
                 <Copyright />
             </div>

@@ -14,7 +14,13 @@ export const educationData = [
         description: "Machine learning, algorithmics, computer vision, data mining, data visualization...",
         highlight: {
             text: "GPA de 4/4"
-        }
+        },
+        links: [
+            {
+                url: "/science/research#mthesis",
+                text: "Voir plus"
+            }
+        ]
     },
     {
         title: {

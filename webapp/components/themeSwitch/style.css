@@ -3,5 +3,5 @@
 }
 
 .switch-button {
-    @apply w-[40px] h-[30px] relative rounded-full transition duration-300 flex items-center justify-center text-white ease-in-out;
+    @apply w-[25px] h-[25px] relative rounded-full transition duration-300 flex items-center justify-center text-white ease-in-out;
 }

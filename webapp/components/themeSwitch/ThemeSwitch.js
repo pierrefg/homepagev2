@@ -20,9 +20,9 @@ export default function ThemeSwitch() {
             onClick={toggleTheme}
         >
             <div
-                className={`switch-button ${darkMode ? 'bg-gray-700 translate-x-3/4' : 'bg-yellow-500 -translate-x-1/4'}`}
+                className={`switch-button ${darkMode ? 'bg-white translate-x-3/5' : 'bg-black translate-x-full'}`}
             >
-                {darkMode ? <FaMoon size={24} /> : <MdSunny size={24} />}
+                {darkMode ? <FaMoon className="text-black" size={20} /> : <MdSunny className="text-white" size={20} />}
             </div>
         </button>
     );

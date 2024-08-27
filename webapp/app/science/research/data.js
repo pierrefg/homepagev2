@@ -4,6 +4,7 @@ import cePic from './imgs/ce_graph.png';
 export const researchData = 
     [
         {
+            id: 'thesis',
             title: 'Connaissances du Domaine et Fonctions en Science des Données',
             subtitle: "Application à la Production d'Hydroélectricité",
             links: [
@@ -108,6 +109,7 @@ export const researchData =
             </>
         },
         {
+            id: 'mthesis',
             title: "Apprentissage Profond pour la Détection et l'Identification Automatique de Diatomées",
             subtitle:  "pour le Diagnostic Écologique des Milieux d'Eau Douce",
             links: [
