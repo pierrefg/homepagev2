@@ -15,7 +15,7 @@ export const dataScienceData =
         {
             id: 'airgap',
             icon: SlEnergy,
-            title: "Surveillance de l'entrefer",
+            title: "Surveillance de l'entrefer dans des turbines hydro-électriques compactes",
             subtitle: "traitement du signal, visualisation",
             period: "2023-*",
             img: airgapPic,
@@ -79,7 +79,11 @@ export const dataScienceData =
             img: tsnePic,
             imgLegend: "Visualisation TSNE des pièces 3D dans l'espace des embeddings. Les couleurs représentent les classes des pièces.",
             summary: <>
-                TO DO
+                Dans ce projet, nous avons analysés des pièces d'usinage 3D au format <i>.step</i>.
+                Les pièces ont été converties dans un espace vectoriel latent permettant leur comparaison sur des critères visuel.
+                Nous avons alors proposé un système permettant de réunir automatiquement des pièces aux caractéristiques similiaires grâce à plusieurs techniques de clustering complémentaires.
+                <br />
+                Dans un second temps, nous avons utilisé un jeu de données labellisé pour proposer un système de classification automatique des pièces (vis, boulons, écrous...).
             </>
         },
         {

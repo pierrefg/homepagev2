@@ -6,12 +6,12 @@ import { MdOutlineDataThresholding } from "react-icons/md";
 
 const scienceContent = [
     {
-        title: <span><GiChemicalDrop className='inline' /> Recherche</span>,
-        link: '/science/research'
-    },
-    {
         title: <span><MdOutlineDataThresholding className='inline' /> Science des données</span>,
         link: '/science/data-science'
+    },
+    {
+        title: <span><GiChemicalDrop className='inline' /> Recherche</span>,
+        link: '/science/research'
     },
     {
         title: <span><IoDocumentsOutline className='inline' /> Publications, séminaires...</span>,

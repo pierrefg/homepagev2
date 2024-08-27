@@ -9,7 +9,7 @@ export default function Science() {
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/science/research');
+        router.push('/science/data-science');
     }, []);
 
     return <Loader />;
