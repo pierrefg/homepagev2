@@ -15,7 +15,7 @@ export default function Landing() {
 
     return (
         <>
-            <div className='z-50 md:block absolute md:top-[calc(var(--primary-menu-height)_/_2_-6px)] md:right-[50px]'>  
+            <div className='z-50 md:block absolute top-[40px] right-[50px]'>  
                 <ThemeSwitch />
             </div>
             <div className={`absolute inset-0 z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
