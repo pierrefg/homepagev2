@@ -13,7 +13,11 @@ export const softwareData = [
             {
                 text: 'git',
                 url: 'https://github.com/datavalor/ADESIT'
-            }
+            },
+            {
+                text: 'ADESIT',
+                url: 'https://adesit.liris.cnrs.fr/'
+            },
         ]  
     },
     {

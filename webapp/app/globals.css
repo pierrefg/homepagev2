@@ -33,6 +33,10 @@
     --secondary-hover-color-rgb: 128, 0, 128; /* Button secondary hover color */
 }
 
+html {
+    @apply bg-[theme('colors.foreground')];
+}
+
 #main-container {
     @apply bg-[theme('colors.foreground')] text-primary scroll-smooth font-mono;
     @apply transition-colors duration-300 ease-in-out;

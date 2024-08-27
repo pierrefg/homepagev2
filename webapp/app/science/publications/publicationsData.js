@@ -15,16 +15,20 @@ export const publicationsData = [
         ],
         links: [
             {
-                text: 'manuscrit',
-                url: 'https://drive.proton.me/urls/ZFNRV7QJ3C#77xm9WRSA8aw'
+                text: 'hal',
+                url: 'https://theses.hal.science/tel-04519659'
             },
             {
                 text: 'poster',
-                url: 'https://drive.proton.me/urls/GMDY3HT9KR#zyUaBfKZQTvi'
+                url: '/pdfs/g3_poster.pdf'
             },
             {
                 text: 'slides',
-                url: 'https://drive.proton.me/urls/EXSPTFE7TM#aPh3kkCmGqFM'
+                url: '/pdfs/g3_slides.pdf'
+            },
+            {  
+                text: 'voir plus',
+                url: '/science/research'
             }
         ]  
     },
@@ -42,6 +46,12 @@ export const publicationsData = [
                 link: 'https://iccs-conference.org/?page_id=1625'
             }
         ],
+        links: [
+            {
+                text: 'hal',
+                url: 'https://hal.science/hal-04193389v1'
+            },
+        ] 
     },
     {
         title: {
@@ -57,6 +67,12 @@ export const publicationsData = [
                 link: 'https://survishno2023.sciencesconf.org/'
             }
         ],
+        links: [
+            {
+                text: 'hal',
+                url: 'https://drive.proton.me/urls/ZFNRV7QJ3C#77xm9WRSA8aw'
+            },
+        ] 
     },
     {
         title: {
@@ -68,9 +84,15 @@ export const publicationsData = [
         companies: [ 
             {
                 name: 'Engineering Applications of Artificial Intelligence [Elsevier]',
-                link: 'https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence/'
+                link: 'https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence'
             }
         ],
+        links: [
+            {
+                text: 'hal',
+                url: 'https://hal.science/hal-03852321v1'
+            },
+        ] 
     },
     {
         title: {
@@ -86,6 +108,12 @@ export const publicationsData = [
                 place: 'Kuala Lumpur, Malaisie'
             }
         ],
+        links: [
+            {
+                text: 'hal',
+                url: 'https://hal.science/hal-03540513v3'
+            },
+        ] 
     },
     {
         title: {
@@ -105,7 +133,17 @@ export const publicationsData = [
         highlight: {
             text: 'Prix de la meilleure démonstration à BDA 2021',
             url: 'https://bda2021.inria.fr/prix-bda2021/'
-        }
+        },
+        links: [
+            {
+                text: 'hal',
+                url: 'https://hal.science/hal-03242380v2'
+            },
+            {
+                text: 'ADESIT',
+                url: 'https://adesit.liris.cnrs.fr/'
+            },
+        ] 
     },
     {
         title: {
@@ -121,5 +159,19 @@ export const publicationsData = [
                 link: 'https://www.gatech.edu/'
             }
         ],
+        links: [
+            {
+                text: 'Georgia Tech Library',
+                url: 'https://repository.gatech.edu/entities/publication/8b1d7e14-99ea-4e31-83c1-a261e88a77ec'
+            },
+            {
+                text: 'poster',
+                url: '/pdfs/diatoms_poster.pdf'
+            },
+            {  
+                text: 'voir plus',
+                url: '/science/research#mthesis'
+            }
+        ] 
     },
 ];

@@ -10,15 +10,19 @@ export const researchData =
             links: [
                 {
                     text: 'manuscrit',
-                    url: ''
+                    url: 'https://theses.hal.science/tel-04519659'
                 },
                 {
                     text: 'poster',
-                    url: ''
+                    url: '/pdfs/g3_poster.pdf'
                 },
                 {  
                     text: 'slides',
-                    url: ''
+                    url: '/pdfs/g3_slides.pdf'
+                },
+                {
+                    text: 'ADESIT',
+                    url: 'https://adesit.liris.cnrs.fr/'
                 },
             ],
             peopleIntro: 'Thèse défendue à Lyon le 24 novembre 2023 devant un jury composé de :',
@@ -115,11 +119,11 @@ export const researchData =
             links: [
                 {
                     text: 'manuscrit',
-                    url: ''
+                    url: 'https://repository.gatech.edu/entities/publication/8b1d7e14-99ea-4e31-83c1-a261e88a77ec'
                 },
                 {
                     text: 'poster',
-                    url: ''
+                    url: '/pdfs/diatoms_poster.pdf'
                 }
             ],
             peopleIntro: 'Thèse de master approuvée le 24 juillet 2020 par :',
