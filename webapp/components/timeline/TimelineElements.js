@@ -1,8 +1,9 @@
-import { IoLink } from "react-icons/io5";
 import { IoMdPerson } from "react-icons/io";
 import { FaBuilding, FaStar } from "react-icons/fa";
 import { MdMergeType } from "react-icons/md";
 import { FaCircleInfo, FaCirclePlus } from "react-icons/fa6";
+
+import ButtonsList from "@/components/ButtonsList";
 
 export default function TimelineElement({ elementData, authorData, largeDate=false }) {
     if (!elementData) return null;
@@ -30,7 +31,6 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                         {  
                             elementData.title.link ?
                                 <a href={elementData.title.link} target="_blank" rel="noopener noreferrer">
-                                    {/* <><IoLink className="inline"/> </> */}
                                     <span>{elementData.title.name} {elementData.title.postname}</span>
                                 </a>
                             :
@@ -142,19 +142,9 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
 
                     {/* LINKS */}
                     {
-                        elementData.links &&
-                        <div className="mt-1">
-                            <><FaCirclePlus className="inline" /> </>
-                            {
-                                elementData.links.map((link, index) => (
-                                    <span key={index}> 
-                                        { index>0 && <span> • </span> }
-                                        <a href={link.url} className="special-link" target="_blank" rel="noopener noreferrer">
-                                            {link.text}
-                                        </a>
-                                    </span>
-                                ))
-                            }
+                        elementData.links && 
+                        <div className="flex flex-row items-center gap-2">
+                            <FaCirclePlus className="inline mt-2" /> <ButtonsList links={elementData.links} />
                         </div>
                     }
                 </div>
