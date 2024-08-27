@@ -1,5 +1,6 @@
 .menu-bar {
-    @apply fixed top-[0px] w-full border-solid border-b-2 border-b-gray-500 bg-[theme('colors.foreground')] ;
+    @apply fixed top-[0px] w-full bg-[theme('colors.foreground')] ;
+    @apply border-solid border-b-2 border-b-primary-muted;
     @apply h-[var(--primary-menu-mobile-height)] md:h-[var(--primary-menu-height)];
     @apply transition-colors duration-300 ease-in-out;
 }

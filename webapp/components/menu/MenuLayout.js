@@ -13,7 +13,7 @@ export default function MenuLayout({ children }) {
     return (
         <div className='flex flex-col min-h-screen'>
             {/* ThemeSwitch positioning */}
-            <div className='z-50 fixed hidden md:block  top-[calc(var(--primary-menu-height)_/_2_-6px)] right-[50px]'>  
+            <div className='z-50 fixed hidden md:block bottom-[50px] right-[50px]'>  
                 <ThemeSwitch />
             </div>
 
