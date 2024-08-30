@@ -1,5 +1,7 @@
 "use client";
 
+import './style.css';
+
 import { usePathname } from 'next/navigation';
 import useStore from '@/store/useStore';
 

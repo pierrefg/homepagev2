@@ -11,7 +11,8 @@
 }
 
 .menu-content {
-    @apply flex-grow flex-1 max-w-7xl w-full mx-auto;
+    @apply flex-grow flex-1 w-full mx-auto;
+    /* @apply max-w-7xl; */
     @apply mt-[var(--primary-menu-mobile-height)] md:mt-[var(--primary-menu-height)];
     
     .special-link {

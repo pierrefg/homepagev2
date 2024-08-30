@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import MainLayout from "@/components/MainLayout";
+import MainLayout from "@/components/mainLayout/MainLayout";
 import Loader from "@/components/loader/Loader";
 
 import React, { Suspense } from 'react';

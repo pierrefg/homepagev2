@@ -8,7 +8,8 @@ import { RiVideoOnLine } from "react-icons/ri";
 const artContent = [
     {
         title: <span><MdOutlinePolyline className='inline' /> Graphisme</span>,
-        link: '/art/graphics'
+        link: '/art/graphics',
+        fullWidth: true
     },
     {
         title: <span><MdOutlinePhotoCamera className='inline' /> Photographie</span>,

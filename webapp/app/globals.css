@@ -38,11 +38,6 @@ html {
     overflow-x: hidden;
 }
 
-#main-container {
-    @apply bg-[theme('colors.foreground')] text-primary scroll-smooth font-mono;
-    @apply transition-colors duration-300 ease-in-out;
-}
-
 .btn-primary {
     @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground;
     @apply hover:bg-primary-hover hover:text-white hover:animate-pulse;
