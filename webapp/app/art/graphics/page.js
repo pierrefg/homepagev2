@@ -1,32 +1,22 @@
-'use client';
+// 'use client';
 
-import { useEffect, useState } from 'react';
-import MyGallery from '@/components/Gallery';
+import { graphicsData } from './content/data';
 
-import getArtContent from '@/components/getArtContent';
+import Gallery from '@/components/Gallery'
 
 // React component
 export default function Graphics() {
-    const [content, setContent] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const rel_path = '/imgs/art/graphics/content/';
-            const data = await getArtContent(rel_path);
-            setContent(data);
-        };
-
-        fetchData();
-    }, []);
-
     return (
-        <div className="flex flex-col">
-            {content &&
-                content.map((part, index) => (
-                    <div key={index}>
-                        <MyGallery images={part.imgs} />
-                    </div>
-                ))}
+        <div className="flex flex-col gap-8">
+            {
+                graphicsData.map(
+                    (graphicsSection, index) => (
+                        <div key={index}>
+                            <Gallery galleryData={graphicsSection} />
+                        </div>                        
+                    )
+                )
+            }
         </div>
     );
 }
