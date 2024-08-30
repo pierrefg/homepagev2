@@ -5,8 +5,8 @@ import imgD from './D.png';
 import imgE from './E.png';
 import imgF from './F.png';
 
-export const thesisG = {
-    title: 'A g3 adventure ',
+export const thesis = {
+    title: 'Lines and dots',
     theme: 'light',
     imgs: [
         {

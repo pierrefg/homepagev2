@@ -1,13 +1,20 @@
-import { thesisG } from './thesis/data';
-import { tdG } from './3d/data';
-import { Zzzzzzz } from './nightmares/data';
-import { planets } from './osiu/data';
-import { monsters } from './monsters/data';
+import { tdG } from "./deception/data";
+import { monsters } from "./monsters/data";
+import { Zzzzzzz } from "./nightmares/data";
+import { pastel } from "./pastel/data";
+import { planets } from "./space/data";
+import { thesis } from "./thesis/data";
+import { trou } from "./trou/data";
+import { vague } from "./vague/data";
+
 
 export const graphicsData = [
     planets,
-    tdG,
+    monsters,
     Zzzzzzz,
-    thesisG,
-    monsters
+    pastel,
+    tdG,
+    thesis,
+    vague,
+    trou,
 ]
