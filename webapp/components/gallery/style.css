@@ -1,0 +1,18 @@
+.img-div {
+    @apply shrink-0 snap-center pb-4 flex justify-center w-full;
+    @apply md:justify-normal md:w-auto;
+}
+
+.img-carrousel {
+    @apply flex flex-row gap-[20px] mx-auto;
+    @apply overflow-x-scroll scroll-smooth snap-x snap-mandatory;
+    @apply md:snap-none;
+}
+
+.gallery-light {
+    @apply text-black bg-white;
+}
+
+.gallery-dark {
+    @apply text-white bg-black;
+}

@@ -2,12 +2,12 @@
 
 import { graphicsData } from './content/data';
 
-import Gallery from '@/components/Gallery'
+import Gallery from '@/components/gallery/Gallery';
 
 // React component
 export default function Graphics() {
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col w-full">
             {
                 graphicsData.map(
                     (graphicsSection, index) => (

@@ -4,7 +4,7 @@ import imgC from './C.png';
 import imgD from './D.png';
 
 export const monsters = {
-    title: 'Creatures',
+    title: 'Bestiaire',
     imgs: [
         {
             img: imgA

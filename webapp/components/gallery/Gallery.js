@@ -1,8 +1,11 @@
 'use client';
 
+import './style.css';
+
 import React, { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
+import Overlay from '@/components/overlay/Overlay';
 
 export default function Gallery({ galleryData }) {
     const galleryLength = galleryData.imgs.length;
@@ -10,6 +13,9 @@ export default function Gallery({ galleryData }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageWidths, setImageWidths] = useState([]);
     const [isScrollable, setIsScrollable] = useState(false);
+    const lightTheme = (galleryData.theme || 'dark') == 'light';
+
+    const [toShowInOverlay, setToShowInOverlay] = useState(null);
 
     const imageContainerRef = useRef(null);
 
@@ -56,23 +62,32 @@ export default function Gallery({ galleryData }) {
         });
     };
 
-    return (
-        <div className='flex flex-col gap-2'>
+    
+
+    return (<>
+        {
+            toShowInOverlay &&
+            <Overlay onClose={() => setToShowInOverlay(null)}>{toShowInOverlay}</Overlay>
+        }
+        <div className={`flex flex-col gap-2 ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}>
             <h2 
                 className="inline-block p-2 text-base text-center"
                 style={{ display: 'inline-block', width: 'auto' }}
             >
                 {galleryData.title}
             </h2>
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-4 max-w-7xl mx-auto">
                 <div className='w-[40px] hidden md:block'>
-                    <MdNavigateBefore 
-                        className={`w-[40px] text-4xl btn-secondary ${currentIndex==0 && 'disabled'}`} 
-                        onClick={handlePrevClick}
-                    />
+                    {
+                        isScrollable &&
+                        <MdNavigateBefore 
+                            className={`w-[40px] text-4xl btn-secondary ${currentIndex==0 && 'disabled'}`} 
+                            onClick={handlePrevClick}
+                        />
+                    }
                 </div>
                 <div 
-                    className='flex flex-row gap-[20px] mx-auto overflow-x-scroll scroll-smooth snap-x snap-mandatory md:snap-none'
+                    className='img-carrousel'
                     style={{
                         WebkitOverflowScrolling: 'touch',
                     }}
@@ -83,10 +98,18 @@ export default function Gallery({ galleryData }) {
                             (el, index) => (
                                 <div 
                                     key={index} 
-                                    className='shrink-0 snap-center pb-4 flex justify-center md:justify-normal w-full md:w-auto'
+                                    className='img-div cursor-pointer'
+                                    onClick={
+                                        () => setToShowInOverlay(
+                                        <Image 
+                                            src={el.img}
+                                            alt={`Image ${index + 1} full size`}
+                                            height={800}
+                                            onLoad={(e) => handleImageLoad(index, e)}
+                                        />
+                                    )}
                                 >
                                     <Image
-                                        id={galleryData.title+'_'+index}
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
                                         height={400}
@@ -98,13 +121,16 @@ export default function Gallery({ galleryData }) {
                     }
                 </div>
                 <div className='w-[40px] hidden md:block'>
-                    <MdNavigateNext 
-                        className={`text-4xl btn-secondary ${currentIndex==galleryLength-1 && 'disabled'}`} 
-                        onClick={handleNextClick}
-                    />
+                    {
+                        isScrollable &&
+                        <MdNavigateNext 
+                            className={`text-4xl btn-secondary ${currentIndex==galleryLength-1 && 'disabled'}`} 
+                            onClick={handleNextClick}
+                        />
+                    }
                 </div>
             </div>
         </div>
-    );
+    </>);
     
 }

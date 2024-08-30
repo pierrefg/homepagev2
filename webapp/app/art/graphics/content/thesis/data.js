@@ -6,7 +6,8 @@ import imgE from './E.png';
 import imgF from './F.png';
 
 export const thesisG = {
-    title: 'Thesis',
+    title: 'A g3 adventure ',
+    theme: 'light',
     imgs: [
         {
             img: imgA

@@ -14,7 +14,7 @@ export default function SubMenuLayout({ children, pagesData }) {
     useEffect(() => {
         const currentPage = pagesData.find(contentData => pathname === contentData.link);
         if (currentPage) {
-            setIsFullWidth('fullWidth' in currentPage && currentPage.fullWidth);
+            setIsFullWidth(currentPage.fullWidth || false);
         }
     }, [pathname, pagesData]);
 
