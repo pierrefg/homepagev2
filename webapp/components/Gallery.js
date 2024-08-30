@@ -72,7 +72,7 @@ export default function Gallery({ galleryData }) {
                     />
                 </div>
                 <div 
-                    className='flex flex-row gap-[20px] mx-auto overflow-x-scroll scroll-smooth snap-center'
+                    className='flex flex-row gap-[20px] mx-auto overflow-x-scroll scroll-smooth snap-x snap-mandatory md:snap-none'
                     style={{
                         WebkitOverflowScrolling: 'touch',
                     }}
@@ -81,7 +81,10 @@ export default function Gallery({ galleryData }) {
                     {
                         galleryData.imgs.map(
                             (el, index) => (
-                                <div key={index} className='shrink-0 snap-center pb-4'>
+                                <div 
+                                    key={index} 
+                                    className='shrink-0 snap-center pb-4 flex justify-center md:justify-normal w-full md:w-auto'
+                                >
                                     <Image
                                         id={galleryData.title+'_'+index}
                                         src={el.img}
@@ -103,4 +106,5 @@ export default function Gallery({ galleryData }) {
             </div>
         </div>
     );
+    
 }
