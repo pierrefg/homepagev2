@@ -7,8 +7,6 @@ import Image from "next/image";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import Overlay from '@/components/overlay/Overlay';
 
-
-
 export default function Gallery({ galleryData }) {
     const galleryLength = galleryData.imgs.length;
 
