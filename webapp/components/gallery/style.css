@@ -9,6 +9,14 @@
     @apply md:snap-none;
 }
 
+.gallery {
+    @apply flex flex-col gap-2 py-4;
+    
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
+}
+
 .gallery-light {
     @apply text-black bg-white;
 

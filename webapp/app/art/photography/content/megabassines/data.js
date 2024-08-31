@@ -54,5 +54,11 @@ export const megabassines = {
         {
             img: imgL
         },
+        {
+            img: imgM
+        },
+        {
+            img: imgN
+        },
     ]
 }

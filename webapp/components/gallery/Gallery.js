@@ -7,6 +7,8 @@ import Image from "next/image";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import Overlay from '@/components/overlay/Overlay';
 
+import Loader from '../loader/Loader';
+
 export default function Gallery({ galleryData }) {
     const galleryLength = galleryData.imgs.length;
 
@@ -69,7 +71,8 @@ export default function Gallery({ galleryData }) {
             toShowInOverlay &&
             <Overlay onClose={() => setToShowInOverlay(null)}>{toShowInOverlay}</Overlay>
         }
-        <div className={`flex flex-col gap-2 py-4 ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}>
+        {/* <div className={`gallery ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}> */}
+        <div className="gallery">
             <div className="inline-block flex flex-col p-2 text-base text-center">
                 <h2 
                     className="inline-block"
@@ -116,6 +119,7 @@ export default function Gallery({ galleryData }) {
                                     <Image
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
+                                        placeholder={'blur'}
                                         height={400}
                                         style={{objectFit: "contain"}}
                                         onLoad={(e) => handleImageLoad(index, e)}
