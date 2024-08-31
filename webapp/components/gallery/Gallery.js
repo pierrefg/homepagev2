@@ -7,7 +7,7 @@ import Image from "next/image";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import Overlay from '@/components/overlay/Overlay';
 
-import Loader from '../loader/Loader';
+
 
 export default function Gallery({ galleryData }) {
     const galleryLength = galleryData.imgs.length;
@@ -15,7 +15,7 @@ export default function Gallery({ galleryData }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageWidths, setImageWidths] = useState([]);
     const [isScrollable, setIsScrollable] = useState(false);
-    const lightTheme = (galleryData.theme || 'dark') == 'light';
+    // const lightTheme = (galleryData.theme || 'dark') == 'light';
 
     const [toShowInOverlay, setToShowInOverlay] = useState(null);
 

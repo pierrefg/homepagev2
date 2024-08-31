@@ -1,11 +1,12 @@
 .img-div {
-    @apply shrink-0 snap-center pb-4 flex justify-center w-full;
+    @apply shrink-0 snap-center snap-always pb-4 flex justify-center w-full;
     @apply md:justify-normal md:w-auto;
 }
 
 .img-carrousel {
     @apply flex flex-row gap-[20px] mx-auto;
-    @apply overflow-x-scroll scroll-smooth snap-x snap-mandatory;
+    @apply overflow-x-scroll snap-x snap-mandatory ;
+    @apply scroll-smooth;
     @apply md:snap-none;
 }
 
