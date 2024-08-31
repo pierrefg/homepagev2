@@ -4,7 +4,7 @@ import { AiOutlineMail, AiOutlineCopyright } from "react-icons/ai";
 
 export default function Footer() {
     return (
-        <div className="flex flex-col w-full items-center py-6 text-sm md:text-base max-w-7xl mx-auto text-primary-muted">
+        <div className="flex flex-col gap-2 w-full items-center py-6 text-sm md:text-base max-w-7xl mx-auto text-primary-muted">
             <div>
                 <Link 
                     href="/legals"
@@ -20,10 +20,9 @@ export default function Footer() {
                     <><AiOutlineMail className="inline" /> contact@pierrefg.com</>
                 </a>
             </div>
-            <br />
-            <p>
+            <div >
                 Copyright <AiOutlineCopyright className='inline'/> Pierre Faure--Giovagnoli, 2024
-            </p>
+            </div>
         </div>
     );
 }

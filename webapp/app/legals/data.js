@@ -4,7 +4,7 @@ export const legalData = [
     {
         title: 'Éditeur du site',
         content: <>
-            Pierre Faure-Giovagnoli
+            Pierre Faure--Giovagnoli
             <br />
             <a
                 href='mailto: contact@pierrefg.com'
@@ -18,7 +18,7 @@ export const legalData = [
     {
         title: 'Responsable de la publication',
         content: <>
-            Pierre Faure-Giovagnoli
+            Pierre Faure--Giovagnoli
         </>
     },
     {
