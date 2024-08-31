@@ -11,7 +11,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
     title: "Pierre FG",
-    description: "Je suis scientifique des données mais également graphiste et photographe. Viens découvrir mon site pour voir ce que je fais !",
+    description: "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
     manifest: "/manifest.json",
     icons: {
       icon: [
@@ -22,8 +22,8 @@ export const metadata = {
     },
     openGraph: {
         title: "Pierre Faure--Giovagnoli",
-        description: "Je suis scientifique des données mais également graphiste et photographe. Viens découvrir mon site pour voir ce que je fais !",
-        url: "https://www.pierrefg.github.io",
+        description: "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
+        url: "https://www.pierrefg.com",
         siteName: "Pierre Faure--Giovagnoli",
     },
 };
