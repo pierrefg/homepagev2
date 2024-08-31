@@ -5,7 +5,7 @@ import useStore from '@/store/useStore';
 import Portrait from "@/components/Portrait";
 import MenuBar from '@/components/menu/MenuButtons';
 import SocialIcons from '@/components/SocialIcons'
-import Copyright from "@/components/Copyright";
+import Copyright from "@/components/Footer";
 import Snake from "@/components/snake/Snake";
 
 import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';

@@ -3,7 +3,7 @@ import './style.css';
 import useStore from '@/store/useStore';
 
 import MenuBar from "./MenuBar";
-import Copyright from "../Copyright";
+import Copyright from "../Footer";
 
 import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
 
