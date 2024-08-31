@@ -14,6 +14,7 @@ module.exports = {
             '/science': 0.8,
             '/background': 0.8
         };
+        
         const defaultPriority = 0.5;
         const priority = priorityMap[path] || defaultPriority;
 

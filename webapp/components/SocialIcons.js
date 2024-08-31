@@ -1,13 +1,15 @@
-import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineMail, AiOutlineGithub, AiOutlineExperiment   } from "react-icons/ai";
-import { IoDocumentsOutline } from "react-icons/io5";
+import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub, AiOutlineYoutube   } from "react-icons/ai";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
+import { SlSocialSoundcloud } from "react-icons/sl";
 
 export default function SocialIcons() {
     var socialIcons = [
         [AiOutlineInstagram, "https://www.instagram.com/pierre_fg/"],
+        [AiOutlineYoutube, "https://www.youtube.com/@pierrefg"],
+        [SlSocialSoundcloud, "https://soundcloud.com/pierrefg"],
         [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
-        [IoDocumentsOutline, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
+        [HiOutlineAcademicCap, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
         [AiOutlineGithub, "https://github.com/PierreFG"],
-        // [AiOutlineMail, "mailto: pierrefg@proton.me"]
     ]
 
     return (
