@@ -3,7 +3,7 @@
 }
 
 .square-loader {
-    @apply w-16 h-16 bg-primary-hover border-solid border-2 border-white;
+    @apply bg-primary-hover border-solid border-2 border-white;
     animation: rotate 3s linear infinite;
 }
   

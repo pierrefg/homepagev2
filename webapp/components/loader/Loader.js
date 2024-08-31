@@ -1,9 +1,11 @@
 import "./style.css";
 
+import LoaderElement from "./LoaderElement";
+
 export default function Loader() {
     return (
       <div className="loader-div">
-        <div className="square-loader"></div>
+        <LoaderElement size={50} />
       </div>
     );
 }

@@ -34,7 +34,7 @@
 }
 
 html {
-    @apply bg-[theme('colors.foreground')];
+    @apply bg-foreground;
     overflow-x: hidden;
 }
 
