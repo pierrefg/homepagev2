@@ -13,7 +13,8 @@ const artContent = [
     },
     {
         title: <span><MdOutlinePhotoCamera className='inline' /> Photographie</span>,
-        link: '/art/photography'
+        link: '/art/photography',
+        fullWidth: true
     },
     {
         title: <span><IoMusicalNoteOutline className='inline' /> Musique</span>,
