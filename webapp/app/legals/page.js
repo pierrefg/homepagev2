@@ -3,7 +3,7 @@ import { legalData } from "./data"
 export default function Legals() {
 
     return (
-            <div className="px-4 mx-auto mt-[20px] text-sm">
+            <div className="px-4 mx-auto mt-[20px] text-sm md:text-base max-w-4xl">
                 <h1 className="text-base md:text-xl text-center">
                     <strong>
                         Mentions légales

@@ -76,3 +76,12 @@ a {
 .icon {
     @apply text-2xl inline;
 }
+
+li {
+    @apply relative pl-3 my-2;
+}
+
+li::before {
+    content: '• '; /* Empty content for the dot */
+    transform: translateY(-100%);
+}
