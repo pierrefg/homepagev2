@@ -69,13 +69,17 @@ export default function Gallery({ galleryData }) {
             toShowInOverlay &&
             <Overlay onClose={() => setToShowInOverlay(null)}>{toShowInOverlay}</Overlay>
         }
-        <div className={`flex flex-col gap-2 ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}>
-            <h2 
-                className="inline-block p-2 text-base text-center"
-                style={{ display: 'inline-block', width: 'auto' }}
-            >
-                {galleryData.title}
-            </h2>
+        <div className={`flex flex-col gap-2 py-4 ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}>
+            <div className="inline-block flex flex-col p-2 text-base text-center">
+                <h2 
+                    className="inline-block"
+                >
+                    {galleryData.title}
+                </h2>
+                <p className="inline-block text-sm text-primary-muted">
+                    {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
+                </p>
+            </div>
             <div className="flex flex-row items-center gap-4 max-w-7xl mx-auto">
                 <div className='w-[40px] hidden md:block'>
                     {
@@ -113,6 +117,7 @@ export default function Gallery({ galleryData }) {
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
                                         height={400}
+                                        style={{objectFit: "contain"}}
                                         onLoad={(e) => handleImageLoad(index, e)}
                                     />
                                 </div>

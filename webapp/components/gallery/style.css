@@ -11,8 +11,16 @@
 
 .gallery-light {
     @apply text-black bg-white;
+
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
 }
 
 .gallery-dark {
     @apply text-white bg-black;
+
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
 }
