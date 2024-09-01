@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.pierrefg.github.io
-
-# Sitemaps
-Sitemap: https://www.pierrefg.github.io/sitemap.xml
