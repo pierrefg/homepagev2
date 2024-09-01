@@ -28,7 +28,7 @@ export default function SubMenuLayout({ children, pagesData }) {
                             <Link
                                 key={index}
                                 href={contentData.link}
-                                className={`btn-secondary ${isActive ? 'active' : ''}`}
+                                className={`btn btn-secondary ${isActive ? 'active' : ''}`}
                             >
                                 {contentData.title}
                             </Link>

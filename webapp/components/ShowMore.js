@@ -14,7 +14,7 @@ export default function ShowMore({ children, textShow="Voir plus", textHide="Voi
     return (
         <>
             <button
-                className={`btn-secondary ${show ? 'active' : ''}`}
+                className={`btn btn-secondary ${show ? 'active' : ''}`}
                 onClick={ toggle }
             >
                 {

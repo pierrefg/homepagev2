@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./button.css";
 
 import MainLayout from "@/components/mainLayout/MainLayout";
 import Loader from "@/components/loader/Loader";

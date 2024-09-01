@@ -1,0 +1,46 @@
+.btn {
+    @apply px-[6px] py-[2px] cursor-pointer;
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.btn:hover {
+    @apply animate-pulse;
+}
+
+.btn.active {
+    @apply  rotate-3;
+}
+
+.btn-large {
+    @apply px-[8px] py-[6px];
+}
+
+.btn-primary {
+   @apply bg-primary text-foreground;
+}
+.btn-primary:hover {
+    @apply bg-primary-hover text-white;
+}
+
+.btn-primary.active {
+    @apply bg-primary-hover text-white;
+}
+
+.btn-secondary {
+    @apply bg-secondary;
+    @apply text-primary text-center;
+    @apply border-solid border-2 border-primary;
+    @apply hover:text-primary;
+}
+
+.btn-secondary:hover {
+    @apply border-secondary-hover;
+}
+
+.btn-secondary.active {
+    @apply border-secondary-hover text-primary;
+}
+
+.btn-secondary.disabled {
+    @apply text-primary-muted border-primary-muted;
+}

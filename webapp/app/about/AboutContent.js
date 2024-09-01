@@ -26,38 +26,38 @@ export default function AboutContent() {
                     Dans mon activité scientifique, je pratique principalement la science des données et le développement.
                     Diplomé INSA Lyon et Georgia Tech ainsi que détenteur d'un doctorat en informatique, je possède une large palette créative et technique pour répondre à tes projets.
                     
-                    <div className="mt-2 text-center">
+                    <p className="mt-2 text-center">
                         <Link 
-                            className="special-link py-1"
+                            className="btn btn-secondary py-1"
                             href="/science"
                         >
                             <AiOutlineExperiment className="inline text-xl "/> Voir plus
                         </Link>
-                    </div>
+                    </p>
                 </p>
                 <p>
                     En parallèle de mon activité scientifique, je m'investis dans des projets artistiques, offrant des services mêlant graphisme, photographie et vidéo (et même son !).
                     C'est notamment dans le milieu associatif que j'ai pu mettre à profit ces différentes activités et développer mes compétences.   
-                    <div className="mt-2 text-center">
+                    <p className="mt-2 text-center">
                         <Link 
-                            className="special-link py-1"
+                            className="btn btn-secondary py-1"
                             href="/art"
                         >
                             <LuPaintbrush className="inline text-xl "/> Voir plus
                         </Link>
-                    </div>
+                    </p>
                 </p>
                 <p>
                     Vous trouverez sur ce site un aperçu des domaines qui m'intéressent. 
                     N'hésitez pas à me contacter pour toute collaboration ou simplement pour poser une question !
-                    <div className="mt-2 text-center">
+                    <p className="mt-2 text-center">
                         <Link 
-                            className="special-link py-1"
+                            className="btn btn-secondary py-1"
                             href="/contact"
                         >
                             <LuPaintbrush className="inline text-xl "/> Me contacter
                         </Link>
-                    </div>
+                    </p>
                 </p>
 
                 <p className="text-primary-muted">

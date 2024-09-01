@@ -29,7 +29,7 @@ export default function MenuButtons({ toDoOnElementClick }) {
                             <Link 
                                 key={index} 
                                 href={link}
-                                className={`btn-primary ${isActive ? 'active' : ''}`}
+                                className={`btn btn-primary btn-large ${isActive ? 'active' : ''}`}
                                 onClick={ toDoOnElementClick }
                             >
                                 {title}

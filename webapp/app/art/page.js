@@ -30,7 +30,7 @@ export default function Art() {
                 <div className="flex flex-col gap-6 text-center">
                     <div>
                         <Link 
-                            className="special-link py-1"
+                            className="btn btn-secondary py-1"
                             href="/art/photography"
                         >
                             <MdOutlinePolyline className="inline text-xl"/> Graphisme
@@ -43,7 +43,7 @@ export default function Art() {
                 <div className="flex flex-col gap-6 text-center">
                     <div>
                         <Link 
-                            className="special-link py-1"
+                            className="btn btn-secondary py-1"
                             href="/art/photography"
                         >
                             <MdOutlinePhotoCamera className="inline text-xl "/> Photographie
@@ -55,17 +55,17 @@ export default function Art() {
                 <div className="hidden md:block text-center">
                     Je fais aussi de la<> </>
                     <Link 
-                        className="special-link py-1"
+                        className="btn btn-secondary py-1"
                         href="/art/music"
                     >
-                        <IoMusicalNoteOutline className="inline text-xl "/> Musique
+                        <span><IoMusicalNoteOutline className="inline text-xl "/> Musique</span>
                     </Link>
                     <> et de la </>
                     <Link 
-                        className="special-link py-1"
-                        href="/art/music"
+                        className="btn btn-secondary py-1"
+                        href="/art/video"
                     >
-                        <RiVideoOnLine className="inline text-xl "/> Vidéo
+                        <span><RiVideoOnLine className="inline text-xl "/> Vidéo</span>
                     </Link>
                     <> !</>
                 </div>
@@ -75,16 +75,16 @@ export default function Art() {
                     </div>
                     <div>
                         <Link 
-                            className="special-link py-1 mr-2"
+                            className="btn btn-secondary py-1 mr-2"
                             href="/art/music"
                         >
-                            <IoMusicalNoteOutline className="inline text-xl "/> Musique
+                            <span><IoMusicalNoteOutline className="inline text-xl "/> Musique</span>
                         </Link>
                         <Link 
-                            className="special-link py-1"
-                            href="/art/music"
+                            className="btn btn-secondary py-1"
+                            href="/art/video"
                         >
-                            <RiVideoOnLine className="inline text-xl "/> Vidéo
+                            <span><RiVideoOnLine className="inline text-xl "/> Vidéo</span>
                         </Link>
                     </div>
                 </div>

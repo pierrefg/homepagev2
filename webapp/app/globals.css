@@ -38,36 +38,6 @@ html {
     overflow-x: hidden;
 }
 
-.btn-primary {
-    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] bg-primary text-foreground;
-    @apply hover:bg-primary-hover hover:text-white hover:animate-pulse;
-    @apply transition-colors duration-300 ease-in-out;
-}
-
-.btn-primary.active {
-    @apply bg-primary-hover text-white rotate-2;
-}
-
-.btn-secondary {
-    @apply px-[7px] py-[4px] bg-secondary cursor-pointer;
-    @apply text-primary text-center;
-    @apply border-solid border-2 border-primary;
-    @apply hover:text-primary;
-    @apply transition-colors duration-300 ease-in-out;
-}
-
-.btn-secondary:hover {
-    @apply border-secondary-hover;
-}
-
-.btn-secondary.active {
-    @apply border-secondary-hover text-primary rotate-2 z-0;
-}
-
-.btn-secondary.disabled {
-    @apply text-primary-muted border-primary-muted;
-}
-
 a {
     @apply hover:text-primary-hover cursor-pointer;
     @apply transition-colors duration-300 ease-in-out;

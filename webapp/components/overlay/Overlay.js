@@ -8,7 +8,7 @@ export default function Overlay({ children, onClose }) {
         >
             <div className="w-full flex justify-end">
                 <IoCloseSharp 
-                    className='btn-secondary text-4xl m-4'
+                    className='btn btn-secondary btn-large text-4xl'
                     onClick={onClose}
                 />
             </div>

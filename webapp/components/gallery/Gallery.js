@@ -88,7 +88,7 @@ export default function Gallery({ galleryData, size=400 }) {
                     {
                         isScrollable &&
                         <MdNavigateBefore 
-                            className={`w-[40px] text-4xl btn-secondary ${currentIndex==0 && 'disabled'}`} 
+                            className={`w-[40px] text-4xl btn btn-secondary ${currentIndex==0 && 'disabled'}`} 
                             onClick={handlePrevClick}
                         />
                     }
@@ -133,7 +133,7 @@ export default function Gallery({ galleryData, size=400 }) {
                     {
                         isScrollable &&
                         <MdNavigateNext 
-                            className={`text-4xl btn-secondary ${currentIndex==galleryLength-1 && 'disabled'}`} 
+                            className={`text-4xl btn btn-secondary ${currentIndex==galleryLength-1 && 'disabled'}`} 
                             onClick={handleNextClick}
                         />
                     }

@@ -16,7 +16,7 @@ export default function Science() {
                 <p>
                     J'ai mis beaucoup d'amour dans la création de ce site, retrouvez toutes les sources sur<> </>
                     <Link 
-                        className="special-link py-1"
+                        className="btn btn-secondary py-1"
                         href="https://github.com/pierrefg/pierrefg.com"
                         target="__blank"
                     >
