@@ -9,8 +9,7 @@ import { AiOutlineTool } from "react-icons/ai";
 const backgroundContent = [
     {
         title: <span><AiOutlineHome className='inline' /></span>,
-        link: '/about',
-        fullwidth: true
+        link: '/about'
     },
     {
         title: <span><AiOutlineTool className='inline' /> Expérience</span>,

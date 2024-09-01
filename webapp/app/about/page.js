@@ -1,20 +1,19 @@
-import Portrait from "@/components/Portrait";
-
-import { MdOutlinePlace } from "react-icons/md";
-import { IoLanguage } from "react-icons/io5";
 import Link from "next/link";
+
+import Portrait from "@/components/Portrait";
 
 import { AiOutlineExperiment } from "react-icons/ai";
 import { LuPaintbrush } from "react-icons/lu";
-import { RiQuestionAnswerLine } from "react-icons/ri";
+import { MdOutlinePlace } from "react-icons/md";
+import { IoLanguage } from "react-icons/io5";
 
 export default function About() {
     return (
-        <div className="flex flex-row items-center justify-center gap-6 max-w-4xl">
-            <div className="w-1/4">
+        <div className="md:flex flex-col md:flex-row items-center justify-center gap-6 md:max-w-4xl">
+            <div className="w-1/3 md:w-1/4 mx-auto pb-4">
                 <Portrait size={400} src='/imgs/portrait2.jpg' />
             </div>
-            <div className="w-3/4 flex flex-col gap-4">
+            <div className="md:w-3/4 flex flex-col gap-4">
                 <h1 className="text-xl">
                     Pierre Faure--Giovagnoli
                 </h1>
