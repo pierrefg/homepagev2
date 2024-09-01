@@ -45,7 +45,7 @@ export default function AboutContent() {
             </div>
 
             <div className="text-primary-muted">
-                Photo d'illustration par Pierre Fimbel. prout
+                Photo d'illustration par Pierre Fimbel.
             </div>
         </div>
     );
