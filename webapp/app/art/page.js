@@ -9,6 +9,8 @@ import { photoBestOf } from './content/photoBestOf';
 
 import { artTabs } from "./artTabs";
 
+import Image from "next/image";
+
 var img_size = 130;
 
 export default function Art() {
@@ -19,22 +21,50 @@ export default function Art() {
         >
             <div className="flex flex-col gap-8">
                 <p>
-                    De graphisme spacial à photographie miliante en passant par motion design et musique électroacoustique,
+                    De graphisme spacial à photographie militante en passant par motion design et musique électroacoustique,
                     vous trouverez ici un aperçu de mes activités artistiques ! 
                 </p>
-                <div className="flex flex-col gap-6 text-center">
+                <div className="flex flex-col gap-6 text-center mx-auto justify-center">
                     <div>
                         <SimpleLink content={artTabs[1]} />
                     </div>
-                    <Gallery galleryData={graphicBestOf} size={img_size} />
-                    
+                    <div className="flex flex-row flex-wrap gap-6 justify-center">
+                        {
+                            graphicBestOf.imgs.slice(0, 4).map(
+                                (el, index) => (
+                                    <Image
+                                        key={index}
+                                        src={el.img}
+                                        placeholder={'blur'}
+                                        height={img_size}
+                                        style={{ objectFit: "contain" }}
+                                    />
+                                )
+                            )
+                        }
+                    </div>
                 </div>
-                
-                <div className="flex flex-col gap-6 text-center">
+
+                <div className="flex flex-col gap-6 text-center mx-auto justify-center">
                     <div>
                         <SimpleLink content={artTabs[2]} />
                     </div>
-                    <Gallery galleryData={photoBestOf} size={img_size} />
+                    {/* <Gallery galleryData={photoBestOf} size={img_size} /> */}
+                    <div className="flex flex-row flex-wrap gap-6 justify-center">
+                        {
+                            photoBestOf.imgs.slice(0, 4).map(
+                                (el, index) => (
+                                    <Image
+                                        key={index}
+                                        src={el.img}
+                                        placeholder={'blur'}
+                                        height={img_size}
+                                        style={{ objectFit: "contain" }}
+                                    />
+                                )
+                            )
+                        }
+                    </div>
                 </div>
 
                 <div className="hidden md:block text-center">
