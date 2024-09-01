@@ -4,6 +4,7 @@ import { AiOutlineExperiment } from "react-icons/ai";
 import { LuPaintbrush } from "react-icons/lu";
 import { MdOutlinePlace } from "react-icons/md";
 import { IoLanguage } from "react-icons/io5";
+import { RiQuestionAnswerLine } from "react-icons/ri";
 
 export default function AboutContent() {
     return (
@@ -28,10 +29,10 @@ export default function AboutContent() {
                     
                     <p className="mt-2 text-center">
                         <Link 
-                            className="btn btn-secondary py-1"
+                            className="btn btn-primary py-1"
                             href="/science"
                         >
-                            <AiOutlineExperiment className="inline text-xl "/> Voir plus
+                            <AiOutlineExperiment className="inline text-xl "/> Informatique
                         </Link>
                     </p>
                 </p>
@@ -40,10 +41,10 @@ export default function AboutContent() {
                     C'est notamment dans le milieu associatif que j'ai pu mettre à profit ces différentes activités et développer mes compétences.   
                     <p className="mt-2 text-center">
                         <Link 
-                            className="btn btn-secondary py-1"
+                            className="btn btn-primary py-1"
                             href="/art"
                         >
-                            <LuPaintbrush className="inline text-xl "/> Voir plus
+                            <LuPaintbrush className="inline text-xl "/> Portfolio artistique
                         </Link>
                     </p>
                 </p>
@@ -52,10 +53,10 @@ export default function AboutContent() {
                     N'hésitez pas à me contacter pour toute collaboration ou simplement pour poser une question !
                     <p className="mt-2 text-center">
                         <Link 
-                            className="btn btn-secondary py-1"
+                            className="btn btn-primary py-1"
                             href="/contact"
                         >
-                            <LuPaintbrush className="inline text-xl "/> Me contacter
+                            <RiQuestionAnswerLine className="inline text-xl "/> Contact
                         </Link>
                     </p>
                 </p>

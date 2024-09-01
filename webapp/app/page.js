@@ -34,19 +34,29 @@ export default function Landing() {
                             </div>
                             <div className="w-full">
                                 <span>
-                                    <a 
+                                    {/* <a 
                                         href="mailto: contact@pierrefg.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='md:text-base text-sm'
                                     >
                                         contact@pierrefg.com 
-                                    </a>
+                                    </a> */}
+                                    Scientifique des données
+                                    <br />
+                                    Graphisme, photo, vidéo et son
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div className='py-8'>
+                    {/* <div className='text-center'>
+                        <i>
+                            Scientifique des données
+                            <br />
+                            Graphisme, photo, vidéo et son
+                        </i>
+                    </div> */}
+                    <div className='py-4  md:py-8'>
                         <MenuBar />
                     </div>
                     <SocialIcons />
