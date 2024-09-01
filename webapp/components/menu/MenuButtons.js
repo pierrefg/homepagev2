@@ -11,7 +11,7 @@ import { RiQuestionAnswerLine } from "react-icons/ri";
 const menuLinks = [
     [<span><BiGame className='icon' /> Qui suis-je ?</span>, '/about'],
     [<span><AiOutlineExperiment className='icon' /> Informatique</span>, '/science'],
-    [<span><LuPaintbrush className='icon'/> Art</span>, '/art'],
+    [<span><LuPaintbrush className='icon'/> Porfolio artistique</span>, '/art'],
     [<span><RiQuestionAnswerLine className='icon'/> Contact</span>, '/contact'],
 ]; 
 

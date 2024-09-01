@@ -8,7 +8,7 @@ import { MdOutlineDataThresholding } from "react-icons/md";
 const scienceContent = [
     {
         title: <span><AiOutlineHome className='inline' /></span>,
-        link: '/science'
+        link: '/science',
     },
     {
         title: <span><MdOutlineDataThresholding className='inline' /> Science des données</span>,

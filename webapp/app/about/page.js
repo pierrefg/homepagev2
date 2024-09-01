@@ -32,7 +32,7 @@ export default function About() {
                     Lorsque je trouve du sens à un projet, je m'y engage pleinement.
                     </p>
                     <p>
-                        Dans mon activité scientifique, je pratique principalement la science des données et développement.
+                        Dans mon activité scientifique, je pratique principalement la science des données et le développement.
                         Diplomé INSA Lyon et Georgia Tech ainsi que détenteur d'un doctorat en informatique, je possède une large palette créative et technique pour répondre à tes projets.
                         
                         <div className="mt-2 text-center">
@@ -62,7 +62,7 @@ export default function About() {
                         <div className="mt-2 text-center">
                             <Link 
                                 className="special-link py-1"
-                                href="/art"
+                                href="/contact"
                             >
                                 <LuPaintbrush className="inline text-xl "/> Me contacter
                             </Link>
