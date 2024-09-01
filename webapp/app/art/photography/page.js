@@ -8,7 +8,7 @@ export default function Graphics() {
             {
                 photoData.map(
                     (graphicsSection, index) => (
-                        <div key={index}>
+                        <div key={index} className='pb-8'>
                             <Gallery galleryData={graphicsSection} />
                         </div>                        
                     )

@@ -7,7 +7,7 @@ import Image from "next/image";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 import Overlay from '@/components/overlay/Overlay';
 
-export default function Gallery({ galleryData }) {
+export default function Gallery({ galleryData, size=400 }) {
     const galleryLength = galleryData.imgs.length;
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -71,16 +71,18 @@ export default function Gallery({ galleryData }) {
         }
         {/* <div className={`gallery ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}> */}
         <div className="gallery">
-            <div className="inline-block flex flex-col p-2 text-base text-center">
-                <h2 
-                    className="inline-block"
-                >
-                    {galleryData.title}
-                </h2>
-                <p className="inline-block text-sm text-primary-muted">
-                    {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
-                </p>
-            </div>
+            { galleryData.title &&
+                <div className="flex flex-col p-2 text-base text-center">
+                    <h2 
+                        className="inline-block"
+                    >
+                        {galleryData.title}
+                    </h2>
+                    <p className="inline-block text-sm text-primary-muted">
+                        {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
+                    </p>
+                </div>
+            }
             <div className="flex flex-row items-center gap-4 max-w-7xl mx-auto">
                 <div className='w-[40px] hidden md:block'>
                     {
@@ -118,7 +120,7 @@ export default function Gallery({ galleryData }) {
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
                                         placeholder={'blur'}
-                                        height={400}
+                                        height={size}
                                         style={{objectFit: "contain"}}
                                         onLoad={(e) => handleImageLoad(index, e)}
                                     />

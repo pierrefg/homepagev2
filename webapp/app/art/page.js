@@ -1,19 +1,93 @@
+import Image from "next/image";
+import Link from "next/link";
+
 import planetPic from './graphics/content/space/A.png';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
+import Gallery from '@/components/gallery/Gallery';
+
+import { graphicBestOf } from './content/graphicBestOf';
+import { photoBestOf } from './content/photoBestOf';
+
+import perceptionPic from './music/content/perception.jpg'
+
+import { IoMusicalNoteOutline } from "react-icons/io5";
+import { MdOutlinePhotoCamera } from "react-icons/md";
+import { MdOutlinePolyline } from "react-icons/md";
+import { RiVideoOnLine } from "react-icons/ri";
+
+var img_size = 130;
 
 export default function Art() {
     return (
         <HomePageLayout
             coverPic={planetPic}
-            title='Activité artistique'
+            // title='Activité artistique'
         >
-            <>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec sapien condimentum, placerat est non, egestas massa. Etiam vel malesuada justo. Etiam eget dolor sit amet lorem convallis congue at vitae mi. Duis malesuada mauris eget orci pellentesque laoreet. Vestibulum vehicula nec mi sed feugiat. Vivamus lacinia ligula in mauris lobortis scelerisque eu ac purus. Aenean consectetur, quam vel mollis elementum, augue ipsum viverra turpis, ut interdum ante tortor ut leo. Integer ac purus luctus, euismod ligula non, facilisis odio. Sed id lacinia nulla.
-                    Maecenas non ultrices velit. Cras fermentum, metus et mollis condimentum, justo nisl scelerisque leo, et vestibulum mi risus nec nulla. Nullam ac tincidunt metus. Fusce vehicula tellus quis dolor tincidunt, in malesuada ligula maximus. Donec dapibus sollicitudin fermentum. Mauris efficitur est ut neque gravida, eu bibendum elit porttitor. Vivamus a purus in sapien mollis malesuada a et velit. Sed at fringilla ante. Ut vitae pellentesque augue. Morbi mauris est, viverra eget erat vitae, molestie consequat urna. Nulla ac imperdiet enim, nec faucibus ligula. Pellentesque ut posuere turpis. Fusce sed sodales tellus, at vulputate est. Donec velit tortor, consectetur eu purus a, pharetra placerat arcu.   
-                </p>
-            </>
+            <div className="flex flex-col gap-8 justify-center">
+                <h2 className="text-xl text-center">Activité artistique</h2>
+                <div className="flex flex-col gap-6 text-center">
+                    <div>
+                        <Link 
+                            className="special-link py-1"
+                            href="/art/photography"
+                        >
+                            <MdOutlinePolyline className="inline text-xl"/> Graphisme
+                        </Link>
+                    </div>
+                    <Gallery galleryData={graphicBestOf} size={img_size} />
+                    
+                </div>
+                
+                <div className="flex flex-col gap-6 text-center">
+                    <div>
+                        <Link 
+                            className="special-link py-1"
+                            href="/art/photography"
+                        >
+                            <MdOutlinePhotoCamera className="inline text-xl "/> Photographie
+                        </Link>
+                    </div>
+                    <Gallery galleryData={photoBestOf} size={img_size} />
+                </div>
+
+                <div className="hidden md:block text-center">
+                    Je fais aussi de la<> </>
+                    <Link 
+                        className="special-link py-1"
+                        href="/art/music"
+                    >
+                        <IoMusicalNoteOutline className="inline text-xl "/> Musique
+                    </Link>
+                    <> et de la </>
+                    <Link 
+                        className="special-link py-1"
+                        href="/art/music"
+                    >
+                        <RiVideoOnLine className="inline text-xl "/> Vidéo
+                    </Link>
+                    <> !</>
+                </div>
+                <div className="flex flex-col gap-4 md:hidden text-center">
+                    <div>
+                        Découvrez aussi:
+                    </div>
+                    <div>
+                        <Link 
+                            className="special-link py-1 mr-2"
+                            href="/art/music"
+                        >
+                            <IoMusicalNoteOutline className="inline text-xl "/> Musique
+                        </Link>
+                        <Link 
+                            className="special-link py-1"
+                            href="/art/music"
+                        >
+                            <RiVideoOnLine className="inline text-xl "/> Vidéo
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </HomePageLayout>
     );
 }
