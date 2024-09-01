@@ -3,17 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { BiGame } from "react-icons/bi";
-import { AiOutlineExperiment } from "react-icons/ai";
-import { LuPaintbrush } from "react-icons/lu";
-import { RiQuestionAnswerLine } from "react-icons/ri";
+import { mainMenuLinks } from './menuData';
 
-const menuLinks = [
-    [<span><BiGame className='icon' /> Qui suis-je ?</span>, '/about'],
-    [<span><AiOutlineExperiment className='icon' /> Informatique</span>, '/science'],
-    [<span><LuPaintbrush className='icon'/> Porfolio artistique</span>, '/art'],
-    [<span><RiQuestionAnswerLine className='icon'/> Contact</span>, '/contact'],
-]; 
+import SimpleLink from '../SimpleLink';
 
 export default function MenuButtons({ toDoOnElementClick }) {
     const pathname = usePathname();
@@ -21,19 +13,19 @@ export default function MenuButtons({ toDoOnElementClick }) {
     return (
         <div className={`flex flex-col md:flex-row items-center gap-4`}>
             {
-                menuLinks.map(
-                    ([title, link], index) => {
-                        const isActive = pathname.includes(link);
+                mainMenuLinks.map(
+                    (el, index) => {
+                        const isActive = pathname.includes(el.link);
                         
                         return (
-                            <Link 
+                            <SimpleLink 
                                 key={index} 
-                                href={link}
-                                className={`btn btn-primary btn-large ${isActive ? 'active' : ''}`}
-                                onClick={ toDoOnElementClick }
-                            >
-                                {title}
-                            </Link>
+                                content={el} 
+                                primary 
+                                large 
+                                active={isActive}
+                                onClick={toDoOnElementClick}
+                            />
                         )
                     }
                 )

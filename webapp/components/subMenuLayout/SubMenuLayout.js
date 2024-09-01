@@ -7,6 +7,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import SimpleLink from '../SimpleLink';
+
 export default function SubMenuLayout({ children, pagesData }) {
     const pathname = usePathname();
     const [isFullWidth, setIsFullWidth] = useState(false);
@@ -22,16 +24,14 @@ export default function SubMenuLayout({ children, pagesData }) {
         <>
             <div className="sub-menu-layout">
                 <div className="sub-menu">
-                    {pagesData.map((contentData, index) => {
-                        const isActive = pathname === contentData.link;
+                    {pagesData.map((el, index) => {
+                        const isActive = pathname === el.link;
                         return (
-                            <Link
-                                key={index}
-                                href={contentData.link}
-                                className={`btn btn-secondary ${isActive ? 'active' : ''}`}
-                            >
-                                {contentData.title}
-                            </Link>
+                            <SimpleLink 
+                                key={index} 
+                                content={el}  
+                                active={isActive}
+                            />
                         );
                     })}
                 </div>

@@ -7,6 +7,7 @@ export default function HomePageLayout({children, title, coverPic}) {
                 <Image
                     src={coverPic}
                     className="object-cover w-[150px] h-[150px] md:w-full md:h-full rounded-full md:rounded-none"
+                    placeholder={'blur'}
                     priority
                 />
             </div>

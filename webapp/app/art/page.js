@@ -1,18 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import planetPic from './graphics/content/space/A.png';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 import Gallery from '@/components/gallery/Gallery';
+import SimpleLink from "@/components/SimpleLink";
 
 import { graphicBestOf } from './content/graphicBestOf';
 import { photoBestOf } from './content/photoBestOf';
 
-import { IoMusicalNoteOutline } from "react-icons/io5";
-import { MdOutlinePhotoCamera } from "react-icons/md";
-import { MdOutlinePolyline } from "react-icons/md";
-import { RiVideoOnLine } from "react-icons/ri";
+import { artTabs } from "./artTabs";
 
 var img_size = 130;
 
@@ -29,12 +24,7 @@ export default function Art() {
                 </p>
                 <div className="flex flex-col gap-6 text-center">
                     <div>
-                        <Link 
-                            className="btn btn-secondary py-1"
-                            href="/art/photography"
-                        >
-                            <MdOutlinePolyline className="inline text-xl"/> Graphisme
-                        </Link>
+                        <SimpleLink content={artTabs[1]} />
                     </div>
                     <Gallery galleryData={graphicBestOf} size={img_size} />
                     
@@ -42,50 +32,25 @@ export default function Art() {
                 
                 <div className="flex flex-col gap-6 text-center">
                     <div>
-                        <Link 
-                            className="btn btn-secondary py-1"
-                            href="/art/photography"
-                        >
-                            <MdOutlinePhotoCamera className="inline text-xl "/> Photographie
-                        </Link>
+                        <SimpleLink content={artTabs[2]} />
                     </div>
                     <Gallery galleryData={photoBestOf} size={img_size} />
                 </div>
 
                 <div className="hidden md:block text-center">
                     Je fais aussi de la<> </>
-                    <Link 
-                        className="btn btn-secondary py-1"
-                        href="/art/music"
-                    >
-                        <span><IoMusicalNoteOutline className="inline text-xl "/> Musique</span>
-                    </Link>
+                    <SimpleLink content={artTabs[3]} />
                     <> et de la </>
-                    <Link 
-                        className="btn btn-secondary py-1"
-                        href="/art/video"
-                    >
-                        <span><RiVideoOnLine className="inline text-xl "/> Vidéo</span>
-                    </Link>
+                    <SimpleLink content={artTabs[4]} />
                     <> !</>
                 </div>
                 <div className="flex flex-col gap-4 md:hidden text-center">
                     <div>
                         Découvrez aussi:
                     </div>
-                    <div>
-                        <Link 
-                            className="btn btn-secondary py-1 mr-2"
-                            href="/art/music"
-                        >
-                            <span><IoMusicalNoteOutline className="inline text-xl "/> Musique</span>
-                        </Link>
-                        <Link 
-                            className="btn btn-secondary py-1"
-                            href="/art/video"
-                        >
-                            <span><RiVideoOnLine className="inline text-xl "/> Vidéo</span>
-                        </Link>
+                    <div className="flex flex-row gap-4 mx-auto">
+                        <SimpleLink content={artTabs[3]} />
+                        <SimpleLink content={artTabs[4]} />
                     </div>
                 </div>
             </div>
