@@ -9,8 +9,6 @@ import Gallery from '@/components/gallery/Gallery';
 import { graphicBestOf } from './content/graphicBestOf';
 import { photoBestOf } from './content/photoBestOf';
 
-import perceptionPic from './music/content/perception.jpg'
-
 import { IoMusicalNoteOutline } from "react-icons/io5";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import { MdOutlinePolyline } from "react-icons/md";
@@ -22,10 +20,13 @@ export default function Art() {
     return (
         <HomePageLayout
             coverPic={planetPic}
-            // title='Activité artistique'
+            title='Activité artistique'
         >
-            <div className="flex flex-col gap-8 justify-center">
-                <h2 className="text-xl text-center">Activité artistique</h2>
+            <div className="flex flex-col gap-8">
+                <p>
+                    De graphisme spacial à photographie miliante en passant par motion design et musique électroacoustique,
+                    vous trouverez ici un aperçu de mes activités artistiques ! 
+                </p>
                 <div className="flex flex-col gap-6 text-center">
                     <div>
                         <Link 
