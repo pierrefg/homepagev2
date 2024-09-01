@@ -3,16 +3,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { FaRunning } from "react-icons/fa";
+import { BiGame } from "react-icons/bi";
 import { AiOutlineExperiment } from "react-icons/ai";
 import { LuPaintbrush } from "react-icons/lu";
 import { RiQuestionAnswerLine } from "react-icons/ri";
 
 const menuLinks = [
-    [<span><FaRunning className='icon' /> Parcours</span>, '/background'],
-    [<span><AiOutlineExperiment className='icon' /> Science</span>, '/science'],
+    [<span><BiGame className='icon' /> Qui suis-je ?</span>, '/about'],
+    [<span><AiOutlineExperiment className='icon' /> Informatique</span>, '/science'],
     [<span><LuPaintbrush className='icon'/> Art</span>, '/art'],
-    [<span><RiQuestionAnswerLine className='icon'/> En savoir plus</span>, '/about'],
+    [<span><RiQuestionAnswerLine className='icon'/> Contact</span>, '/contact'],
 ]; 
 
 export default function MenuButtons({ toDoOnElementClick }) {

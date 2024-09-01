@@ -1,28 +1,39 @@
 import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
-import { RiInformation2Line } from "react-icons/ri";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { GrContact } from "react-icons/gr";
+import { AiOutlineHome } from "react-icons/ai";
+import { PiChalkboardTeacherLight } from "react-icons/pi";
+import { IoSchoolOutline } from "react-icons/io5";
+import { MdOutlineVolunteerActivism } from "react-icons/md";
+import { AiOutlineTool } from "react-icons/ai";
 
-const aboutContent = [
+const backgroundContent = [
     {
-        title: <span><RiInformation2Line className='inline' /> Qui suis-je ?</span>,
-        link: '/about/who-am-i'
+        title: <span><AiOutlineHome className='inline' /></span>,
+        link: '/about',
+        fullwidth: true
     },
     {
-        title: <span><MdOutlineDesignServices className='inline' /> Prestations</span>,
-        link: '/about/services'
+        title: <span><AiOutlineTool className='inline' /> Expérience</span>,
+        link: '/about/work'
     },
     {
-        title: <span><GrContact className='inline' /> Contact</span>,
-        link: '/about/contact'
+        title: <span><MdOutlineVolunteerActivism className='inline' /> Bénévolat</span>,
+        link: '/about/volunteering'
     },
+    {
+        title: <span><IoSchoolOutline className='inline' /> Formation</span>,
+        link: '/about/education'
+    },
+    {
+        title: <span><PiChalkboardTeacherLight className='inline' /> Enseignement</span>,
+        link: '/about/teaching'
+    }
 ];
 
 export default function AboutLayout({ children }) {
     return (
         <>
-            <SubMenuLayout pagesData={aboutContent}>{children}</SubMenuLayout>
+            <SubMenuLayout pagesData={backgroundContent}>{children}</SubMenuLayout>
         </>
     );
 }

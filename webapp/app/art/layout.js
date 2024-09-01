@@ -1,11 +1,16 @@
 import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
+import { AiOutlineHome } from "react-icons/ai";
 import { IoMusicalNoteOutline } from "react-icons/io5";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import { MdOutlinePolyline } from "react-icons/md";
 import { RiVideoOnLine } from "react-icons/ri";
 
 const artContent = [
+    {
+        title: <span><AiOutlineHome className='inline' /></span>,
+        link: '/art'
+    },
     {
         title: <span><MdOutlinePolyline className='inline' /> Graphisme</span>,
         link: '/art/graphics',

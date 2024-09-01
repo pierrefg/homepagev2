@@ -72,5 +72,33 @@ export const educationData = [
         highlight: {
             text: "Mention très bien"
         }
+    },
+    {
+        title: {
+            name: "DNOP en violon et musique électroacoustique"
+        },
+        subtitle: "DNOP (Diplôme National d'Orientation Professionnelle)",
+        period: "2008-15",
+        companies: [ 
+            {
+                name: 'Conservatoire Gabriel Fauré',
+                place: 'Angoulême, France',
+                link: "https://conservatoire.grandangouleme.fr/"
+            }
+        ]
+    },
+    {
+        title: {
+            name: "CEM de formation musicale-orchestre"
+        },
+        subtitle: "CEM (Certificat d'Études Musicales)",
+        period: "2008-15",
+        companies: [ 
+            {
+                name: 'Conservatoire Gabriel Fauré',
+                place: 'Angoulême, France',
+                link: "https://conservatoire.grandangouleme.fr/"
+            }
+        ]
     }
 ];

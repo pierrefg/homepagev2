@@ -9,34 +9,7 @@ import LoaderElement from '@/components/loader/LoaderElement';
 import { FaRegFaceSadCry } from "react-icons/fa6";
 import { BiHappyBeaming } from "react-icons/bi";
 
-const TextInput = ({ type = 'text', label, name, rows = "1", disabled = false }) => {
-    const commonProps = {
-        name,
-        className: "text-input",
-        required: true,
-    };
-
-    return (
-        <div>
-            <label className="block text-sm mb-2" htmlFor={name}>
-                {label}
-            </label>
-            {type === 'textarea' ? (
-                <textarea
-                    {...commonProps}
-                    rows={rows}
-                    disabled={disabled}
-                />
-            ) : (
-                <input
-                    type={type}
-                    {...commonProps}
-                    disabled={disabled}
-                />
-            )}
-        </div>
-    );
-}
+import TextInput from '@/components/form/TextInput';
 
 export default function Contact() {
     const [mailState, setMailState] = useState(null);
@@ -90,7 +63,7 @@ export default function Contact() {
                     ) : mailState === 'error' ? (
                         <span className='text-red-600'>
                             <FaRegFaceSadCry className='inline' /> 
-                            <> Il y a eu un problème avec l'envoie, essayez directement sur mon adresse pierrefg@proton.me !</>
+                            <> Il y a eu un problème avec l'envoi, essayez directement sur mon adresse pierrefg@proton.me !</>
                         </span>
                     ) : (
                         <button
