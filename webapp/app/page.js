@@ -44,7 +44,7 @@ export default function Landing() {
                                     </a> */}
                                     Scientifique des données
                                     <br />
-                                    Graphisme, photo, vidéo et son
+                                    Graphisme, photo, son et vidéo
                                 </span>
                             </div>
                         </div>

@@ -25,7 +25,7 @@ export default function AboutContent() {
                 </p>
                 <p>
                     Dans mon activité scientifique, je pratique principalement la science des données et le développement.
-                    Diplomé INSA Lyon et Georgia Tech ainsi que détenteur d'un doctorat en informatique, je possède une large palette créative et technique pour répondre à tes projets.
+                    Diplomé INSA Lyon et Georgia Tech ainsi que détenteur d'un doctorat en informatique, je possède une large palette créative et technique pour répondre à des problématiques complexes.
                     
                     <p className="mt-2 text-center">
                         <Link 
