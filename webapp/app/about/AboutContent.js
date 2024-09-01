@@ -61,7 +61,7 @@ export default function AboutContent() {
                 </p>
 
                 <p className="text-primary-muted">
-                    Photo par Pierre Fymbel.
+                    Photo d'illustration par Pierre Fimbel.
                 </p>
             </div>
         </>
