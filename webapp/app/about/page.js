@@ -1,5 +1,4 @@
-// import coverPic from '@/public/imgs/portrait.jpg';
-import coverPic from '@/public/imgs/ombrelle.jpg';
+import coverPic from './cover.jpg';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 import AboutContent from "./AboutContent";

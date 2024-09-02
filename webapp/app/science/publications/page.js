@@ -1,3 +1,6 @@
+import Image from "next/image";
+import CoverPic from "./talk.jpg";
+
 import Timeline from "@/components/timeline/Timeline";
 
 import { publicationsData } from "./publicationsData";
@@ -14,6 +17,12 @@ import { VscSymbolMisc } from "react-icons/vsc";
 export default function Publications() {
     return (
         <div className="justify-center">
+            <Image
+                src={CoverPic}
+                className="rounded-full w-[200px] h-[200px] mx-auto mb-8"
+                placeholder={'blur'}
+                priority
+            />
             <Timeline
                 Icon = {IoDocumentsOutline}
                 title = "Publications"

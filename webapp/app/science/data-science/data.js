@@ -5,10 +5,10 @@ import { TbBuildingFactory2 } from "react-icons/tb";
 import { SlEnergy } from "react-icons/sl";
 
 import pdfPic from './imgs/pdf_analysis.jpg';
-import saosPic from './imgs/saos.png';
-import tsnePic from './imgs/tsne.png';
-import halPic from './imgs/hal_scrapping.png';
-import airgapPic from './imgs/airgap.png';
+import saosPic from './imgs/saos.jpg';
+import tsnePic from './imgs/tsne.jpg';
+import halPic from './imgs/hal_scrapping.jpg';
+import airgapPic from './imgs/airgap.jpg';
 
 export const dataScienceData = 
     [

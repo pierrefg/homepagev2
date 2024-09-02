@@ -60,8 +60,8 @@ export default function Project({data}) {
                     <div className="mx-auto text-center md:w-2/5 md:pr-8 pb-6">
                         <Image
                             src={data.img}
-                            width={350}
-                            className="mx-auto rounded-full"
+                            // width={350}
+                            className="mx-auto rounded-full w-4/5 md:w-[350px]"
                         />
                         <p className="text-primary-muted italic pt-2">{data.imgLegend}</p>
                     </div>

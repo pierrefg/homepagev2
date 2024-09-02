@@ -1,4 +1,4 @@
-import planetPic from './graphics/content/space/A.jpg';
+import coverPic from './cover.jpg';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 import SimpleLink from "@/components/SimpleLink";
@@ -15,7 +15,7 @@ var img_size = 130;
 export default function Art() {
     return (
         <HomePageLayout
-            coverPic={planetPic}
+            coverPic={coverPic}
             title='Activité artistique'
         >
             <div className="flex flex-col gap-8">

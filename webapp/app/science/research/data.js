@@ -1,5 +1,5 @@
-import diatomPic from './imgs/diatom.png';
-import cePic from './imgs/ce_graph.png';
+import diatomPic from './imgs/diatom.jpg';
+import cePic from './imgs/ce_graph.jpg';
 
 import { IoHammerOutline } from "react-icons/io5";
 import { MdOutlineWater } from "react-icons/md";

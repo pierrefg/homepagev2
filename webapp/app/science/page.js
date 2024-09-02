@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import coverPic from './research/imgs/diatom.png';
+import coverPic from './cover.jpg';
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 import SimpleLink from "@/components/SimpleLink";
 

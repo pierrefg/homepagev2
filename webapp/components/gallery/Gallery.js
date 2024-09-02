@@ -128,6 +128,7 @@ export default function Gallery({ galleryData, size=400 }) {
                             )
                         )
                     }
+                    
                 </div>
                 <div className='w-[40px] hidden md:block'>
                     {
@@ -138,6 +139,17 @@ export default function Gallery({ galleryData, size=400 }) {
                         />
                     }
                 </div>
+            </div>
+            <div className='mx-auto md:hidden flex flex-row gap-2'>
+                {
+                    Array.from({ length: galleryLength }, (_, index) => (
+                        <div 
+                            className={`circle ${(index === currentIndex) ? 'active' : ''}`}
+                            key={index}
+                        >
+                        </div>
+                    ))
+                }
             </div>
         </div>
     </>);
