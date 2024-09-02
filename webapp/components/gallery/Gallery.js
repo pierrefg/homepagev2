@@ -13,7 +13,7 @@ export default function Gallery({ galleryData, size=400 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageWidths, setImageWidths] = useState([]);
     const [isScrollable, setIsScrollable] = useState(false);
-    // const lightTheme = (galleryData.theme || 'dark') == 'light';
+    const [startX, setStartX] = useState(0);
 
     const [toShowInOverlay, setToShowInOverlay] = useState(null);
 
@@ -62,6 +62,20 @@ export default function Gallery({ galleryData, size=400 }) {
         });
     };
 
+    const handleTouchStart = (e) => {
+        setStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const deltaX = endX - startX;
+
+        if (deltaX > 50) { // Swipe right
+            handlePrevClick();
+        } else if (deltaX < -50) { // Swipe left
+            handleNextClick();
+        }
+    };
     
 
     return (<>
@@ -69,7 +83,6 @@ export default function Gallery({ galleryData, size=400 }) {
             toShowInOverlay &&
             <Overlay onClose={() => setToShowInOverlay(null)}>{toShowInOverlay}</Overlay>
         }
-        {/* <div className={`gallery ${lightTheme ? 'gallery-light' : 'gallery-dark' }`}> */}
         <div className="gallery">
             { galleryData.title &&
                 <div className="flex flex-col p-2 text-base text-center">
@@ -83,7 +96,11 @@ export default function Gallery({ galleryData, size=400 }) {
                     </p>
                 </div>
             }
-            <div className="flex flex-row items-center gap-4 max-w-7xl mx-auto">
+            <div 
+                className="flex flex-row items-center gap-4 max-w-7xl mx-auto"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+            >
                 <div className='w-[40px] hidden md:block'>
                     {
                         isScrollable &&
