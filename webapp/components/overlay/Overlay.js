@@ -12,8 +12,10 @@ export default function Overlay({ children, onClose }) {
                     onClick={onClose}
                 />
             </div>
-            <div className="flex-grow mx-auto">
-                { children }
+            <div className="flex-grow flex items-center justify-center w-full h-full">
+                <div>
+                    {children}
+                </div>
             </div>
         </div>
     );

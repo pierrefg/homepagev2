@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import coverPic from '@/app/art/photography/content/london/H.png';
+import coverPic from '@/app/art/photography/content/london/H.jpg';
 import ContactForm from '@/components/form/ContactForm';
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 

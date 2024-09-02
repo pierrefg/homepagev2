@@ -1,7 +1,6 @@
-import planetPic from './graphics/content/space/A.png';
+import planetPic from './graphics/content/space/A.jpg';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
-import Gallery from '@/components/gallery/Gallery';
 import SimpleLink from "@/components/SimpleLink";
 
 import { graphicBestOf } from './content/graphicBestOf';

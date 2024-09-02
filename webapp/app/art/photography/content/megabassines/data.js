@@ -1,17 +1,17 @@
-import imgA from './A.png';
-import imgB from './B.png';
-import imgC from './C.png';
-import imgD from './D.png';
-import imgE from './E.png';
-import imgF from './F.png';
-import imgG from './G.png';
-import imgH from './H.png';
-import imgI from './I.png';
-import imgJ from './J.png';
-import imgK from './K.png';
-import imgL from './L.png';
-import imgM from './M.png';
-import imgN from './N.png';
+import imgA from './A.jpg';
+import imgB from './B.jpg';
+import imgC from './C.jpg';
+import imgD from './D.jpg';
+import imgE from './E.jpg';
+import imgF from './F.jpg';
+import imgG from './G.jpg';
+import imgH from './H.jpg';
+import imgI from './I.jpg';
+import imgJ from './J.jpg';
+import imgK from './K.jpg';
+import imgL from './L.jpg';
+import imgM from './M.jpg';
+import imgN from './N.jpg';
 
 export const megabassines = {
     title: 'Megabassines',

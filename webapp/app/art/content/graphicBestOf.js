@@ -1,10 +1,10 @@
-import img0 from '@/app/art/graphics/content/space/B.png';
-import imgA from '@/app/art/graphics/content/nightmares/A.png';
-import imgB from '@/app/art/graphics/content/deception/A.png';
-import imgD from '@/app/art/graphics/content/trou/A.png';
-import imgC from '@/app/art/graphics/content/thesis/A.png';
-import imgE from '@/app/art/graphics/content/monsters/A.png';
-import imgF from '@/app/art/graphics/content/pastel/A.png';
+import img0 from '@/app/art/graphics/content/space/B.jpg';
+import imgA from '@/app/art/graphics/content/nightmares/A.jpg';
+import imgB from '@/app/art/graphics/content/deception/A.jpg';
+import imgD from '@/app/art/graphics/content/trou/A.jpg';
+import imgC from '@/app/art/graphics/content/thesis/A.jpg';
+import imgE from '@/app/art/graphics/content/monsters/A.jpg';
+import imgF from '@/app/art/graphics/content/pastel/A.jpg';
 
 export var graphicBestOf = {
     imgs: [

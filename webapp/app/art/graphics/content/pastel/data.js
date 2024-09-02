@@ -1,8 +1,8 @@
-import imgA from './A.png';
-import imgB from './B.png';
-import imgC from './C.png';
-import imgD from './D.png';
-import imgE from './E.png';
+import imgA from './A.jpg';
+import imgB from './B.jpg';
+import imgC from './C.jpg';
+import imgD from './D.jpg';
+import imgE from './E.jpg';
 
 export const pastel = {
     title: 'Pastel',

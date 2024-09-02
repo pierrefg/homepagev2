@@ -1,13 +1,13 @@
-import imgA from './A.png';
-import imgB from './B.png';
-import imgC from './C.png';
-import imgD from './D.png';
-import imgE from './E.png';
-import imgF from './F.png';
-import imgG from './G.png';
-import imgH from './H.png';
-import imgI from './I.png';
-import imgJ from './J.png';
+import imgA from './A.jpg';
+import imgB from './B.jpg';
+import imgC from './C.jpg';
+import imgD from './D.jpg';
+import imgE from './E.jpg';
+import imgF from './F.jpg';
+import imgG from './G.jpg';
+import imgH from './H.jpg';
+import imgI from './I.jpg';
+import imgJ from './J.jpg';
 
 export const istanbul = {
     title: 'Petit-déjeuner',
@@ -15,7 +15,7 @@ export const istanbul = {
     place: 'Istanbul',
     imgs: [
         {
-            img: imgA
+            img: imgD
         },
         {
             img: imgB
@@ -24,7 +24,7 @@ export const istanbul = {
             img: imgC
         },
         {
-            img: imgD
+            img: imgA
         },
         {
             img: imgE

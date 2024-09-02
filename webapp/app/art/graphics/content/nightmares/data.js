@@ -1,5 +1,5 @@
-import imgA from './A.png';
-import imgB from './B.png';
+import imgA from './A.jpg';
+import imgB from './B.jpg';
 
 export const Zzzzzzz = {
     title: 'Zzzzzzzzzz',

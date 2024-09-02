@@ -1,11 +1,11 @@
-import imgA from './A.png';
-import imgB from './B.png';
-import imgC from './C.png';
-import imgD from './D.png';
-import imgE from './E.png';
-import imgF from './F.png';
-import imgG from './G.png';
-import imgH from './H.png';
+import imgA from './A.jpg';
+import imgB from './B.jpg';
+import imgC from './C.jpg';
+import imgD from './D.jpg';
+import imgE from './E.jpg';
+import imgF from './F.jpg';
+import imgG from './G.jpg';
+import imgH from './H.jpg';
 
 export const london = {
     title: 'Fudge & Brownies',

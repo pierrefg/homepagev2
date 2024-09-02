@@ -1,4 +1,4 @@
-import imgA from './A.png';
+import imgA from './A.jpg';
 
 export const tortue = {
     title: 'Tortue',
