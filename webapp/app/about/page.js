@@ -1,6 +1,5 @@
-import Link from "next/link";
-
-import coverPic from '@/public/imgs/portrait.jpg';
+// import coverPic from '@/public/imgs/portrait.jpg';
+import coverPic from '@/public/imgs/ombrelle.jpg';
 
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
 import AboutContent from "./AboutContent";

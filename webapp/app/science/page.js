@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import coverPic from './research/imgs/diatom.png';
 import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
+import SimpleLink from "@/components/SimpleLink";
 
 import { scienceTabs } from "./scienceTabs";
 
@@ -15,12 +16,7 @@ export default function Science() {
                 <div>
                     [WIP]
                     <p className="mt-2 text-center">
-                        <Link 
-                            className="btn btn-secondary py-1"
-                            href={scienceTabs[1].link}
-                        >
-                            {scienceTabs[1].title}
-                        </Link>
+                        <SimpleLink content={scienceTabs[1]}/>
                     </p>
 
                 </div>

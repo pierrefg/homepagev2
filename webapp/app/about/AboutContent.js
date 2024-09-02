@@ -44,8 +44,8 @@ export default function AboutContent() {
                 </p>
             </div>
 
-            <div className="text-primary-muted">
-                Photo d'illustration par Pierre Fimbel.
+            <div className="text-primary-muted text-sm">
+                Merci à Pierre Fimbel et Charlotte Delfosse de m'avoir tiré le portrait.
             </div>
         </div>
     );
