@@ -22,14 +22,15 @@ export default function Landing() {
     const { darkMode } = useStore();
 
     return (
-        <>
-            <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
-                <Snake color = "purple" />
-                <Snake color = "blue" />
-            </div>
+        <div className="snap-y snap-proximity md:snap-none h-screen md:h-auto overflow-scroll md:overflow-auto">
             
-            <div className="relative h-screen flex flex-col justify-between z-20">
-                <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6">
+            
+            <div className="relative h-screen flex flex-col justify-between snap-start">
+                <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
+                    <Snake color = "purple" />
+                    <Snake color = "blue" />
+                </div>
+                <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
                     <div className="flex flex-col items-center gap-4 ">
                         <div className="flex w-[150px] md:w-[200px]">
                             <Portrait />
@@ -55,7 +56,7 @@ export default function Landing() {
                         <ThemeSwitch />
                     </div>
                 </div>
-                <div className="flex justify-center mb-8">
+                <div className="flex justify-center mb-8 z-20">
                     <Link
                         href='/#about'
                         className='btn btn-primary rounded-full flex justify-center items-center w-[50px] h-[50px] '
@@ -64,7 +65,7 @@ export default function Landing() {
                     </Link>
                 </div>
             </div>
-            <div id='about' className='h-screen flex flex-col justify-between items-center z-20'>
+            <div id='about' className='h-screen flex flex-col justify-between items-center z-20 snap-start'>
                 <div className='flex flex-grow justify-center items-center p-6 z-20'>
                     <HomePageLayout
                         coverPic={coverPic}
@@ -75,6 +76,6 @@ export default function Landing() {
                 </div>
                 <Footer />
             </div>
-        </>
+        </div>
     ) 
 }
