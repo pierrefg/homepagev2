@@ -20,11 +20,11 @@ export const publicationsData = [
             },
             {
                 text: 'poster',
-                url: '/pdfs/g3_poster.pdf'
+                url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/g3_poster-lmrpbAqiSwbCCtiV4viVW0EMS4pcy6.pdf'
             },
             {
                 text: 'slides',
-                url: '/pdfs/g3_slides.pdf'
+                url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/g3_slides-Xkh3jIKwU0t54DFdoM0y1jjjg043o6.pdf'
             },
             {  
                 text: 'voir plus',
@@ -166,7 +166,7 @@ export const publicationsData = [
             },
             {
                 text: 'poster',
-                url: '/pdfs/diatoms_poster.pdf'
+                url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/diatoms_poster-O3MpzVoAgmQkjrYcLvaGLsLRs1rzsv.pdf'
             },
             {  
                 text: 'voir plus',
