@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import useStore from '@/store/useStore';
 import Image from "next/image";
 
-export default function Portrait({ size = 220, src = '/imgs/portrait.jpg' }) {
+import portraitPic from './portrait.jpg';
+
+export default function Portrait({ size = 220 }) {
     const { darkMode } = useStore();
     const portraitRef = useRef(null);
     const [hasMounted, setHasMounted] = useState(false);
@@ -31,7 +33,7 @@ export default function Portrait({ size = 220, src = '/imgs/portrait.jpg' }) {
 
     return (
         <Image
-            src={src}
+            src={portraitPic}
             alt="pierrefg"
             width={size}
             height={size}

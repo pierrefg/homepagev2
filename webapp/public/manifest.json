@@ -1,7 +1,7 @@
 {
     "name": "Pierre Faure-Giovagnoli",
     "short_name": "Pierre FG",
-    "description": "Je suis scientifique des données mais également graphiste et photographe. Viens découvrir mon site pour voir ce que je fais !",
+    "description": "Science des données • Graphisme • Photographie • Musique / Viens découvrir ce que je fais !",
     "icons": [
       {
         "src": "/icons/icon-192x192.png",
@@ -14,7 +14,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/",
+    "start_url": "",
     "background_color": "#000000",
     "theme_color": "#000000",
     "display": "standalone",
