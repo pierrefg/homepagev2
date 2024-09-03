@@ -74,3 +74,11 @@ li::before {
     animation: rotate360 5s linear infinite;
     animation-timing-function: ease-in-out;
 }
+
+.no-select {
+    user-select: none;
+}
+
+.paused {
+    animation-play-state: paused;
+  }

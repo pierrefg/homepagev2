@@ -15,6 +15,10 @@
     @apply px-[8px] py-[6px];
 }
 
+.btn-tight {
+    @apply p-0;
+}
+
 .btn-primary {
    @apply bg-primary text-foreground;
 }
@@ -31,6 +35,7 @@
     @apply text-primary text-center;
     @apply border-solid border-2 border-primary;
     @apply hover:text-primary;
+    @apply inline-flex justify-center items-center;
 }
 
 .btn-secondary:hover {
@@ -42,5 +47,5 @@
 }
 
 .btn-secondary.disabled {
-    @apply text-primary-muted border-primary-muted;
+    @apply text-primary-muted border-primary-muted animate-none cursor-no-drop;
 }

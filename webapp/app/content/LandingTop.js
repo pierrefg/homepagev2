@@ -50,12 +50,12 @@ export default function LandingTop() {
                 </div>
             </div>
             
-            <div className="flex justify-center mb-8 z-20">
+            <div className="flex justify-center mb-8 z-20 ">
                 <Link
                     href='/#about'
-                    className='btn btn-primary rounded-full flex justify-center items-center w-[50px] h-[50px] '
+                    className='btn btn-primary rounded-full flex justify-center items-center w-[50px] h-[50px] animate-bounce'
                 >
-                    <FaArrowDown className='text-2xl rotate-animation' />
+                    <FaArrowDown className='text-2xl ' />
                 </Link>
             </div>
         </>
