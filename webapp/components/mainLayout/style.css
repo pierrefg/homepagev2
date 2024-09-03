@@ -1,4 +1,4 @@
 #main-container {
     @apply bg-[theme('colors.foreground')] text-primary scroll-smooth font-mono;
-    @apply transition-colors duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
 }

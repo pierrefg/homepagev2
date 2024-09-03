@@ -12,27 +12,34 @@ export default function About() {
             title='Mon parcours'
         >
             <div className='flex flex-col gap-3'>
-                [WIP]
                 <div>
-                    <p>
+                    Dans les pages de cette section, je vous détaille les expériences qui ont façonné mes dernières années !
+                    Après quelques stages et de chouettes expériences de recherche, je suis aujourd'hui travailleur indépendant.
+                    Notamment, je propose mes services en science des données à l'entreprise DataValor sur divers projets de l'univers du médical aux énergies renouvelables.
+                    <p className='mt-2 text-center'>
                         <SimpleLink content={aboutTabs[1]} />
                     </p>
                 </div>
 
                 <div>
-                    <p>
+                    En parallèle, je m'investis dans plusieurs associations dans le social et l'écologie.
+                    J'y propose mes services de graphiste, développeur, photographe ou encore cuisinier.
+                    <p className='mt-2 text-center'>
                         <SimpleLink content={aboutTabs[2]} />
                     </p>
                 </div>
 
                 <div>
-                    <p>
+                    Tout cela s'inscrit dans une longue formation qui a commencé au conservatoire Gabriel Fauré à Angoulême jusqu'à un doctorat à Lyon en passant par un échange avec l'université américaine Georgia Tech.
+                    Encore aujourd'hui, j'apprends tous les jours de mes projets et c'est parti pour continuer !
+                    <p className='mt-2 text-center'>
                         <SimpleLink content={aboutTabs[3]} />
                     </p>
                 </div>
 
                 <div>
-                    <p>
+                    Durant mon parcours, j'ai aussi donné plus de 200 heures d'enseignement à des élèves de l'INSA.
+                    <p className='mt-2 text-center'>
                         <SimpleLink content={aboutTabs[4]} />
                     </p>
                 </div>

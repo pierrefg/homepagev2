@@ -30,7 +30,7 @@ export default function AboutContent() {
                 </p>
             </div>
             <div>
-                En parallèle de mon activité scientifique, je m'investis dans des projets artistiques, offrant des services mêlant graphisme, photographie et vidéo (et même son !).
+                En parallèle de mon activité scientifique, je m'investis dans des projets artistiques, offrant des services mêlant graphisme, photographie et vidéo (voir musique ?).
                 C'est notamment dans le milieu associatif que j'ai pu mettre à profit ces différentes activités et développer mes compétences.   
                 <p className="mt-2 text-center">
                     <SimpleLink content={mainMenuLinks[2]} primary large/>
