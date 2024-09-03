@@ -1,5 +1,5 @@
 .btn {
-    @apply px-[6px] py-[2px] cursor-pointer;
+    @apply px-[6px] py-[2px] cursor-pointer whitespace-nowrap;
     @apply transition-colors duration-300 ease-in-out;
 }
 

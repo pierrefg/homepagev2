@@ -11,11 +11,18 @@ export const workData = [
                 link: "https://www.insavalor.fr/fr/datavalor"
             }
         ],
-        type: "CDD",
+        type: "CDD puis indépendant",
+        links: [
+            {
+                url: "/science/data-science",
+                text: "Voir plus"
+            }
+        ],
+        description: "Travailler à Datavalor m'a permis d'explorer une large palette de problématiques de vision par ordinateur à traitement du langage naturel et traitement du signal.",
     },
     {
         title: {
-            name: "Doctorat en Science des Données et Énergies Renouvelables",
+            name: "Doctorat en Informatique (appliqué à la production hydroélectrique)",
         },
         period: "2020-23",
         type: "Doctorat",
@@ -37,7 +44,29 @@ export const workData = [
                 url: "/science/research",
                 text: "Voir plus"
             }
-        ]
+        ],
+        description: "Pendant cette thèse, j'ai développé des solutions pratiques et théoriques afin de faciliter le dialogue entre experts métiers et scientifiques des données.",
+    },
+    {
+        title: {
+            name: "Thèse de Master en Informatique (appliqué à la biologie)",
+        },
+        period: "2020",
+        type: "Thèse de master",
+        companies: [ 
+            {
+                name: 'Georgia Institute of Technology',
+                place: 'Atlanta, USA',
+                link: "https://www.gatech.edu/"
+            }
+        ],
+        links: [
+            {
+                url: "/science/research#mthesis",
+                text: "Voir plus"
+            }
+        ],
+        description: "Pendant cette thèse de master, j'ai travaillé conjointement avec des biologistes afin de développer une solution permettant de reconnaitre automatiquement des organismes unicellulaires dans les eaux fluviales.",
     },
     {
         title: {
@@ -53,7 +82,7 @@ export const workData = [
             }
         ],
         type: "Stage",
-        description: "J'ai travaillé avec une équipe AGILE sur le développement d'un grand produit de Worldline (Contact). En parallèle, j'ai également collaboré étroitement avec la R&D sur le NLP pour le développement d'un chatbot.",
+        description: "J'ai travaillé avec une équipe AGILE sur le développement d'un grand produit de Worldline (Contact). En parallèle, j'ai également collaboré étroitement avec la R&D sur des problématiques de langage naturel.",
     },
     {
         title: { 
@@ -69,7 +98,7 @@ export const workData = [
             }
         ],
         type: "Stage",
-        description: "Mon stage dans une entreprise de gestion SAP m'a donné une vision globale du paysage SAP, de ses modules, de la maintenance et de son fonctionnement. J'ai également approfondi mes connaissances techniques (Unix, réseau, base de données, web...) et mes capacités à travailler en équipe.",
+        description: "Ce stage de gestion SAP m'a permis d'approfondir mes connaissances techniques (Unix, réseau, base de données, web...) et mes capacités à travailler en équipe.",
     },
     {
         title: {

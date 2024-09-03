@@ -11,7 +11,7 @@ export const educationData = [
                 link: "https://www.gatech.edu/"
             }
         ],
-        description: "Machine learning, algorithmics, computer vision, data mining, data visualization...",
+        description: "Apprentissage machine, algorithmie, vision par ordinateur, exploration de données, robotique, visualisation...",
         highlight: {
             text: "GPA de 4/4"
         },
@@ -35,7 +35,7 @@ export const educationData = [
                 link: "https://www.insa-lyon.fr/"
             }
         ],
-        description: "Statistics, machine learning, algorithmics, database theory, graph theory, management..."
+        description: "Statistiques, apprentissage machine, algorithmie, théorie des bases de données, théorie des graphes, gestion..."
     },
     {
         title: {
@@ -50,7 +50,7 @@ export const educationData = [
                 link: "https://www.insa-lyon.fr/"
             }
         ],
-        description: "Mathematics, physics, chemistry...",
+        description: "Mathématiques, physique, chimie...",
         highlight: {
             text: "Challenge multimédia Gaston Berger : prix de la meilleure vidéo de rapport de stage",
             url: "https://www.youtube.com/watch?v=RzpSbEcSk-A"
