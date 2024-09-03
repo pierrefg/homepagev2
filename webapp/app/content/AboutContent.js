@@ -5,6 +5,8 @@ import { mainMenuLinks } from "@/components/menu/menuData";
 
 import SimpleLink from "@/components/SimpleLink";
 
+import { FaHeart } from "react-icons/fa";
+
 export default function AboutContent() {
     return (
         <div className="flex flex-col gap-4">
@@ -18,7 +20,7 @@ export default function AboutContent() {
             </div>
             <div>
                 Bienvenue sur mon site ! Je suis scientifique des données mais aussi graphiste et photographe. 
-                Que ce soit dans le milieu professionnel ou associatif, je place toujours au centre de mes préoccupations les enjeux sociaux et environnementaux qui me tiennent à cœur. 
+                Que ce soit dans le milieu professionnel ou associatif, je place toujours au centre de mes préoccupations les enjeux sociaux et environnementaux qui me tiennent à <FaHeart className="inline"/>. 
                 Vous pouvez aller jeter un coup d'oeil à ce que j'ai fait ces dernière années par ici.
 
                 <p className="mt-2 text-center">
