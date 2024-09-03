@@ -13,7 +13,6 @@ export default function Gallery({ galleryData, size=400 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageWidths, setImageWidths] = useState([]);
     const [isScrollable, setIsScrollable] = useState(false);
-    const [startX, setStartX] = useState(0);
 
     const [toShowInOverlay, setToShowInOverlay] = useState(null);
 
@@ -62,21 +61,15 @@ export default function Gallery({ galleryData, size=400 }) {
         });
     };
 
-    const handleTouchStart = (e) => {
-        setStartX(e.touches[0].clientX);
-    };
-
-    const handleTouchEnd = (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const deltaX = endX - startX;
-
-        if (deltaX > 50) { // Swipe right
-            handlePrevClick();
-        } else if (deltaX < -50) { // Swipe left
-            handleNextClick();
-        }
-    };
-    
+    const handleScroll = (e) => {
+        const target = e.target;
+        const scrollPosition = target.scrollLeft;
+        const scrollableWidth = target.scrollWidth - target.clientWidth;
+        const ratio = scrollPosition / scrollableWidth;
+        const newIndex = Math.round(ratio*(galleryLength-1))
+        setCurrentIndex(newIndex)
+        console.log('Scroll ratio:', newIndex);
+    }
 
     return (<>
         {
@@ -97,9 +90,7 @@ export default function Gallery({ galleryData, size=400 }) {
                 </div>
             }
             <div 
-                className="flex flex-row items-center gap-4 max-w-7xl mx-auto"
-                onTouchStart={handleTouchStart}
-                onTouchEnd={handleTouchEnd}
+                className="flex flex-row items-center gap-4 max-w-7xl mx-auto"$
             >
                 <div className='w-[40px] hidden md:block'>
                     {
@@ -116,6 +107,7 @@ export default function Gallery({ galleryData, size=400 }) {
                         WebkitOverflowScrolling: 'touch',
                     }}
                     ref={imageContainerRef}
+                    onScroll={ handleScroll }
                 >
                     {
                         galleryData.imgs.map(
@@ -125,13 +117,13 @@ export default function Gallery({ galleryData, size=400 }) {
                                     className='img-div cursor-pointer'
                                     onClick={
                                         () => setToShowInOverlay(
-                                        <Image 
-                                            src={el.img}
-                                            alt={`Image ${index + 1} full size`}
-                                            height={800}
-                                            onLoad={(e) => handleImageLoad(index, e)}
-                                        />
-                                    )}
+                                            <Image 
+                                                src={el.img}
+                                                alt={`Image ${index + 1} full size`}
+                                                height={800}
+                                            />
+                                        )
+                                    }
                                 >
                                     <Image
                                         src={el.img}
@@ -157,7 +149,10 @@ export default function Gallery({ galleryData, size=400 }) {
                     }
                 </div>
             </div>
-            <div className='mx-auto md:hidden flex flex-row gap-2'>
+            <div 
+                className='mx-auto md:hidden flex flex-row gap-2'
+                // className='mx-auto flex flex-row gap-2'
+            >
                 {
                     Array.from({ length: galleryLength }, (_, index) => (
                         <div 
