@@ -10,24 +10,13 @@ import React, { Suspense } from 'react';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-export const metadata = {
-    title: "Pierre FG",
-    description: "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
-    manifest: "/manifest.json",
-    icons: {
-      icon: [
-        { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-        { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      ],
-      apple: "/icons/apple-touch-icon.png",
-    },
-    openGraph: {
-        title: "Pierre Faure--Giovagnoli",
-        description: "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
-        url: "https://www.pierrefg.com",
-        siteName: "Pierre Faure--Giovagnoli",
-    },
-};
+import { createPageMetadata } from '@/utils/metadata';
+
+export const metadata = createPageMetadata(
+    "Accueil",
+    "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
+    ""
+)
 
 export default function RootLayout({ children }) {
     return (

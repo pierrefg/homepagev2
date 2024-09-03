@@ -15,7 +15,7 @@ export default function About() {
                 <div>
                     Dans les pages de cette section, je vous détaille les expériences qui ont façonné mes dernières années !
                     Après quelques stages et de chouettes expériences de recherche, je suis aujourd'hui travailleur indépendant.
-                    Notamment, je propose mes services en science des données à l'entreprise DataValor sur divers projets de l'univers du médical aux énergies renouvelables.
+                    Je propose notamment mes services en science des données à l'entreprise DataValor pour divers projets dans les domaines médical et des énergies renouvelables.
                     <p className='mt-2 text-center'>
                         <SimpleLink content={aboutTabs[1]} />
                     </p>

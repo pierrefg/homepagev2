@@ -1,5 +1,13 @@
 import { legalData } from "./data"
 
+import { createPageMetadata } from '@/utils/metadata';
+
+export const metadata = createPageMetadata(
+    "Mentions légales",
+    "Mentions légales du site pierrefg.com.",
+    "/legals"
+)
+
 export default function Legals() {
 
     return (

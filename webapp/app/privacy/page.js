@@ -1,5 +1,13 @@
 import { privacyData } from "./data";
 
+import { createPageMetadata } from '@/utils/metadata';
+
+export const metadata = createPageMetadata(
+    "Politique de confidentialité",
+    "Politique de confidentialité du site pierrefg.com.",
+    "/privacy"
+)
+
 export default function Privacy() {
 
     return (
@@ -7,7 +15,7 @@ export default function Privacy() {
                 <div className="text-center">
                     <h1 className="text-base md:text-xl text-center">
                         <strong>
-                            Politique de Confidentialité
+                            Politique de confidentialité
                         </strong>
                     </h1>
                     <span className="pt-4">
