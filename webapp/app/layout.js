@@ -14,7 +14,7 @@ import { createPageMetadata } from '@/utils/metadata';
 
 export const metadata = createPageMetadata(
     "Accueil",
-    "Scientifique des données mais également graphiste et photographe : viens découvrir ce que je fais !",
+    "Scientifique des données mais également graphiste et photographe. Viens découvrir ce que je fais !",
     ""
 )
 

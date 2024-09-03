@@ -5,8 +5,8 @@ import { artTabs } from './artTabs';
 import { createPageMetadata } from '@/utils/metadata';
 
 export const metadata = createPageMetadata(
-    "Porfolio artistique",
-    "Trouve ici mon portfolio qui mêle graphisme, photographie, musique et vidéo.",
+    "Portfolio artistique",
+    "Trouve ici mon portfolio mêlant graphisme, photographie, musique et vidéo.",
     "/art"
 )
 
