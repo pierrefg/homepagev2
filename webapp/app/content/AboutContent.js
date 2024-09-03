@@ -7,7 +7,7 @@ import SimpleLink from "@/components/SimpleLink";
 
 export default function AboutContent() {
     return (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-0">
                 <span>
                     <MdOutlinePlace className="inline text-base" /> Basé à Lyon
@@ -19,7 +19,11 @@ export default function AboutContent() {
             <div>
                 Bienvenue sur mon site ! Je suis scientifique des données mais aussi graphiste et photographe. 
                 Que ce soit dans le milieu professionnel ou associatif, je place toujours au centre de mes préoccupations les enjeux sociaux et environnementaux qui me tiennent à cœur. 
-                Lorsque je trouve du sens à un projet, je m'y engage pleinement.
+                Vous pouvez aller jeter un coup d'oeil à ce que j'ai fait ces dernière années par ici.
+
+                <p className="mt-2 text-center">
+                    <SimpleLink content={mainMenuLinks[0]} primary large/>
+                </p>
             </div>
             <div>
                 Dans mon activité scientifique, je pratique principalement la science des données et le développement.
