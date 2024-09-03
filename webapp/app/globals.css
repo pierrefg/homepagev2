@@ -36,6 +36,7 @@
 html {
     @apply bg-foreground;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -54,4 +55,22 @@ li {
 li::before {
     content: '• '; /* Empty content for the dot */
     transform: translateY(-100%);
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg); /* Keep the rotation at 360 degrees for the last 20% */
+    }
+    80% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+
+  }
+  
+.rotate-animation {
+    animation: rotate360 5s linear infinite;
+    animation-timing-function: ease-in-out;
 }

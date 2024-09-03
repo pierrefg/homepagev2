@@ -7,7 +7,7 @@ import SimpleLink from "@/components/SimpleLink";
 
 export default function AboutContent() {
     return (
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-0">
                 <span>
                     <MdOutlinePlace className="inline text-base" /> Basé à Lyon

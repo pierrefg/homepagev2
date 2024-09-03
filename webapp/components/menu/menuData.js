@@ -5,7 +5,7 @@ import { RiQuestionAnswerLine } from "react-icons/ri";
 
 export const mainMenuLinks = [
     {
-        title: <span><BiGame className='icon' /> Qui suis-je ?</span>,
+        title: <span><BiGame className='icon' /> Mon parcours</span>,
         link: '/about'
     },
     {
