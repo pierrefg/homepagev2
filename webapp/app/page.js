@@ -11,7 +11,12 @@ export default function Landing() {
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => setVisible(entry.isIntersecting));
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.disconnect(); 
+                }
+            });
         });
 
         observer.observe(domRef.current);
@@ -21,14 +26,14 @@ export default function Landing() {
 
     return (
         <>
-            <div className="relative h-screen flex flex-col justify-between mb-[20px]">
+            <div className="relative h-screen flex flex-col justify-between animate-fadeIn mb-[20px]">
                 <LandingTop />
             </div>
             <div 
                 ref={domRef}
                 id='about' 
-                className={`h-screen flex flex-col justify-between items-center transition-all duration-1000 ease-in-out transform ${
-                    isVisible ? 'opacity-100' : 'opacity-0'
+                className={`h-screen flex flex-col justify-between items-center ${
+                    isVisible ? 'animate-fadeIn' : 'opacity-0'
                 }`} 
             >
                 <About />

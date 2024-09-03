@@ -20,14 +20,19 @@ module.exports = {
           muted: 'rgb(var(--secondary-muted-color-rgb))',
         },
       },
-      spacing: {
-        'btn-padding-x': 'var(--btn-padding-x)',
-        'btn-padding-y': 'var(--btn-padding-y)',
-      },
       height: {
         'primary-menu': 'var(--primary-menu-height)',
         'secondary-menu': 'var(--secondary-menu-height)',
         'secondary-menu-mobile': 'var(--secondary-menu-mobile-height)'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
       },
     },
   },
