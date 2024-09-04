@@ -34,13 +34,13 @@
 }
 
 html {
-    @apply bg-foreground text-sm md:text-base;
+    @apply bg-foreground text-base md:text-base;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 h1 {
-    @apply text-base md:text-xl font-bold;
+    @apply text-xl md:text-xl font-bold;
 }
 
 .text-small {
