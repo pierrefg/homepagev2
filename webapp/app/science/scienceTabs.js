@@ -5,19 +5,19 @@ import { MdOutlineDataThresholding } from "react-icons/md";
 
 export const scienceTabs = [
     {
-        title: <span><AiOutlineHome className='inline' /></span>,
+        title: <><AiOutlineHome className='inline' /></>,
         link: '/science',
     },
     {
-        title: <span><MdOutlineDataThresholding className='inline' /> Science des données</span>,
+        title: <><MdOutlineDataThresholding className='title-icon' /> Science des données</>,
         link: '/science/data-science'
     },
     {
-        title: <span><GiChemicalDrop className='inline' /> Recherche</span>,
+        title: <><GiChemicalDrop className='title-icon' /> Recherche</>,
         link: '/science/research'
     },
     {
-        title: <span><IoDocumentsOutline className='inline' /> Publications, séminaires...</span>,
+        title: <><IoDocumentsOutline className='title-icon' /> Publications, séminaires...</>,
         link: '/science/publications'
     },
 ];

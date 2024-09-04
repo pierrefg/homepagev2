@@ -25,6 +25,7 @@ export default function SubMenuLayout({ children, pagesData }) {
                 <div className="sub-menu">
                     {pagesData.map((el, index) => {
                         const isActive = pathname === el.link;
+
                         return (
                             <SimpleLink 
                                 key={index} 

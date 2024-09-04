@@ -11,6 +11,7 @@ export const metadata = createPageMetadata(
 )
 
 export default function AboutLayout({ children }) {
+    console.log(children)
     return (
         <SubMenuLayout pagesData={aboutTabs}>{children}</SubMenuLayout>
     );

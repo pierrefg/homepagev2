@@ -3,11 +3,11 @@ import { MdOutlineDesignServices } from "react-icons/md";
 
 export const contactTabs = [
     {
-        title: <span><AiOutlineHome className='inline' /></span>,
+        title: <><AiOutlineHome className='inline' /></>,
         link: '/contact'
     },
     {
-        title: <span><MdOutlineDesignServices className='inline' /> Prestations</span>,
+        title: <><MdOutlineDesignServices className='title-icon' /> Prestations</>,
         link: '/contact/services'
     },
 ];

@@ -6,23 +6,23 @@ import { AiOutlineTool } from "react-icons/ai";
 
 export const aboutTabs = [
     {
-        title: <span><AiOutlineHome className='inline' /></span>,
+        title: <><AiOutlineHome className='inline' /></>,
         link: '/about'
     },
     {
-        title: <span><AiOutlineTool className='inline' /> Expérience</span>,
+        title: <><AiOutlineTool className='title-icon' /> Expérience</>,
         link: '/about/work'
     },
     {
-        title: <span><MdOutlineVolunteerActivism className='inline' /> Bénévolat</span>,
+        title: <><MdOutlineVolunteerActivism className='title-icon' /> Bénévolat</>,
         link: '/about/volunteering'
     },
     {
-        title: <span><IoSchoolOutline className='inline' /> Formation</span>,
+        title: <><IoSchoolOutline className='title-icon' /> Formation</>,
         link: '/about/education'
     },
     {
-        title: <span><PiChalkboardTeacherLight className='inline' /> Enseignement</span>,
+        title: <><PiChalkboardTeacherLight className='title-icon' /> Enseignement</>,
         link: '/about/teaching'
     }
 ];

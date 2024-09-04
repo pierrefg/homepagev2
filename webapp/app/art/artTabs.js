@@ -6,26 +6,26 @@ import { RiVideoOnLine } from "react-icons/ri";
 
 export const artTabs = [
     {
-        title: <span><AiOutlineHome className='inline' /></span>,
+        title: <><AiOutlineHome className='inline' /></>,
         link: '/art'
     },
     {
-        title: <span><MdOutlinePolyline className='inline' /> Graphisme</span>,
+        title: <><MdOutlinePolyline className='title-icon' /> Graphisme</>,
         link: '/art/graphics',
         fullWidth: true
     },
     {
-        title: <span><MdOutlinePhotoCamera className='inline' /> Photographie</span>,
+        title: <><MdOutlinePhotoCamera className='title-icon' /> Photographie</>,
         link: '/art/photography',
         fullWidth: true
     },
     {
-        title: <span><IoMusicalNoteOutline className='inline' /> Musique</span>,
+        title: <><IoMusicalNoteOutline className='title-icon' /> Musique</>,
         link: '/art/music',
         fullWidth: true
     },
     {
-        title: <span><RiVideoOnLine className='inline' /> Vidéo</span>,
+        title: <><RiVideoOnLine className='title-icon' /> Vidéo</>,
         link: '/art/video'
     },
 ];
