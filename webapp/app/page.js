@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 
-import LandingTop from './content/LandingTop';
-import About from './content/About';
+import LandingA from './content/LandingA';
+import LandingB from './content/LandingB';
 
 export default function Landing() {
     const [isVisible, setVisible] = useState(false);
@@ -27,7 +27,7 @@ export default function Landing() {
     return (
         <>
             <div className="relative h-screen flex flex-col justify-between animate-fadeIn mb-[20px]">
-                <LandingTop />
+                <LandingA />
             </div>
             <div 
                 ref={domRef}
@@ -36,7 +36,7 @@ export default function Landing() {
                     isVisible ? 'animate-fadeIn' : 'opacity-0'
                 }`} 
             >
-                <About />
+                <LandingB />
             </div>
         </>
     ) 

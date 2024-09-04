@@ -3,7 +3,7 @@ import './style.css';
 import useStore from '@/store/useStore';
 
 import MenuBar from "./MenuBar";
-import Copyright from "../Footer";
+import Footer from "../Footer";
 
 import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
 
@@ -32,7 +32,7 @@ export default function MenuLayout({ children }) {
 
             {/* Copyright section */}
             <div className={`mt-auto ${menuOpen ? "opacity-40" : ""}`}>
-                <Copyright />
+                <Footer />
             </div>
         </div>
     );

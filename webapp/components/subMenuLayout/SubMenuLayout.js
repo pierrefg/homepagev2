@@ -4,7 +4,6 @@ import './style.css';
 
 import React, { useState, useEffect } from 'react';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import SimpleLink from '../SimpleLink';

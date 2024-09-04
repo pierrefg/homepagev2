@@ -84,7 +84,7 @@ export default function Gallery({ galleryData, size=400 }) {
                     >
                         {galleryData.title}
                     </h2>
-                    <p className="inline-block text-sm text-primary-muted">
+                    <p className="inline-block text-small text-primary-muted">
                         {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
                     </p>
                 </div>

@@ -11,12 +11,10 @@ export const metadata = createPageMetadata(
 export default function Privacy() {
 
     return (
-            <div className="px-4 mx-auto mt-[20px] text-sm md:text-base max-w-4xl">
+            <div className="px-4 mx-auto mt-[20px] max-w-4xl">
                 <div className="text-center">
-                    <h1 className="text-base md:text-xl text-center">
-                        <strong>
-                            Politique de confidentialité
-                        </strong>
+                    <h1>
+                        Politique de confidentialité
                     </h1>
                     <span className="pt-4">
                         Date d'entrée en vigueur : 1er septembre 2024

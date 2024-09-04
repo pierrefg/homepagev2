@@ -34,9 +34,17 @@
 }
 
 html {
-    @apply bg-foreground;
+    @apply bg-foreground text-sm md:text-base;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+h1 {
+    @apply text-base md:text-xl font-bold;
+}
+
+.text-small {
+    @apply text-sm;
 }
 
 a {

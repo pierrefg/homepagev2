@@ -7,7 +7,7 @@ export default function TextInput({ type = 'text', label, name, rows = "1", disa
 
     return (
         <div>
-            <label className="block text-sm mb-2" htmlFor={name}>
+            <label className="block text-small mb-2" htmlFor={name}>
                 {label}
             </label>
             {type === 'textarea' ? (

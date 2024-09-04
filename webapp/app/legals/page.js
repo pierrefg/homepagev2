@@ -11,11 +11,9 @@ export const metadata = createPageMetadata(
 export default function Legals() {
 
     return (
-            <div className="px-4 mx-auto mt-[20px] text-sm md:text-base max-w-4xl">
-                <h1 className="text-base md:text-xl text-center">
-                    <strong>
-                        Mentions légales
-                    </strong>
+            <div className="px-4 mx-auto mt-[20px] max-w-4xl">
+                <h1 className="text-center">
+                    Mentions légales
                 </h1>
 
                 <div className="flex flex-col gap-6 md:items-center mt-6">  {/* Added items-center to center the content */}

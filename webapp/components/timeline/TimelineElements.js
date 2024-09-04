@@ -18,7 +18,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
             <div className="hidden md:block">
                 <time>{elementData.period}</time><br />
                 {elementData.type && (
-                    <span className="text-sm text-gray-400">
+                    <span className="text-small text-primary-muted">
                         {elementData.type}
                     </span>
                 )}
@@ -39,7 +39,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     </strong>
                 </h2>
 
-                <div className="text-sm text-primary-muted pl-0">
+                <div className="text-small text-primary-muted pl-0">
                     {/* SUBTITLE */}
                     {
                         elementData.subtitle &&
@@ -69,7 +69,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     <span className="md:hidden block">
                         <time>{elementData.period}</time><br className="hidden md:block"/>
                         {elementData.type && (
-                            <span className="text-sm text-primary-muted">
+                            <span className="text-small text-primary-muted">
                                 <span> | </span>{elementData.type}
                             </span>
                         )}
