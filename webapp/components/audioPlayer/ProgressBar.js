@@ -31,7 +31,7 @@ export default function ProgressBar({
         const handleEnd = (event) => {
             if (isSeeking) {
                 const newFraction = event.touches ? null : getNewFraction(event);
-                event.touches && document.body.classList.remove('no-select');
+                !event.touches && document.body.classList.remove('no-select');
                 setIsSeeking(false);
                 if (onSeekEnd) onSeekEnd(newFraction);
             }
@@ -52,7 +52,7 @@ export default function ProgressBar({
 
     const handleStart = (event) => {
         setIsSeeking(true);
-        event.touches && document.body.classList.add('no-select');
+        !event.touches && document.body.classList.add('no-select');
         event.touches && event.preventDefault();
         if (onSeekStart) onSeekStart();
     };

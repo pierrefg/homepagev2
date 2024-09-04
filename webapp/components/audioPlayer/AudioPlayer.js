@@ -93,13 +93,14 @@ export default function AudioPlayer({
                     setCurrentTime(newTime);
                 }}
             />
-            <div className="w-full items-center border-2 bt-0 flex md:flex-row flex-col gap-2 px-6 py-4">
-                <div className='md:w-[200px]'>
-                    {title}
-                </div>
+            <div className="w-full items-center border-2 flex flex-row gap-2 md:px-6 py-2 px-2 md:py-4">
+                <div className='flex flex-1 flex-col items-left md:flex-row md:items-center '>
+                    <div className='md:w-[200px]'>
+                        {title}
+                    </div>
 
-                <div className='flex flex-1'>
-                    <div className='flex flex-row gap-4 mx-auto'>
+
+                    <div className='flex flex-1 flex-row gap-4 md:mx-auto'>
                         <button
                             onClick={handlePrevious}
                             className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMinTrack && 'disabled'}`}
@@ -127,9 +128,9 @@ export default function AudioPlayer({
                     </div>
                 </div>
 
-                <div className='md:w-[200px] text-right'>
-                    {formatTime(currentTime)} / {formatTime(duration)}
-                </div>
+                    <div className='md:w-[200px] text-right'>
+                        {formatTime(currentTime)} / {formatTime(duration)}
+                    </div>
             </div>
         </div>
     );
