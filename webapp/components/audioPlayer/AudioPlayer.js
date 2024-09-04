@@ -83,9 +83,9 @@ export default function AudioPlayer({
                     setIsSeeking(true);
                 }}
                 onSeekEnd={(playedFraction) => {
-                    const newTime = playedFraction * duration;
-                    setCurrentTime(newTime);
-                    audioRef.current.currentTime = newTime;
+                    // const newTime = playedFraction * duration;
+                    // setCurrentTime(newTime);
+                    audioRef.current.currentTime = currentTime;
                     setIsSeeking(false);
                 }}
                 onSeekChange={(playedFraction) => {

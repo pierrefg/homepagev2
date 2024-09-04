@@ -1,5 +1,5 @@
 .sub-menu-layout {
-    @apply flex fixed left-0 w-full items-center justify-center;
+    @apply flex fixed left-0 w-full items-center justify-center z-40;
     @apply bg-[theme('colors.foreground')] bg-opacity-10;
     @apply top-[var(--primary-menu-mobile-height)] md:top-[var(--primary-menu-height)] ;
     @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)];
@@ -7,7 +7,7 @@
 }
 
 .sub-menu {
-    @apply flex flex-row gap-4 overflow-x-auto whitespace-nowrap px-4;
+    @apply flex flex-row gap-4 overflow-x-auto whitespace-nowrap px-4 z-40;
     @apply h-full;
     @apply items-center;
 }

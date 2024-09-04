@@ -14,39 +14,46 @@ export default function ProgressBar({
     useEffect(() => {
         const getNewFraction = (event) => {
             const progressBarRect = progressBarRef.current.getBoundingClientRect();
-            const moveX = event.clientX - progressBarRect.left;
+            const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+            const moveX = clientX - progressBarRect.left;
             const newFraction = Math.max(0, Math.min((moveX / progressBarRect.width), 1));
             return newFraction;
         };
 
-        const handleMouseMove = (event) => {
+        const handleMove = (event) => {
             if (isSeeking) {
+                event.touches && event.preventDefault();
                 const newFraction = getNewFraction(event);
                 if (onSeekChange) onSeekChange(newFraction);
             }
         };
 
-        const handleMouseUp = (event) => {
+        const handleEnd = (event) => {
             if (isSeeking) {
-                const newFraction = getNewFraction(event);
+                const newFraction = event.touches ? null : getNewFraction(event);
+                event.touches && document.body.classList.remove('no-select');
                 setIsSeeking(false);
-                document.body.classList.remove('no-select');
                 if (onSeekEnd) onSeekEnd(newFraction);
             }
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
-        window.addEventListener('mouseup', handleMouseUp);
+        window.addEventListener('mousemove', handleMove);
+        window.addEventListener('mouseup', handleEnd);
+        window.addEventListener('touchmove', handleMove);
+        window.addEventListener('touchend', handleEnd);
 
         return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('mouseup', handleMouseUp);
+            window.removeEventListener('mousemove', handleMove);
+            window.removeEventListener('mouseup', handleEnd);
+            window.removeEventListener('touchmove', handleMove);
+            window.removeEventListener('touchend', handleEnd);
         };
-    }, [isSeeking, playedFraction, onSeekChange, onSeekEnd]);
+    }, [isSeeking,  onSeekChange, onSeekEnd]);
 
-    const handleMouseDown = () => {
+    const handleStart = (event) => {
         setIsSeeking(true);
-        document.body.classList.add('no-select');
+        event.touches && document.body.classList.add('no-select');
+        event.touches && event.preventDefault();
         if (onSeekStart) onSeekStart();
     };
 
@@ -54,7 +61,8 @@ export default function ProgressBar({
         <div
             ref={progressBarRef}
             className='absolute top-0 left-0 w-full h-[5px] bg-primary z-10 cursor-pointer'
-            onMouseDown={handleMouseDown}
+            onMouseDown={handleStart}
+            onTouchStart={handleStart} // Handle touch start
         >
             <div
                 className='absolute top-0 left-0 h-[5px] bg-primary-hover z-20'

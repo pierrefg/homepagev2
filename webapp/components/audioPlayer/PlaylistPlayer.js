@@ -27,11 +27,11 @@ export default function PlaylistPlayer({playlist}) {
                     <h2>{playlist.title}</h2>
                 </div>
                 <div className='flex md:flex-row flex-col gap-4'>
-                    <div className={`cursor-pointer hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
+                    <div className={`cursor-pointer z-0 hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
                         <Image
                             src={playlist.cover}
                             alt={`${playlist.title}-cover`}
-                            className={`transition-all w-2/3 md:w-[400px] ease-in-out duration-[5s] animate-rotate mx-auto ${
+                            className={`transition-all z-0 w-2/3 md:w-[400px] ease-in-out duration-[5s] animate-rotate mx-auto ${
                                 !isPlaying && 'paused'
                             } ${
                                 hasNeverPlayed ? 'rounded-none' : 'rounded-full'
