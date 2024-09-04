@@ -20,7 +20,7 @@
 }
 
 .btn-primary {
-   @apply bg-primary text-foreground;
+   @apply bg-primary text-foreground font-medium;
 }
 .btn-primary:hover {
     @apply bg-primary-hover text-white;

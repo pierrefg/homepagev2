@@ -21,7 +21,7 @@ export const metadata = createPageMetadata(
 export default function RootLayout({ children }) {
     return (
         <html lang="fr">
-            <body className='font-mono'>
+            <body>
                 <Analytics />
                 <SpeedInsights/>
                 <Suspense fallback={<Loader />}>
