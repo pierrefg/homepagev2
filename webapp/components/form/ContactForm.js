@@ -59,7 +59,7 @@ export default function ContactForm() {
                     ) : (
                         <button
                             type="submit"
-                            className="btn btn-secondary"
+                            className="btn btn-primary"
                         >
                             <GrSend className='inline' /> Envoyer
                         </button>

@@ -35,7 +35,7 @@ export default function About() {
                                     <div key={index}>
                                         {el.content}
                                         <p className='mt-2 text-center'>
-                                            <SimpleLink content={mainMenuLinks[el.linkIndex]} />
+                                            <SimpleLink content={mainMenuLinks[el.linkIndex]} primary large />
                                         </p>
                                     </div>
                                 )
