@@ -8,6 +8,8 @@ import Image from "next/image";
 
 import AudioPlayer from './AudioPlayer';
 
+import SimpleLink from '../SimpleLink';
+
 export default function PlaylistPlayer({playlist}) {
     const [hasNeverPlayed, setHasNeverPlayed] = useState(true);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -22,14 +24,14 @@ export default function PlaylistPlayer({playlist}) {
     return (
         <div className='flex flex-col gap-0 w-full max-w-4xl mx-auto items-center justify-center'>
             
-            <div className='w-full max-w-lg mx-auto px-4 pt-2 pb-4'>
+            <div className='w-full max-w-lg mx-auto p-2 mb-2'>
                 
                 <div className='flex md:flex-row flex-col gap-4'>
-                    <div className={`cursor-pointer z-0 hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
+                    <div className={`cursor-pointer mx-auto w-2/5 md:w-2/5 hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
                         <Image
                             src={playlist.cover}
                             alt={`${playlist.title}-cover`}
-                            className={`transition-rounded z-0 w-2/3 md:w-[250px] ease-in-out duration-[5s] animate-rotate mx-auto ${
+                            className={`transition-rounded ease-in-out duration-[5s] animate-rotate mx-auto ${
                                 !isPlaying && 'paused'
                             } ${
                                 hasNeverPlayed ? 'rounded-none' : 'rounded-full'
@@ -37,11 +39,14 @@ export default function PlaylistPlayer({playlist}) {
                             priority
                         />
                     </div>
-                    <div>
-                        <div className='pb-4 text-xl text-center'>
-                            <h2>{playlist.title}</h2>
-                        </div>
-                        Perception
+
+                    <div className='flex flex-col md:w-3/5 gap-2 text-center'>
+                        <h2>{playlist.title}</h2>
+                        <p className='text-primary-muted'>P1ps - {playlist.releasedDate}</p>
+                        <p>{playlist.description}</p>
+                        <p>
+                            <SimpleLink content={playlist.fullLink} />
+                        </p>
                     </div>
                 </div>
             </div>

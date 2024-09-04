@@ -3,6 +3,13 @@ import perceptionCover from './perception.jpg';
 export const perceptionData = {
     title: 'Perception',
     cover: perceptionCover,
+    releasedDate: '2023',
+    fullLink: {
+        title: 'Streaming',
+        link: 'https://songwhip.com/p1ps/perception',
+        extern: true
+    },
+    description: 'Perception is a compilation of unreleased electroacoustic music I made between 2007 and 2017. ',
     tracks: [
         {
             title: 'Prélude',
