@@ -2,15 +2,15 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-export default function ProgressBar(
-    {
-        playedFraction,
-        setPlayedFraction,
-        isSeeking,
-        setIsSeeking
-    }
-) {
+export default function ProgressBar({
+    playedFraction,
+    setPlayedFraction,
+    onSeekStart,      // New prop: callback for the start of seeking
+    onSeekEnd,        // New prop: callback for the end of seeking
+    onSeekChange,     // New prop: callback during seeking (optional, for live updates)
+}) {
     const progressBarRef = useRef(null);
+    const [isSeeking, setIsSeeking] = useState(false);
 
     useEffect(() => {
         const getNewFraction = (event) => {
@@ -18,20 +18,21 @@ export default function ProgressBar(
             const moveX = event.clientX - progressBarRect.left;
             const newFraction = Math.max(0, Math.min((moveX / progressBarRect.width), 1));
             return newFraction;
-        }
+        };
 
         const handleMouseMove = (event) => {
             if (isSeeking) {
-                setPlayedFraction(getNewFraction(event))
-            };
+                const newFraction = getNewFraction(event);
+                if (onSeekChange) onSeekChange(newFraction);
+            }
         };
 
         const handleMouseUp = (event) => {
             if (isSeeking) {
                 const newFraction = getNewFraction(event);
-                setPlayedFraction(newFraction);
                 setIsSeeking(false);
                 document.body.classList.remove('no-select');
+                if (onSeekEnd) onSeekEnd(newFraction);
             }
         };
 
@@ -42,11 +43,14 @@ export default function ProgressBar(
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [isSeeking, playedFraction]);
+    }, [isSeeking, playedFraction, onSeekChange, onSeekEnd]);
 
     const handleMouseDown = () => {
         setIsSeeking(true);
         document.body.classList.add('no-select');
+        if (onSeekStart) {
+            onSeekStart();  // Trigger the start of seeking event
+        }
     };
 
     return (
@@ -68,7 +72,6 @@ export default function ProgressBar(
                     transform: 'translate(-50%, -50%)',
                     top: '50%'
                 }}
-                
             />
         </div>
     );

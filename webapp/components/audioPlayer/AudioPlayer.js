@@ -72,13 +72,16 @@ export default function AudioPlayer(
             />
             <ProgressBar 
                 playedFraction={currentTime/duration} 
-                setPlayedFraction={(playedFraction) => {
+                onSeekStart={() => setIsSeeking(true)} 
+                onSeekEnd={(playedFraction) => {
                     var newTime =  playedFraction*duration;
                     setCurrentTime(newTime);
                     audioRef.current.currentTime = newTime;
-                }} 
-                isSeeking={isSeeking}
-                setIsSeeking={setIsSeeking}
+                }}
+                onSeekChange={(playedFraction) => {
+                    var newTime =  playedFraction*duration;
+                    setCurrentTime(newTime);
+                }}
             />
             <div className="w-full h-[60px] items-center border-2 bt-0 flex flex-row gap-6 px-6 py-4">
                 <div className='w-[200px]'>
