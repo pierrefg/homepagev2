@@ -4,10 +4,9 @@ import { useState, useRef, useEffect } from 'react';
 
 export default function ProgressBar({
     playedFraction,
-    setPlayedFraction,
-    onSeekStart,      // New prop: callback for the start of seeking
-    onSeekEnd,        // New prop: callback for the end of seeking
-    onSeekChange,     // New prop: callback during seeking (optional, for live updates)
+    onSeekStart,
+    onSeekEnd,
+    onSeekChange,
 }) {
     const progressBarRef = useRef(null);
     const [isSeeking, setIsSeeking] = useState(false);
@@ -48,9 +47,7 @@ export default function ProgressBar({
     const handleMouseDown = () => {
         setIsSeeking(true);
         document.body.classList.add('no-select');
-        if (onSeekStart) {
-            onSeekStart();  // Trigger the start of seeking event
-        }
+        if (onSeekStart) onSeekStart();
     };
 
     return (

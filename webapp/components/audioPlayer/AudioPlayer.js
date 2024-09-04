@@ -7,26 +7,20 @@ import { MdOutlineSkipPrevious, MdOutlineSkipNext } from "react-icons/md";
 
 import ProgressBar from './ProgressBar';
 
-const splitSecs = (duration) => {
-    const mins = Math.floor(duration / 60);
-    const secs = Math.round(duration % 60);
-    return [mins, secs];
-}
+import { formatTime } from '@/utils/time';
 
-const formatTime = (nSeconds) => splitSecs(nSeconds).map(num => num.toString().padStart(2, '0')).join(':');
-
-export default function AudioPlayer(
-    { 
-        title, 
-        url, 
-        setIsPlayingParent,
-        goToPreviousTrack,
-        goToNextTrack,
-        isMinTrack,
-        isMaxTrack
-    }
-) {
+export default function AudioPlayer({
+    title,
+    url,
+    isMinTrack,
+    isMaxTrack,
+    onPlayPause,
+    onNext,
+    onPrevious,
+    onSeek
+}) {
     const [isPlayable, setIsPlayable] = useState(true);
+    const [wasPlaying, setWasPlaying] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(null);
@@ -35,6 +29,8 @@ export default function AudioPlayer(
     const audioRef = useRef(null);
 
     useEffect(() => {
+        audioRef.current.pause();
+        setWasPlaying(isPlaying);
         setIsPlayable(false);
         setIsPlaying(false);
         setIsSeeking(false);
@@ -42,23 +38,31 @@ export default function AudioPlayer(
         setDuration(0);
     }, [url]);
 
+    useEffect(() => {
+        onSeek(isSeeking);
+    }, [isSeeking]);
+
+    useEffect(() => {
+        if (isPlaying) audioRef.current.play();
+        else audioRef.current.pause();
+    }, [isPlaying]);
+
     const togglePlayPause = () => {
         if (!duration) setDuration(audioRef.current.duration);
-        
-        if (isPlaying) {
-            setIsPlayingParent(false);
-            audioRef.current.pause();
-        } else {
-            setIsPlayingParent(true);
-            audioRef.current.play();
-        }
         setIsPlaying(!isPlaying);
+        if (onPlayPause) onPlayPause(!isPlaying);
+    };
+
+    const handleNext = () => {
+        if (onNext) onNext();
+    };
+
+    const handlePrevious = () => {
+        if (onPrevious) onPrevious();
     };
 
     const handleTimeUpdate = () => {
-        if (!isSeeking) {
-            setCurrentTime(audioRef.current.currentTime);
-        }
+        if (!isSeeking) setCurrentTime(audioRef.current.currentTime);
     };
 
     return (
@@ -67,57 +71,63 @@ export default function AudioPlayer(
                 ref={audioRef}
                 onTimeUpdate={handleTimeUpdate}
                 src={url}
-                onDurationChange={() => {setDuration(audioRef.current.duration)}}
-                onCanPlay={() => {setIsPlayable(true)}}
+                onDurationChange={() => { setDuration(audioRef.current.duration) }}
+                onCanPlay={() => { 
+                    setIsPlayable(true); setIsPlaying(wasPlaying); 
+                }}
             />
-            <ProgressBar 
-                playedFraction={currentTime/duration} 
-                onSeekStart={() => setIsSeeking(true)} 
+            <ProgressBar
+                playedFraction={currentTime / duration}
+                onSeekStart={() => {
+                    setWasPlaying(isPlaying);
+                    setIsSeeking(true);
+                }}
                 onSeekEnd={(playedFraction) => {
-                    var newTime =  playedFraction*duration;
+                    const newTime = playedFraction * duration;
                     setCurrentTime(newTime);
                     audioRef.current.currentTime = newTime;
+                    setIsSeeking(false);
                 }}
                 onSeekChange={(playedFraction) => {
-                    var newTime =  playedFraction*duration;
+                    const newTime = playedFraction * duration;
                     setCurrentTime(newTime);
                 }}
             />
-            <div className="w-full h-[60px] items-center border-2 bt-0 flex flex-row gap-6 px-6 py-4">
-                <div className='w-[200px]'>
-                    { title }
+            <div className="w-full items-center border-2 bt-0 flex md:flex-row flex-col gap-2 px-6 py-4">
+                <div className='md:w-[200px]'>
+                    {title}
                 </div>
-                
+
                 <div className='flex flex-1'>
                     <div className='flex flex-row gap-4 mx-auto'>
                         <button
-                            onClick={goToPreviousTrack}
+                            onClick={handlePrevious}
                             className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMinTrack && 'disabled'}`}
                         >
                             <MdOutlineSkipPrevious className='inline text-2xl' />
                         </button>
-                        
+
                         <button
                             onClick={togglePlayPause}
                             className={`btn btn-primary w-[30px] h-[30px] ${!isPlayable && 'disabled'}`}
                         >
-                            {   
+                            {
                                 isPlaying ?
-                                <FaPause className='inline' /> :
-                                <FaPlay className='inline' />
+                                    <FaPause className='inline' /> :
+                                    <FaPlay className='inline' />
                             }
                         </button>
 
                         <button
-                            onClick={goToNextTrack}
+                            onClick={handleNext}
                             className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMaxTrack && 'disabled'}`}
                         >
-                            <MdOutlineSkipNext className='text-2xl'/>
+                            <MdOutlineSkipNext className='text-2xl' />
                         </button>
                     </div>
                 </div>
 
-                <div className='w-[200px] text-right'>
+                <div className='md:w-[200px] text-right'>
                     {formatTime(currentTime)} / {formatTime(duration)}
                 </div>
             </div>
