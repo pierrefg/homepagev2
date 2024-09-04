@@ -9,7 +9,7 @@ const aboutContent = [
     {
         content: <>
             Dans les pages qui suivent, je détaille les expériences qui ont façonné mes dernières années !
-            Après quelques stages et de chouettes expériences de recherche, je suis aujourd'hui travailleur indépendant.
+            Après quelques stages et de chouettes projets de recherche, je suis aujourd'hui travailleur indépendant.
             Je propose notamment mes services en science des données à l'entreprise DataValor pour divers projets dans les domaines médical et des énergies renouvelables. 
         </>,
         linkIndex: 1
