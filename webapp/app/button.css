@@ -1,5 +1,6 @@
 .btn {
-    @apply px-[6px] py-[2px] cursor-pointer whitespace-nowrap border-2 border-hidden;
+    @apply px-[5px] py-[1px] cursor-pointer whitespace-nowrap;
+    @apply border-2 border-hidden;
     @apply transition-colors duration-300 ease-in-out;
 }
 
@@ -20,20 +21,22 @@
 }
 
 .btn-primary {
-   @apply bg-primary text-foreground font-medium;
+   @apply bg-primary;
+   @apply text-foreground;
+   @apply border-solid border-primary;
 }
 .btn-primary:hover {
-    @apply bg-primary-hover text-white;
+    @apply bg-primary-hover text-white border-primary-hover;
 }
 
 .btn-primary.active {
-    @apply bg-primary-hover text-white;
+    @apply bg-primary-hover text-white border-primary-hover;
 }
 
 .btn-secondary {
     @apply bg-secondary;
     @apply text-primary text-center;
-    @apply border-solid border-primary;
+    @apply border-primary;
     @apply hover:text-primary;
     @apply inline-flex justify-center items-center;
 }

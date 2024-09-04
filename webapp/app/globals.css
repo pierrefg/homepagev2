@@ -40,10 +40,10 @@ html {
 }
 
 h1 {
-    @apply text-xl font-bold;
+    @apply text-xl font-semibold;
 }
 
-h1 {
+h2 {
     @apply text-lg font-semibold;
 }
 
