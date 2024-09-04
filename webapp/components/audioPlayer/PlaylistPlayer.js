@@ -28,7 +28,7 @@ export default function PlaylistPlayer({playlist}) {
     }, [isPlaying]);
 
     return (
-        <div className='flex flex-col gap-0 w-full max-w-4xl mx-auto'>
+        <div className='flex flex-col gap-0 w-full max-w-4xl mx-auto items-center justify-center'>
             <div className=' w-full max-w-lg mx-auto border-2 px-4 pt-2 pb-4 border-b-0'>
                 <div className='pb-4 text-xl text-center'>
                     <h2>{playlist.title}</h2>
@@ -47,23 +47,21 @@ export default function PlaylistPlayer({playlist}) {
                             priority
                         />
                     </div>
-                    <div>
-                        <div className='flex flex-col gap-4'>
-                            {
-                                playlist.tracks.map(
-                                    (track, index) => (
-                                        <div 
-                                            key={index} 
-                                            className={`border-2 pl-4 ${
-                                                index==selectedTrackIndex ? 'border-primary-hover' : 'border-hidden'
-                                            }`}
+                    <div className='flex flex-col gap-2 mx-auto'>
+                        {
+                            playlist.tracks.map(
+                                (track, index) => (
+                                    <div key={index}>
+                                        <button
+                                            onClick={() => setSelectedTrackIndex(index)}
+                                            className={`btn text-left ${index==selectedTrackIndex && 'active text-primary bg-primary-hover'}`}
                                         >
-                                            <stong>{index}</stong> - { track.title }
-                                        </div>
-                                    )
+                                            {index} - { track.title }
+                                        </button>
+                                    </div>
                                 )
-                            }
-                        </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>

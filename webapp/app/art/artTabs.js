@@ -21,7 +21,8 @@ export const artTabs = [
     },
     {
         title: <span><IoMusicalNoteOutline className='inline' /> Musique</span>,
-        link: '/art/music'
+        link: '/art/music',
+        fullWidth: true
     },
     {
         title: <span><RiVideoOnLine className='inline' /> Vidéo</span>,

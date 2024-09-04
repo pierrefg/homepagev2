@@ -5,6 +5,8 @@ import { useState, useRef, useEffect } from 'react';
 import { FaPlay, FaPause } from "react-icons/fa6";
 import { MdOutlineSkipPrevious, MdOutlineSkipNext } from "react-icons/md";
 
+import ProgressBar from './ProgressBar';
+
 const splitSecs = (duration) => {
     const mins = Math.floor(duration / 60);
     const secs = Math.round(duration % 60);
@@ -24,51 +26,21 @@ export default function AudioPlayer(
         isMaxTrack
     }
 ) {
+    const [isPlayable, setIsPlayable] = useState(true);
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(null);
-    const [isDragging, setIsDragging] = useState(false);
+    const [isSeeking, setIsSeeking] = useState(false);
 
     const audioRef = useRef(null);
-    const progressBarRef = useRef(null);
-
 
     useEffect(() => {
+        setIsPlayable(false);
         setIsPlaying(false);
+        setIsSeeking(false);
         setCurrentTime(0);
         setDuration(0);
     }, [url]);
-
-    useEffect(() => {
-        const handleMouseMove = (event) => {
-            if (isDragging) {
-                const progressBarRect = progressBarRef.current.getBoundingClientRect();
-                const moveX = event.clientX - progressBarRect.left;
-                const newTime = Math.max(0, Math.min((moveX / progressBarRect.width) * duration, duration));
-                setCurrentTime(newTime);
-            }
-        };
-
-        const handleMouseUp = (event) => {
-            if (isDragging) {
-                const progressBarRect = progressBarRef.current.getBoundingClientRect();
-                const clickX = event.clientX - progressBarRect.left;
-                const newTime = (clickX / progressBarRect.width) * duration;
-                audioRef.current.currentTime = newTime;
-                setCurrentTime(newTime);
-                setIsDragging(false);
-                document.body.classList.remove('no-select');
-            }
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        window.addEventListener('mouseup', handleMouseUp);
-
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-            window.removeEventListener('mouseup', handleMouseUp);
-        };
-    }, [isDragging, duration]);
 
     const togglePlayPause = () => {
         if (!duration) setDuration(audioRef.current.duration);
@@ -84,14 +56,9 @@ export default function AudioPlayer(
     };
 
     const handleTimeUpdate = () => {
-        if (!isDragging) {
+        if (!isSeeking) {
             setCurrentTime(audioRef.current.currentTime);
         }
-    };
-
-    const handleMouseDown = () => {
-        setIsDragging(true);
-        document.body.classList.add('no-select');
     };
 
     return (
@@ -100,29 +67,20 @@ export default function AudioPlayer(
                 ref={audioRef}
                 onTimeUpdate={handleTimeUpdate}
                 src={url}
+                onDurationChange={() => {setDuration(audioRef.current.duration)}}
+                onCanPlay={() => {setIsPlayable(true)}}
             />
-            <div
-                ref={progressBarRef}
-                className='absolute top-0 left-0 w-full h-[5px] bg-primary z-10 cursor-pointer'
-                onMouseDown={handleMouseDown}
-            >
-                <div
-                    className='absolute top-0 left-0 h-[5px] bg-primary-hover z-20'
-                    style={{
-                        width: Math.round((currentTime / duration) * 100) + '%'
-                    }}
-                />
-                <div
-                    className='absolute h-[15px] w-[15px] hover:h-[20px] hover:w-[20px] bg-primary-hover border-2 z-30 cursor-pointer'
-                    style={{
-                        left: Math.round((currentTime / duration) * 100) + '%',
-                        transform: 'translate(-50%, -50%)',
-                        top: '50%'
-                    }}
-                    
-                />
-            </div>
-            <div className="w-full h-[60px] items-center border-2 flex flex-row gap-6 px-6 py-4">
+            <ProgressBar 
+                playedFraction={currentTime/duration} 
+                setPlayedFraction={(playedFraction) => {
+                    var newTime =  playedFraction*duration;
+                    setCurrentTime(newTime);
+                    audioRef.current.currentTime = newTime;
+                }} 
+                isSeeking={isSeeking}
+                setIsSeeking={setIsSeeking}
+            />
+            <div className="w-full h-[60px] items-center border-2 bt-0 flex flex-row gap-6 px-6 py-4">
                 <div className='w-[200px]'>
                     { title }
                 </div>
@@ -138,14 +96,15 @@ export default function AudioPlayer(
                         
                         <button
                             onClick={togglePlayPause}
-                            className="btn btn-primary w-[30px] h-[30px]"
+                            className={`btn btn-primary w-[30px] h-[30px] ${!isPlayable && 'disabled'}`}
                         >
-                            {
+                            {   
                                 isPlaying ?
-                                    <FaPause className='inline' /> :
-                                    <FaPlay className='inline' />
+                                <FaPause className='inline' /> :
+                                <FaPlay className='inline' />
                             }
                         </button>
+
                         <button
                             onClick={goToNextTrack}
                             className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMaxTrack && 'disabled'}`}
