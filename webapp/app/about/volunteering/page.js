@@ -5,7 +5,7 @@ import { MdOutlineVolunteerActivism } from "react-icons/md";
 
 export default function Volunteering() {
     return (
-        <div className="mx-auto">
+        <div className="timeline-container">
             <Timeline
                 Icon = {MdOutlineVolunteerActivism}
                 title = "Bénévolat"

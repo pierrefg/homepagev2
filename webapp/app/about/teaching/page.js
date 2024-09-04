@@ -5,7 +5,7 @@ import { PiChalkboardTeacherLight } from "react-icons/pi";
 
 export default function Teaching() {
     return (
-        <div className="mx-auto">
+        <div className="timeline-container">
             <Timeline
                 Icon = {PiChalkboardTeacherLight}
                 title = "Enseignement"

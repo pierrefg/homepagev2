@@ -5,7 +5,7 @@ import { IoSchoolOutline } from "react-icons/io5";
 
 export default function Education() {
     return (
-        <div className="mx-auto">
+        <div className="timeline-container">
             <Timeline
                 Icon = {IoSchoolOutline}
                 title = "Formation"

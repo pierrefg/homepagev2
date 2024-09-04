@@ -81,4 +81,8 @@ li::before {
 
 .paused {
     animation-play-state: paused;
-  }
+}
+
+.timeline-container {
+    @apply max-w-3xl mx-auto;
+}

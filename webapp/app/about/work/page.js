@@ -5,7 +5,7 @@ import { AiOutlineTool } from "react-icons/ai";
 
 export default function Work() {
     return (
-        <div className="mx-auto">
+        <div className="timeline-container">
             <Timeline
                 Icon = {AiOutlineTool}
                 title = "Expérience"
