@@ -20,10 +20,10 @@ module.exports = {
           muted: 'rgb(var(--secondary-muted-color-rgb))',
         },
       },
-      // fontSize: {
-      //   base: '14px', // Default for mobile (since Tailwind is mobile-first)
-      //   lg: '16px',   // Larger screens (e.g., "lg" breakpoint and above)
-      // },
+      fontSize: {
+        base: '15px', // Default for mobile (since Tailwind is mobile-first)
+        lg: '16px',   // Larger screens (e.g., "lg" breakpoint and above)
+      },
       height: {
         'primary-menu': 'var(--primary-menu-height)',
         'secondary-menu': 'var(--secondary-menu-height)',

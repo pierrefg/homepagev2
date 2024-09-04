@@ -10,7 +10,7 @@ import { artTabs } from "./artTabs";
 
 import Image from "next/image";
 
-var img_size = 130;
+var img_size = 120;
 
 export default function Art() {
     return (

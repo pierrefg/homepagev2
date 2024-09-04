@@ -10,7 +10,7 @@ export default function Project({data}) {
             }
 
             <div className="text-center">
-                <h2 className="text-base md:text-1xl font-semibold">{data.title}</h2>
+                <h2 className="font-semibold">{data.title}</h2>
                 <h3 className="italic">{data.subtitle}</h3>
                 <h3 className="pt-6">{data.period}</h3>
             </div>
@@ -60,7 +60,7 @@ export default function Project({data}) {
                     <div className="mx-auto text-center md:w-2/5 md:pr-8 pb-6">
                         <Image
                             src={data.img}
-                            className="mx-auto rounded-full w-4/5 md:w-[350px]"
+                            className="mx-auto rounded-full w-3/5 md:w-[350px]"
                         />
                         <p className="text-primary-muted italic pt-2">{data.imgLegend}</p>
                     </div>

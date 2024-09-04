@@ -14,7 +14,6 @@
 
 .sub-menu-content {
     @apply flex flex-col w-full justify-center pt-4;
-    /* @apply text-sm md:text-base; */
     @apply mt-[var(--secondary-menu-mobile-height)];
     @apply md:mt-[var(--secondary-menu-height)];
 }

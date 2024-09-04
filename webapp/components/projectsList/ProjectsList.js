@@ -1,7 +1,3 @@
-import ButtonsList from "@/components/ButtonsList";
-import ShowMore from "@/components/ShowMore";
-import Image from "next/image";
-
 import Project from "./Project";
 
 export default function ProjectsList({data}) {

@@ -5,19 +5,19 @@ import { RiQuestionAnswerLine } from "react-icons/ri";
 
 export const mainMenuLinks = [
     {
-        title: <span><BiGame className='icon' /> Mon parcours</span>,
+        title: <strong><BiGame className='icon' /> Mon parcours</strong>,
         link: '/about'
     },
     {
-        title: <span><AiOutlineExperiment className='icon' /> Informatique</span>,
+        title: <strong><AiOutlineExperiment className='icon' /> Informatique</strong>,
         link: '/science'
     },
     {
-        title: <span><LuPaintbrush className='icon'/> Porfolio artistique</span>,
+        title: <strong><LuPaintbrush className='icon'/> Porfolio artistique</strong>,
         link: '/art'
     },
     {
-        title: <span><RiQuestionAnswerLine className='icon'/> Contact</span>,
+        title: <strong><RiQuestionAnswerLine className='icon'/> Contact</strong>,
         link: '/contact'
     }
 ]; 
