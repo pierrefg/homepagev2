@@ -103,8 +103,3 @@ li::before {
 .timeline-container {
     @apply max-w-4xl mx-auto;
 }
-
-.page-section {
-    /* background-color: brown; */
-    /* scroll-padding-top: 600px; */
-}

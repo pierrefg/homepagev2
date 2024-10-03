@@ -20,6 +20,7 @@ export default function SubMenuLayout({ pagesData }) {
     }, [pathname, pagesData]);
 
     useEffect(() => {
+        console.log(window.location.hash)
         setHash(window.location.hash)
     }, [params]);
 
@@ -80,7 +81,7 @@ export default function SubMenuLayout({ pagesData }) {
                 </div>
             </div>
             
-            <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl px-4 mx-auto'}`}>
+            <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl md:px-0 px-4 mx-auto'}`}>
                 <div className='flex flex-col gap-6'>
                     {
                         pagesData.map(

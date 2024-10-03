@@ -7,21 +7,21 @@ export const mainMenuLinks = [
     {
         title: <span><BiGame className='icon' /> Mon parcours</span>,
         link: '/about',
-        anchor: 'header'
+        // anchor: 'header'
     },
     {
         title: <span><AiOutlineExperiment className='icon' /> Informatique</span>,
         link: '/science',
-        anchor: 'header'
+        // anchor: 'header'
     },
     {
         title: <span><LuPaintbrush className='icon'/> Porfolio artistique</span>,
         link: '/art',
-        anchor: 'header'
+        // anchor: 'header'
     },
     {
         title: <span><RiQuestionAnswerLine className='icon'/> Contact</span>,
         link: '/contact',
-        anchor: 'header'
+        // anchor: 'header'
     }
 ]; 

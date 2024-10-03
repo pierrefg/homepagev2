@@ -17,16 +17,6 @@ export default function ContactHeader() {
                 <p>
                     Pour tout projet, toute collaboration ou question : n'hésitez pas <LuPartyPopper className='inline' />
                 </p>
-                <p className="leading-6">
-                    <>Retrouvez également une description de mes </>
-                    <Link 
-                        className="btn btn-secondary"
-                        href="/contact#services"
-                    >
-                        <span><MdOutlineDesignServices className='inline' /> Prestations</span>
-                    </Link>
-                    .
-                </p>
                 <ContactForm />
             </div>
         </SideImageLayout>
