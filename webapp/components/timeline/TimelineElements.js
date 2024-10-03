@@ -9,7 +9,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
     if (!elementData) return null;
 
     if (largeDate) var divClassName = "grid md:grid-cols-[150px_1fr] md:gap-6"
-    else var divClassName = "grid md:grid-cols-[80px_1fr] md:gap-6"
+    else var divClassName = "grid md:grid-cols-[100px_1fr] md:gap-6"
 
     return (
         <div className={divClassName}>

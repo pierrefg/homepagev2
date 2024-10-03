@@ -37,6 +37,7 @@ html {
     @apply bg-foreground text-base;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
 }
 
 h1 {
@@ -100,5 +101,10 @@ li::before {
 }
 
 .timeline-container {
-    @apply max-w-3xl mx-auto;
+    @apply max-w-4xl mx-auto;
+}
+
+.page-section {
+    /* background-color: brown; */
+    /* scroll-padding-top: 600px; */
 }

@@ -1,4 +1,4 @@
-import { researchData } from './data';
+import { researchData } from './research';
 import ProjectsList from "@/components/projectsList/ProjectsList";
 
 export default function Research() {

@@ -1,35 +1,17 @@
-import Link from "next/link";
+import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
-import coverPic from './cover.jpg';
-import ContactForm from '@/components/form/ContactForm';
-import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
+import { contactSections } from './contactSections';
 
-import { LuPartyPopper } from "react-icons/lu";
-import { MdOutlineDesignServices } from "react-icons/md";
+import { createPageMetadata } from '@/utils/metadata';
+
+export const metadata = createPageMetadata(
+    "Contact",
+    "Contactez-moi pour toute question, collaboration ou demande d'information.",
+    "/contact"
+)
 
 export default function Contact() {
     return (
-        <HomePageLayout
-            coverPic={coverPic}
-            title='Contactez-moi !'
-        >
-            <div className="flex flex-col gap-4">
-                <p>
-                    Pour tout projet, toute collaboration ou question : n'hésitez pas <LuPartyPopper className='inline' />
-                </p>
-                <p className="leading-6">
-                    <>Retrouvez également une description de mes </>
-                    <Link 
-                        className="btn btn-secondary"
-                        href="/contact/services"
-                    >
-                        <span><MdOutlineDesignServices className='inline' /> Prestations</span>
-                    </Link>
-                    .
-                </p>
-                <ContactForm />
-            </div>
-        </HomePageLayout>
-        
+        <SubMenuLayout pagesData={contactSections} />
     );
 }

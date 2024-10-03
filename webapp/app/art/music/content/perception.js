@@ -9,7 +9,7 @@ export const perceptionData = {
         link: 'https://songwhip.com/p1ps/perception',
         extern: true
     },
-    description: 'Perception is a compilation of unreleased electroacoustic music I made between 2007 and 2017. ',
+    description: 'Perception est une compilation de musiques électroacoustiques réalisées entre 2007 et 2017.',
     tracks: [
         {
             title: 'Prélude',

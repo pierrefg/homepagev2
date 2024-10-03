@@ -1,23 +1,33 @@
+import './style.css';
+
 import Image from "next/image";
 
 export default function HomePageLayout({children, title, coverPic}) {
     return (
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
-            <div className="col-span-1 md:col-span-1 flex justify-center md:h-full">
+        <div className="relative w-full flex items-center justify-center">
+            {/* Background Image */}
+            <div className="absolute inset-0">
                 <Image
                     src={coverPic}
-                    alt='Cover image'
-                    className="object-cover w-[150px] h-[150px] md:w-full md:h-full rounded-full md:rounded-none"
-                    placeholder={'blur'}
+                    alt="Background image"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    className="opacity-30"
                     priority
                 />
             </div>
-            <div className="col-span-1 md:col-span-3 flex flex-col gap-4">
-                <h1 className="text-xl">
-                    {title}
+
+            {/* Overlay */}
+            <div className="absolute inset-0bg-opacity-50"></div>
+
+            {/* Text Content */}
+            <div className="relative z-10 max-w-4xl text-center p-6">
+                <h1 className="text-4xl font-bold mb-6">
+                {title}
                 </h1>
-                <div className="flex flex-col gap-4 md:min-h-[600px]">
-                    {children}
+                <div className="text-lg">
+                {children}
                 </div>
             </div>
         </div>

@@ -3,11 +3,11 @@ import CoverPic from "./talk.jpg";
 
 import Timeline from "@/components/timeline/Timeline";
 
-import { publicationsData } from "./publicationsData";
-import { authorsData } from "./authorsData";
-import { seminarsData } from "./seminarsData";
-import { softwareData } from './softwareData';
-import { miscData } from './miscData';
+import { publicationsData } from "./data/publicationsData";
+import { authorsData } from "./data/authorsData";
+import { seminarsData } from "./data/seminarsData";
+import { softwareData } from './data/softwareData';
+import { miscData } from './data/miscData';
 
 import { IoDocumentsOutline } from "react-icons/io5";
 import { RiPresentationFill } from "react-icons/ri";

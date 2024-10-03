@@ -19,7 +19,7 @@ export const dataScienceData =
             subtitle: "traitement du signal, visualisation",
             period: "2023-*",
             img: airgapPic,
-            imgLegend: "Exemple de pdf analysé par l'outil développé dans ce projet.",
+            imgLegend: "Déplié 3D de la valeur d'entrefer dans une turbine hydroélectrique.",
             summary: <>
                 La Compagnie Nationale du Rhône (CNR) exploite un grand nombre de centrales hydroélectriques le long de la rive française du Rhône.
                 Suite à des collisions rotor-stator sur certaines de leurs turbines, la CNR a commencé à développer des techniques de maintenance prédictive en surveillant l'entrefer (distance entre le stator et le rotor).

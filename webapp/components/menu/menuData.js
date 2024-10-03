@@ -6,18 +6,22 @@ import { RiQuestionAnswerLine } from "react-icons/ri";
 export const mainMenuLinks = [
     {
         title: <span><BiGame className='icon' /> Mon parcours</span>,
-        link: '/about'
+        link: '/about',
+        anchor: 'header'
     },
     {
         title: <span><AiOutlineExperiment className='icon' /> Informatique</span>,
-        link: '/science'
+        link: '/science',
+        anchor: 'header'
     },
     {
         title: <span><LuPaintbrush className='icon'/> Porfolio artistique</span>,
-        link: '/art'
+        link: '/art',
+        anchor: 'header'
     },
     {
         title: <span><RiQuestionAnswerLine className='icon'/> Contact</span>,
-        link: '/contact'
+        link: '/contact',
+        anchor: 'header'
     }
 ]; 

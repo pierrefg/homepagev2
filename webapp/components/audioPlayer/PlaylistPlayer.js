@@ -40,13 +40,19 @@ export default function PlaylistPlayer({playlist}) {
                         />
                     </div>
 
-                    <div className='flex flex-col md:w-3/5 gap-2 text-center'>
+                    <div className='flex flex-col md:w-3/5 gap-2 text-center items-center justify-center'>
                         <h2>{playlist.title}</h2>
-                        <p className='text-primary-muted'>P1ps - {playlist.releasedDate}</p>
+                        {
+                            playlist.releasedDate &&
+                            <p className='text-primary-muted'>P1ps - {playlist.releasedDate}</p>
+                        }
                         <p>{playlist.description}</p>
-                        <p>
-                            <SimpleLink content={playlist.fullLink} />
-                        </p>
+                        {
+                            playlist.fullLink &&
+                            <p>
+                                <SimpleLink content={playlist.fullLink} />
+                            </p>
+                        }
                     </div>
                 </div>
             </div>

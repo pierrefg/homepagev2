@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 
 
 import coverPic from '../cover.jpg';
-import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
+import SideImageLayout from "@/components/sideImageLayout";
 import { landingBContent } from "./landingBContent";
 
 import { MdOutlinePlace } from "react-icons/md";
@@ -16,7 +16,7 @@ export default function About() {
     return (
         <>
             <div className='flex flex-grow justify-center items-center p-6 z-20'>
-                <HomePageLayout
+                <SideImageLayout
                     coverPic={coverPic}
                     title='Pierre Faure--Giovagnoli'
                 >
@@ -45,7 +45,7 @@ export default function About() {
                             Merci à Pierre Fimbel et Charlotte Delfosse de m'avoir tiré le portrait.
                         </div>
                     </div>
-                </HomePageLayout>
+                </SideImageLayout>
             </div>
             <Footer />
         </>

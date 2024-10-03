@@ -2,7 +2,7 @@ import { photoData } from './content/data';
 
 import Gallery from '@/components/gallery/Gallery';
 
-export default function Graphics() {
+export default function Photography() {
     return (
         <div className="flex flex-col w-full">
             {

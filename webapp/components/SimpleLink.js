@@ -5,7 +5,7 @@ export default function SimpleLink({content, key=null, primary=false, large=fals
         <Link 
             key={key}
             className={`btn py-1 ${primary ? 'btn-primary' : 'btn-secondary'} ${large && 'btn-large'} ${active && 'active'}`}
-            href={ content.link }
+            href={ content.link + (content.anchor ? `#${content.anchor}`: '') }
             onClick={onClick}
             target={ content.extern && '_blank' }
         >
