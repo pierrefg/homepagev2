@@ -1,23 +1,14 @@
-import { IoArrowUpSharp  } from "react-icons/io5";
 import { IoMusicalNoteOutline } from "react-icons/io5";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import { MdOutlinePolyline } from "react-icons/md";
 import { RiVideoOnLine } from "react-icons/ri";
 
-import ArtHeader from "./header/artHeader";
 import Graphics from "./graphics/graphics";
 import Photography from "./photography/photography";
 import Music from "./music/music";
 import Video from "./video/video";
 
 export const artSections = [
-    {
-        title: <><IoArrowUpSharp className='inline' /></>,
-        noTitle: true,
-        id: 'header',
-        link: '/art#header',
-        section: <ArtHeader />
-    },
     {
         title: <><MdOutlinePolyline className='title-icon' /> Graphisme</>,
         id: 'graphics',

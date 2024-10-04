@@ -8,8 +8,13 @@ export const metadata = createPageMetadata(
     "/about"
 )
 
+import AboutHeader from './header/aboutHeader';
+
 export default function About() {
     return (
-        <SubMenuLayout pagesData={aboutSections} />
+        <>
+            <AboutHeader />
+            <SubMenuLayout pagesData={aboutSections} />
+        </>
     );
 }

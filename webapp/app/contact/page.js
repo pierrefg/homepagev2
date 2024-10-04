@@ -10,8 +10,13 @@ export const metadata = createPageMetadata(
     "/contact"
 )
 
+import ContactHeader from "./header/contactHeader";
+
 export default function Contact() {
     return (
-        <SubMenuLayout pagesData={contactSections} />
+        <div className='mt-8'>
+            <ContactHeader />
+            <SubMenuLayout noMenu pagesData={contactSections} />
+        </div>
     );
 }

@@ -1,5 +1,5 @@
 .sub-menu-layout {
-    @apply flex fixed left-0 w-full items-center justify-center z-40;
+    @apply flex left-0 w-full items-center justify-center z-40;
     @apply bg-[theme('colors.foreground')] bg-opacity-10;
     @apply top-[var(--primary-menu-mobile-height)] md:top-[var(--primary-menu-height)] ;
     @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)];
@@ -13,7 +13,11 @@
 }
 
 .sub-menu-content {
-    @apply flex flex-col w-full justify-center pt-4;
-    @apply mt-[var(--secondary-menu-mobile-height)];
-    @apply md:mt-[var(--secondary-menu-height)];
+    @apply flex flex-col w-full justify-center;
+    /* @apply mt-[var(--secondary-menu-mobile-height)];
+    @apply md:mt-[var(--secondary-menu-height)]; */
+}
+
+.sticky {
+    @apply fixed;
 }

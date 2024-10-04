@@ -13,13 +13,6 @@ import Education from "./education/education";
 
 export const aboutSections = [
     {
-        title: <><IoArrowUpSharp className='inline' /></>,
-        noTitle: true,
-        id: 'header',
-        link: '/about#header',
-        section: <AboutHeader />
-    },
-    {
         title: <><AiOutlineTool className='title-icon' /> Expérience</>,
         id: 'experience',
         link: '/about#experience',

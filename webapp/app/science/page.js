@@ -3,6 +3,8 @@ import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 import { scienceSections } from "./scienceSections";
 
 import { createPageMetadata } from '@/utils/metadata';
+import ScienceHeader from './header/scienceHeader';
+
 
 export const metadata = createPageMetadata(
     "Informatique",
@@ -12,6 +14,9 @@ export const metadata = createPageMetadata(
 
 export default function Science() {
     return (
-        <SubMenuLayout pagesData={scienceSections} />
+        <>
+            <ScienceHeader />
+            <SubMenuLayout pagesData={scienceSections} />
+        </>  
     );
 }
