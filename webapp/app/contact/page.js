@@ -14,9 +14,9 @@ import ContactHeader from "./header/contactHeader";
 
 export default function Contact() {
     return (
-        <div className='mt-8'>
+        <>
             <ContactHeader />
             <SubMenuLayout noMenu pagesData={contactSections} />
-        </div>
+        </>
     );
 }

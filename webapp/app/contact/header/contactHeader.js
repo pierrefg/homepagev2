@@ -1,24 +1,20 @@
-import Link from "next/link";
-
 import coverPic from './cover.jpg';
-import ContactForm from '@/components/form/ContactForm';
-import SideImageLayout from "@/components/sideImageLayout";
 
 import { LuPartyPopper } from "react-icons/lu";
-import { MdOutlineDesignServices } from "react-icons/md";
+
+import BackgroundImageLayout from '@/components/BackgroundImageLayout';
+
+import { mainMenuLinks } from '@/components/menu/menuData';
 
 export default function ContactHeader() {
     return (
-        <SideImageLayout
+        <BackgroundImageLayout
             coverPic={coverPic}
-            title='Contactez-moi !'
+            title={mainMenuLinks[3].title}
         >
-            <div className="flex flex-col gap-4">
-                <p>
-                    Pour tout projet, toute collaboration ou question : n'hésitez pas <LuPartyPopper className='inline' />
-                </p>
-                <ContactForm />
-            </div>
-        </SideImageLayout>
+            Pour tout projet, toute collaboration ou question : n'hésitez pas ! <LuPartyPopper className='inline' />
+            <br />
+            Retrouvez également l'ensemble de mes prestations ci-dessous.
+        </BackgroundImageLayout>
     );
 }

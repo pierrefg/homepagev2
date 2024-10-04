@@ -1,15 +1,17 @@
-import HomePageLayout from "@/components/homePageLayout/HomePageLayout";
-
 import coverPic from './cover.jpg';
+
+import BackgroundImageLayout from '@/components/BackgroundImageLayout';
+
+import { mainMenuLinks } from '@/components/menu/menuData';
 
 export default function ArtHeader() {
     return (
-        <HomePageLayout
+        <BackgroundImageLayout
             coverPic={coverPic}
-            title='Activité artistique'
+            title={mainMenuLinks[2].title}
         >
             De graphisme spatial à photographie militante en passant par motion design et musique électroacoustique,
             vous trouverez ici un aperçu de mes activités artistiques ! 
-        </HomePageLayout>
+        </BackgroundImageLayout>
     );
 }

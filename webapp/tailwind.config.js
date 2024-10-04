@@ -38,10 +38,15 @@ module.exports = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+        slideIn: {
+          '0%': { transform: 'translate(-10px)', opacity: '0' },
+          '100%': { transform: 'translate(0px)', opacity: '1' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         rotate: 'rotate 20s linear infinite',
+        slideIn: 'slideIn 1s ease-in-out'
       },
     },
   },

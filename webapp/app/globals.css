@@ -103,3 +103,7 @@ li::before {
 .timeline-container {
     @apply max-w-4xl mx-auto;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+  }

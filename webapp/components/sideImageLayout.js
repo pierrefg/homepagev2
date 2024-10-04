@@ -13,9 +13,12 @@ export default function SideImageLayout({children, title, coverPic}) {
                 />
             </div>
             <div className="col-span-1 md:col-span-3 flex flex-col gap-4">
-                <h1 className="text-xl">
-                    {title}
-                </h1>
+                {
+                    title && 
+                    <h1 className="text-xl">
+                        {title}
+                    </h1>
+                }
                 <div className="flex flex-col gap-4">
                     {children}
                 </div>
