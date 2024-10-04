@@ -12,6 +12,7 @@ export default function BackgroundImageLayout({children, title, coverPic}) {
                         objectFit="cover"
                         objectPosition="center"
                         className="opacity-30"
+                        placeholder={'blur'}
                         // className="opacity-30 blur-sm"
                         priority
                     />
