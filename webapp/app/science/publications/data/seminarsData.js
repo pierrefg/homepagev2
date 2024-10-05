@@ -4,6 +4,7 @@ export const seminarsData = [
             name: 'Automatic air gap monitoring in compact hydro-generators',
         },
         authors: ['pierref', 'cturbidi', 'vscuturici'],
+        period: "2023",
         companies: [ 
             {
                 name: "Semaine des altrernatives durables de l'INSA Lyon",
@@ -26,6 +27,7 @@ export const seminarsData = [
             name: 'Assessing the existence of a function in a dataset: complexity, algorithmics and visualization',
         },
         authors: ['pierref', 'svilmin', 'jpetit', 'vscuturici'],
+        period: "2021-23",
         companies: [ 
             {
                 name: "MALOTEC seminar at the LORIA laboratory",
@@ -68,6 +70,7 @@ export const seminarsData = [
             name: 'Usefulness of synthetic datasets for diatom automatic detection using a deep-learning approach',
         },
         authors: ['avenkataramanan', 'pierref', 'cregan', 'dheudre', 'cfigus', 'pusseglio', 'cpradalier', 'mlaviale'],
+        period: "2020",
         companies: [ 
             {
                 name: "Imaginecology",

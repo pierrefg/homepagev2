@@ -8,9 +8,9 @@ import Publications from "./publications/publications";
 
 export const scienceSections = [
     {
-        title: <><MdOutlineDataThresholding className='title-icon' /> Science des données</>,
-        id: 'data-science',
-        link: '/science#data-science',
+        title: <><MdOutlineDataThresholding className='title-icon' /> Projets</>,
+        id: 'projects',
+        link: '/science#projects',
         section: <DataScience />
     },
     {

@@ -25,15 +25,15 @@ export const aboutSections = [
         section: <Volunteering />
     },
     {
+        title: <><PiChalkboardTeacherLight className='title-icon' /> Enseignement</>,
+        id: 'teaching',
+        link: '/about#teaching',
+        section: <Teaching />
+    },
+    {
         title: <><IoSchoolOutline className='title-icon' /> Formation</>,
         id: 'education',
         link: '/about#education',
         section: <Education />
     },
-    {
-        title: <><PiChalkboardTeacherLight className='title-icon' /> Enseignement</>,
-        id: 'teaching',
-        link: '/about#teaching',
-        section: <Teaching />
-    }
 ];

@@ -19,10 +19,12 @@ export default function Publications() {
         <div className="justify-center">
             <Image
                 src={CoverPic}
-                className="rounded-full w-[200px] h-[200px] mx-auto mb-8"
+                className="rounded-full w-[200px] h-[200px] mx-auto"
                 placeholder={'blur'}
                 priority
             />
+            
+            <h2 className='text-center my-[40px]'>/// Publications</h2>
             <Timeline
                 Icon = {IoDocumentsOutline}
                 title = "Publications"
@@ -30,7 +32,7 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <div className="my-[40px]"/>
+            <h2 className='text-center my-[40px]'>/// Séminaires</h2>
             <Timeline
                 Icon = {RiPresentationFill}
                 title = "Séminaires"
@@ -38,7 +40,7 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <div className="my-[40px]"/>
+            <h2 className='text-center my-[40px]'>/// Logiciels</h2>
             <Timeline
                 Icon = {FaCode}
                 title = "Logiciels"
@@ -46,7 +48,7 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <div className="my-[40px]"/>
+            <h2 className='text-center my-[40px]'>/// Divers</h2>
             <Timeline
                 Icon = {VscSymbolMisc}
                 title = "Divers"
