@@ -67,7 +67,7 @@ const videoData = [
 
 export default function Video() {
     return (
-        <div className="flex flex-col gap-2 mx-auto">
+        <div className="flex flex-col gap-2 mx-auto px-4 w-fit">
             {
                 videoData.map(
                     (item, index) => (

@@ -74,7 +74,7 @@ export default function PlaylistPlayer({playlist}) {
                 />
             </div>
 
-            <div className='flex flex-col gap-2 mx-auto border-2 p-6 border-t-0'>
+            <div className='flex flex-col gap-2 mx-auto border-2 p-6 border-t-0 w-4/5 md:w-fit'>
                 {
                     playlist.tracks.map(
                         (track, index) => (
