@@ -22,7 +22,7 @@ export const workData = [
     },
     {
         title: {
-            name: "Doctorat en Informatique (appliqué à la production hydroélectrique)",
+            name: "Doctorat en Informatique (appliquée à la production hydroélectrique)",
         },
         period: "2020-23",
         type: "Doctorat",
@@ -49,7 +49,7 @@ export const workData = [
     },
     {
         title: {
-            name: "Thèse de Master en Informatique (appliqué à la biologie)",
+            name: "Thèse de Master en Informatique (appliquée à la biologie)",
         },
         period: "2020",
         type: "Thèse de master",

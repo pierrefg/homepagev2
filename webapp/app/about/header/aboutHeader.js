@@ -11,7 +11,7 @@ export default function AboutHeader() {
             title={mainMenuLinks[0].title}
         >
             <div className='flex flex-col gap-3'>
-                Découvrez ici un aperçu de mon parcours professionnel et bénévole, ainsi que des établissements où j'ai étudié et enseigné.
+                Découvrez ici un aperçu de mon parcours professionnel et bénévole, ainsi que des établissements dans lesquels j'ai étudié ou enseigné.
             </div>
         </BackgroundImageLayout>
     );
