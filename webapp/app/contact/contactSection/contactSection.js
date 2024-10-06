@@ -8,10 +8,11 @@ import { LuPartyPopper } from "react-icons/lu";
 
 export default function ContactSection() {
     return (
-        <SideImageLayout
-            coverPic={coverPic}
-        >
-            <ContactForm />
-        </SideImageLayout>
+        <ContactForm />
+        // <SideImageLayout
+        //     coverPic={coverPic}
+        // >
+        //     <ContactForm />
+        // </SideImageLayout>
     );
 }

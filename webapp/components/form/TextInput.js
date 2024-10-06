@@ -1,4 +1,4 @@
-export default function TextInput({ type = 'text', label, name, rows = "1", disabled = false }) {
+export default function TextInput({ type = 'text', label, name, placeholder, rows = "1", disabled = false }) {
     const commonProps = {
         name,
         className: "text-input",
@@ -15,12 +15,14 @@ export default function TextInput({ type = 'text', label, name, rows = "1", disa
                     {...commonProps}
                     rows={rows}
                     disabled={disabled}
+                    placeholder={placeholder}
                 />
             ) : (
                 <input
                     type={type}
                     {...commonProps}
                     disabled={disabled}
+                    placeholder={placeholder}
                 />
             )}
         </div>

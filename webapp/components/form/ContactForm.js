@@ -2,7 +2,7 @@
 
 import './style.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import LoaderElement from '@/components/loader/LoaderElement';
 
@@ -39,9 +39,9 @@ export default function ContactForm() {
             onSubmit={handleSubmit}
             className="max-w-2xl w-full flex flex-col gap-6 mx-auto"
         >
-            <TextInput label='Nom' name='from_name' disabled={!!mailState} />
-            <TextInput type='E-mail' name='from_email' label='Email' disabled={!!mailState} />
-            <TextInput type='textarea' name='message' label='Message' rows="5" disabled={!!mailState} />
+            <TextInput label='Nom' name='from_name' placeholder='Votre nom' disabled={!!mailState} />
+            <TextInput type='E-mail' name='from_email' label='Email' placeholder='Votre email' disabled={!!mailState} />
+            <TextInput type='textarea' name='message' label='Message' placeholder='Contenu du message' rows="5" disabled={!!mailState} />
             <div className="flex items-center justify-between">
                 {
                     mailState === 'loading' ? (
