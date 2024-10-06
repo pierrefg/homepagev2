@@ -39,7 +39,7 @@ export default function LandingTop() {
                             <span>
                                 Scientifique des données
                                 <br />
-                                Graphisme, photo, son et vidéo
+                                Graphiste, photographe et musicien
                             </span>
                         </div>
                     </div>
