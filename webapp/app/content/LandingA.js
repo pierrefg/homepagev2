@@ -37,9 +37,9 @@ export default function LandingTop() {
                         </div>
                         <div className="w-full">
                             <span>
-                                Scientifique des données
-                                <br />
                                 Graphiste, photographe et musicien
+                                <br />
+                                Scientifique des données
                             </span>
                         </div>
                     </div>
