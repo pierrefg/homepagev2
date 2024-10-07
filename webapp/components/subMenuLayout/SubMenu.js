@@ -79,17 +79,19 @@ export default function SubMenu({ pagesData }) {
 
     return (
         <div className="sub-menu-layout">
-            <div className="sub-menu">
-                {pagesData.map((el, index) => {
-                    const isActive = pathname+hash === el.link;
-                    return (
-                        <SimpleLink 
-                            key={index} 
-                            content={el}  
-                            active={isActive}
-                        />
-                    );
-                })}
+            <div className="sub-menu-layout">
+                <div className="sub-menu">
+                    {pagesData.map((el, index) => {
+                        const isActive = pathname+hash === el.link;
+                        return (
+                            <SimpleLink 
+                                key={index} 
+                                content={el}  
+                                active={isActive}
+                            />
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

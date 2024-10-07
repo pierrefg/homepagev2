@@ -3,7 +3,7 @@ import { GiChemicalDrop } from "react-icons/gi";
 import { MdOutlineDataThresholding } from "react-icons/md";
 
 import DataScience from "./data-science/dataScience";
-import Research from "./research/page";
+import Research from "./research/research";
 import Publications from "./publications/publications";
 
 export const scienceSections = [
