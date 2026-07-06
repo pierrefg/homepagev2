@@ -8,7 +8,29 @@ function smoothstep(edge0, edge1, x) {
     return t * t * (3 - 2 * t);
 }
 
-export default function GaussianOcean({ color = "purple" }) {
+// Parse a hex color ("#rrggbb" or "rrggbb") into [r, g, b]
+function hexToRgb(hex) {
+    const clean = hex.replace("#", "");
+    const bigint = parseInt(clean, 16);
+    return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
+}
+
+function lerp(a, b, t) {
+    return a + (b - a) * t;
+}
+
+function lerpColor(rgbA, rgbB, t) {
+    return [
+        Math.round(lerp(rgbA[0], rgbB[0], t)),
+        Math.round(lerp(rgbA[1], rgbB[1], t)),
+        Math.round(lerp(rgbA[2], rgbB[2], t)),
+    ];
+}
+
+export default function GaussianOcean({
+    colorFar = "#500052",
+    colorNear = "#ffffffcc",
+}) {
     const canvasRef = useRef(null);
     const mouseRef = useRef({ x: -9999, y: -9999 });
     const pointerRef = useRef({ x: 0, y: 0 });
@@ -30,9 +52,12 @@ export default function GaussianOcean({ color = "purple" }) {
             ",", "`", "'", "\"", "/", "\\", "|",
             "(", ")", "[", "]", "{", "}",
             "<", ">", "!", "?", "#", "%", "&", "@",
-            "$", "0", "O",
+            "$", "0", "O", '❤',
             "·", "•", "◦", "○", "●", "□", "■", "△", "▲", "◇", "◆"
         ];
+
+        const rgbFar = hexToRgb(colorFar);
+        const rgbNear = hexToRgb(colorNear);
 
         noiseRef.current = new Noise(Math.random());
 
@@ -74,7 +99,6 @@ export default function GaussianOcean({ color = "purple" }) {
             const time = timestamp * timeScale;
 
             ctx.clearRect(0, 0, width, height);
-            ctx.fillStyle = color;
 
             const mx = mouseRef.current.x;
             const my = mouseRef.current.y;
@@ -108,7 +132,10 @@ export default function GaussianOcean({ color = "purple" }) {
                     const translateX = px * depth * parallaxStrength;
                     const translateY = py * depth * parallaxStrength;
 
-                    ctx.globalAlpha = effectiveValue+0.3;
+                    // Interpolate color based on depth: far (low depth) -> near (high depth)
+                    const [r, g, b] = lerpColor(rgbFar, rgbNear, effectiveValue**4);
+                    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.globalAlpha = effectiveValue + 0.4;
                     ctx.fillText(symbol, cellCenterX + translateX, cellCenterY + translateY);
                 }
             }
@@ -123,7 +150,7 @@ export default function GaussianOcean({ color = "purple" }) {
             window.removeEventListener("resize", resize);
             window.removeEventListener("pointermove", handleMove);
         };
-    }, [color]);
+    }, [colorFar, colorNear]);
 
     return (
         <canvas
