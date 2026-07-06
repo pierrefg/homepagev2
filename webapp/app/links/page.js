@@ -2,7 +2,7 @@ import { createPageMetadata } from '@/utils/metadata';
 
 import SimpleLink from '@/components/SimpleLink';
 import SocialIcons from '@/components/SocialIcons';
-import Sky from "@/components/sky/Sky";
+import Sky from "@/components/wallpapers/sky/Sky";
 import Portrait from "@/components/portrait/Portrait";
 import AnimatedText from '@/components/animatedText';
 

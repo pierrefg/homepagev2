@@ -5,9 +5,8 @@ import useStore from '@/store/useStore';
 import Portrait from "@/components/portrait/Portrait";
 import MenuBar from '@/components/menu/MenuButtons';
 import SocialIcons from '@/components/SocialIcons'
-import Snake from "@/components/snake/Snake";
-
-import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
+import Snake from "@/components/wallpapers/snake/Snake";
+import GaussianOcean from "@/components/wallpapers/gaussianOcean/GaussianOcean";
 
 import Link from "next/link";
 
@@ -26,8 +25,9 @@ export default function LandingTop() {
     return (
         <>
             <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
-                <Snake color = "purple" big_interval_time={3000}/>
-                <Snake color = "#500052" big_interval_time={2000}/>
+                {/* <Snake color = "purple" big_interval_time={3000}/>
+                <Snake color = "#500052" big_interval_time={2000}/> */}
+                <GaussianOcean color = "purple" />
             </div>
 
             <div className='absolute left-4 top-4 z-50'>
