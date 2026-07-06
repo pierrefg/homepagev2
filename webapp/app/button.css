@@ -4,9 +4,9 @@
     @apply transition-colors duration-300 ease-in-out;
 }
 
-.btn:hover {
+/* .btn:hover {
     @apply animate-pulse;
-}
+} */
 
 .btn.active {
     @apply  rotate-3;

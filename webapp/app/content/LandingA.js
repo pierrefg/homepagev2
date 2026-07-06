@@ -7,6 +7,9 @@ import MenuBar from '@/components/menu/MenuButtons';
 import SocialIcons from '@/components/SocialIcons'
 import Snake from "@/components/wallpapers/snake/Snake";
 import GaussianOcean from "@/components/wallpapers/gaussianOcean/GaussianOcean";
+import AscImage from "@/components/ascImage/AscImage";
+
+import coverPic from './cover.jpg';
 
 import Link from "next/link";
 
@@ -29,6 +32,10 @@ export default function LandingTop() {
                 <Snake color = "#500052" big_interval_time={2000}/> */}
                 <GaussianOcean color = "purple" />
             </div>
+
+            {/* <div className={`absolute z-10 pointer-events-none`}>
+                <AscImage imgSrc={coverPic} size={500} res={10} />
+            </div> */}
 
             <div className='absolute left-4 top-4 z-50'>
                 <SimpleLink content={{title: <AiOutlineNumber />, link: 'https://p1ps.net', extern: true}} />
