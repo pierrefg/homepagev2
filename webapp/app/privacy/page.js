@@ -33,9 +33,9 @@ export default function Privacy() {
                                             { el.title }
                                         </strong>
                                     </h3>
-                                    <p>
+                                    <div>
                                         { el.content }
-                                    </p>
+                                    </div>
                                 </div>
                             )
                        ) 
