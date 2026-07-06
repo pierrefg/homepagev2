@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
     <html
       lang="fr"
       className={`${josefinSans.variable} ${monaspaceArgon.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body>
         <MainLayout>{children}</MainLayout>

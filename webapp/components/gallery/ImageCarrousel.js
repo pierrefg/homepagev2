@@ -143,7 +143,6 @@ export default function ImageCarrousel({ content, size=350 }) {
                                     <Image
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
-                                        // placeholder={'blur'}
                                         height={size}
                                         style={{objectFit: "contain"}}
                                         onLoad={(e) => handleImageLoad(index, e)}

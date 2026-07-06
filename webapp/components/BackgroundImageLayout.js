@@ -10,9 +10,8 @@ export default function BackgroundImageLayout({children, icon, title, coverPic})
                     <Image
                         src={coverPic}
                         alt='cover picture'
-                        layout="fill"
-                        objectFit="cover"
-                        objectPosition="center"
+                        fill
+                        style={{ objectFit: "cover", objectPosition: "center" }}
                         className="opacity-30"
                         priority
                     />
