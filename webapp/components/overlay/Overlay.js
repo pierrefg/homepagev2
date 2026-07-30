@@ -3,7 +3,7 @@ import { IoCloseSharp } from "react-icons/io5";
 export default function Overlay({ children, onClose }) {
     return (
         <div 
-            className="fixed top-0 left-0 w-full h-full bg-black flex flex-col items-center justify-between z-50 bg-opacity-90 cursor-pointer"
+            className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-between z-50 bg-opacity-90 cursor-pointer"
             onClick={onClose}
         >
             <IoCloseSharp 

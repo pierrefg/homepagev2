@@ -19,7 +19,7 @@ import SimpleLink from "@/components/SimpleLink";
 export default function About() {
     return (
         <>
-            <div className='flex flex-grow justify-center items-center p-6 z-20'>
+            <div className='flex flex-grow justify-center items-center p-6 z-20 bg-white'>
                 <SideImageLayout
                     coverPic={coverPic}
                     title='Pierre Faure--Giovagnoli'

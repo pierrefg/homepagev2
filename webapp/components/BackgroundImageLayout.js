@@ -12,12 +12,12 @@ export default function BackgroundImageLayout({children, icon, title, coverPic})
                         alt='cover picture'
                         fill
                         style={{ objectFit: "cover", objectPosition: "center" }}
-                        className="opacity-30"
+                        className="opacity-60"
                         priority
                     />
                 </div>
 
-                <div className="relative z-10 max-w-4xl p-6">
+                <div className="relative z-10 max-w-4xl p-6 bg-white border-solid border-2 border-primary">
                     <h1 className="text-2xl lg:text-3xl mb-6">
                         {/* {icon} */}
                         / <AnimatedText texts={[title]} />

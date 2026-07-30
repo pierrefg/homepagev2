@@ -34,7 +34,7 @@ export default function ImageGrid({ content }) {
 
             <div className="relative max-h-[85%] w-5/6 md:w-4/5 overflow-y-auto p-4" onClick={(e) => e.stopPropagation()}>
                 
-                <div className='p-4 bg-black text-center'>
+                <div className='p-4 text-center'>
                     {ImageGrid.makeTitle(content)}
                 </div>
 

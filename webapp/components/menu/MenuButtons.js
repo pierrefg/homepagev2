@@ -25,7 +25,7 @@ export default function MenuButtons({ toDoOnElementClick }) {
                                 large 
                                 active={isActive}
                                 onClick={toDoOnElementClick}
-                                className='hover:!px-8 !transition-[padding] !duration-400 ease-in-out'
+                                // className='hover:!px-8 !transition-[padding] !duration-400 ease-in-out'
                             />
                         )
                     }

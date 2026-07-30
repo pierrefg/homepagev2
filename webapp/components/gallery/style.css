@@ -27,7 +27,7 @@
 }
 
 .gallery-dark {
-    @apply text-white bg-black;
+    @apply text-white;
 
     ::-webkit-scrollbar {
         @apply md:hidden;

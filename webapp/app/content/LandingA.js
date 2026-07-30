@@ -9,6 +9,7 @@ import Snake from "@/components/wallpapers/snake/Snake";
 import GaussianOcean from "@/components/wallpapers/gaussianOcean/GaussianOcean";
 import AscImage from "@/components/ascImage/AscImage";
 
+
 import coverPic from './cover.jpg';
 
 import Link from "next/link";
@@ -22,6 +23,8 @@ import { AiOutlineNumber, AiOutlineFilePdf } from "react-icons/ai";
 import { FaLink } from "react-icons/fa6";
 import { LuPartyPopper } from "react-icons/lu";
 
+import Sky from "@/components/wallpapers/sky/Sky";
+
 export default function LandingTop() {
     const { darkMode } = useStore();
 
@@ -30,7 +33,8 @@ export default function LandingTop() {
             <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
                 {/* <Snake color = "purple" big_interval_time={3000}/>
                 <Snake color = "#500052" big_interval_time={2000}/> */}
-                <GaussianOcean color = "purple" />
+                {/* <GaussianOcean color = "purple" /> */}
+                <Sky color = "#500052" big_interval_time={2000}/>
             </div>
 
             {/* <div className={`absolute z-10 pointer-events-none`}>
@@ -87,9 +91,6 @@ export default function LandingTop() {
                     />
                 </div> */}
                 <SocialIcons />
-                {/* <div className='hidden md:block'>
-                    <ThemeSwitch />
-                </div> */}
                 
             </div>
 

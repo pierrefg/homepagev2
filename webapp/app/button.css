@@ -36,8 +36,8 @@
 
 .btn-secondary {
     @apply bg-foreground;
-    @apply text-primary text-center;
-    @apply border-solid border-primary;
+    @apply text-primary-muted text-center;
+    @apply border-solid border-primary-muted;
     @apply hover:text-primary;
     @apply inline-flex justify-center items-center;
 }
@@ -47,7 +47,7 @@
 }
 
 .btn-secondary.active {
-    @apply border-secondary-hover text-primary;
+    @apply border-secondary-hover text-primary text-primary;
 }
 
 .btn-secondary.disabled {
