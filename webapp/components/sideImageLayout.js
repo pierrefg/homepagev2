@@ -7,7 +7,7 @@ export default function SideImageLayout({children, title, coverPic}) {
                 <Image
                     src={coverPic}
                     alt='cover picture'
-                    className="object-cover w-[150px] h-[150px] md:w-full md:h-full rounded-full md:rounded-none"
+                    className="object-cover w-[150px] h-[150px] md:w-full md:h-full border-double border-solid border-4 border-primary"
                     placeholder={'blur'}
                     priority
                 />
