@@ -27,7 +27,7 @@
 }
 
 .btn-primary:hover {
-    @apply bg-primary-hover text-white border-primary-hover;
+    @apply bg-primary-hover text-white border-primary-hover rotate-3;
 }
 
 .btn-primary.active {

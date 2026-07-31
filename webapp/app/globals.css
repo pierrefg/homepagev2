@@ -56,7 +56,7 @@ a {
 }
 
 .icon {
-    @apply text-2xl inline;
+    @apply text-2xl;
 }
 
 .title-icon {

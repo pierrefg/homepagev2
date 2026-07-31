@@ -24,7 +24,7 @@ export default function About() {
                     coverPic={coverPic}
                     title='Pierre Faure--Giovagnoli'
                 >
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4 bg-white'>
                         <p>
                             Originaire d’Angoulême, je rejoins{" "}
                             <a
