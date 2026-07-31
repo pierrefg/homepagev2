@@ -10,7 +10,8 @@
     @apply transition-colors duration-300 ease-in-out;
 }
 
+
 .menu-content {
-    @apply flex-grow flex-1 w-full mx-auto;
+    @apply flex-grow flex-1 w-full mx-auto relative;
     @apply mt-[var(--primary-menu-mobile-height)] lg:mt-[var(--primary-menu-height)];
 }

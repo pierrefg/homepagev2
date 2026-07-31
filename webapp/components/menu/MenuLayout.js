@@ -12,25 +12,17 @@ export default function MenuLayout({ children }) {
 
     return (
         <div className='flex flex-col min-h-screen'>
-            {/* ThemeSwitch positioning */}
-            {/* <div className='z-50 fixed hidden lg:block bottom-[50px] right-[50px]'>  
-                <ThemeSwitch />
-            </div> */}
-
-            {/* MenuBar section */}
             <div className="z-30">
                 <MenuBar />
             </div>
 
-            {/* Main content area */}
             <div
-                className={`menu-content ${menuOpen ? "opacity-40" : ""}`}
+                className={`menu-content flex-1 flex flex-col ${menuOpen ? "opacity-40" : ""}`}
                 onClick={menuOpen ? switchMenu : null}
             >
                 {children}
             </div>
 
-            {/* Copyright section */}
             <div className={`mt-auto pt-8 ${menuOpen ? "opacity-40" : ""}`}>
                 <Footer />
             </div>
