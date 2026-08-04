@@ -4,17 +4,8 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import coverPic from './cover.jpg';
 import SideImageLayout from "@/components/sideImageLayout";
-import { landingBContent } from "./landingBContent";
-import MenuBar from '@/components/menu/MenuButtons';
 
 import { FaArrowUp } from "react-icons/fa";
-
-import { MdOutlinePlace } from "react-icons/md";
-import { IoLanguage } from "react-icons/io5";
-
-import { mainMenuLinks } from "@/components/menu/menuData";
-
-import SimpleLink from "@/components/SimpleLink";
 
 export default function About() {
     return (
