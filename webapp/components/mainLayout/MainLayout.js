@@ -11,10 +11,8 @@ import Loader from "@/components/loader/Loader";
 import MenuLayout from "@/components/menu/MenuLayout";
 
 import { usePathname } from "next/navigation";
-import useStore from "@/store/useStore";
 
 export default function MainLayout({ children }) {
-  const { darkMode } = useStore();
   const pathname = usePathname();
 
   const noMenuRoutes = ["/", "/xp", "/links", "/void"];
@@ -29,7 +27,6 @@ export default function MainLayout({ children }) {
         <div
           id="main-container"
           className={[
-            !darkMode ? "light" : "",
             hasMenu ? "scroll-padding" : "nothing",
           ].join(" ")}
         >
