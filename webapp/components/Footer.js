@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { AiOutlineCopyright } from "react-icons/ai";
 
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <div className="flex flex-col gap-0 w-full items-center py-6 text-small lg:text-sm max-w-7xl mx-auto text-primary-muted">
             <div className='text-center'>
@@ -20,7 +22,7 @@ export default function Footer() {
                 </Link>
             </div>
             <div >
-                <AiOutlineCopyright className='inline'/> Pierre Faure--Giovagnoli, 2026
+                <AiOutlineCopyright className='inline'/> Pierre Faure--Giovagnoli, {currentYear}
             </div>
         </div>
     );
