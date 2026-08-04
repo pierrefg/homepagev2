@@ -122,9 +122,9 @@ export default function SubMenu({ pagesData }) {
                                     }
                                 >
                                     <SimpleLink
-                                        // linkKey={el.link}
                                         content={el}
                                         active={isActive}
+                                        muted={!isActive}
                                     />
                                 </div>
                             );

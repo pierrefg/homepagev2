@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function SimpleLink({content, linkKey=null, primary=false, large=false, onClick=null, active=false, className=''}) {
+export default function SimpleLink({content, linkKey=null, primary=false, large=false, onClick=null, active=false, muted=false, className=''}) {
     return (
         <Link 
             key={linkKey}
-            className={`btn py-1 ${primary ? 'btn-primary' : 'btn-secondary'} ${large && 'btn-large'} ${active && 'active'} ${className}`}
+            className={`btn py-1 ${primary ? 'btn-primary' : 'btn-secondary'} ${large ? 'btn-large' : ''} ${active ? 'active' : ''} ${muted ? 'muted' : ''} ${className}`}
             href={ content.link + (content.anchor ? `#${content.anchor}`: '') }
             onClick={onClick}
-            target={ content.extern && '_blank' }
+            target={ content.extern ? '_blank' : undefined }
         >
             {
                 content.img && 
